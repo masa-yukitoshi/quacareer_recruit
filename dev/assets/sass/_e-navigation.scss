@@ -1,0 +1,72 @@
+.e-navigation{
+    display: flex;
+    justify-content: space-between;
+    max-width: 990px;
+    margin: auto;
+    &-list{
+        display: flex;
+        flex-direction: column;
+        gap: 38px;
+        &__item{
+            width: fit-content;
+            a{
+                display: flex;
+                align-items: flex-start;
+                gap: 20px;
+                i{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 36px;
+                    aspect-ratio: 36/44;
+                    background-color: var(--c-primary);
+                    img{
+                        width: 50%;
+                    }
+                }
+                span{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    gap: 10px;
+                }
+                svg{
+                    width: auto;
+                    height: 21.5px;
+                    line-height: 0;
+                }
+                small{
+                    font-size: 12px;
+                    line-height: 1;
+                }
+            }
+            &:hover a{
+                animation: clip .4s;
+            }
+        }
+    }
+    &-sublist{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        &__item{
+            font-size: 12px;
+            width: fit-content;
+            [target=_blank]::after{
+                content: url('data:image/svg+xml;utf-8,<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"><path d="m.38 1.75h-.38v8.25h8.25v-.38h-7.87z"/><path d="m1.75 0v8.25h8.25v-8.25zm7.87 7.86h-7.48v-7.48h7.48z"/><path d="m4.07 6.2 3.64-3.64v2.47h.39v-3.13h-3.13v.39h2.47l-3.64 3.64z"/></svg>');
+                display: inline-block;
+                vertical-align: middle;
+                width: 1em;
+                margin-left: 0.5em;
+            }
+            &:hover a{
+                animation: clip .4s;
+            }
+        }
+    }
+}
+@keyframes clip{
+    0%{clip-path: polygon(0 0, 0% 0, 0% 100%, 0% 100%);}
+    100%{clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);}
+}

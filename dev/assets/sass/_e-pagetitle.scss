@@ -1,0 +1,26 @@
+.e-pagetitle{
+    color: var(--c-primary);
+    fill: var(--c-primary);
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+    &.center{
+        align-items: center;
+    }
+    small{
+        font-family: var(--f-serif);
+        font-size: 26px;
+        font-weight: 600;
+        transition: clip-path .2s ease-out;
+        clip-path: polygon(0 0, 0% 0, 0% 100%, 0% 100%);
+        .wf-active &{clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);}
+    }
+    svg{
+        fill: var(--c-primary);
+        height: 71px;
+        transition: clip-path .2s ease-out .1s;
+        clip-path: polygon(0 0, 0% 0, 0% 100%, 0% 100%);
+        .wf-active &{clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);}
+    }
+}

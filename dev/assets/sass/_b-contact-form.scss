@@ -1,0 +1,154 @@
+.b-contact-form{
+    width: calc(100% - 40px);
+    max-width: 898px;
+    margin: auto;
+    display: flex;
+    // align-items: flex-start;
+    gap: 36px;
+    font-size: 18px;
+    &.alignstart{align-items: flex-start;}
+    &+&{
+        margin-top: 80px;
+    }
+    &__headding{
+        width: 214px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include fw(600);
+        letter-spacing: 0.13em;
+        i{
+            display: flex;
+            width: 63px;
+            height: 27px;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--c-primary);
+            color: var(--c-bg);
+            font-size: 16px;
+            line-height: 1;
+            @include fw(400);
+        }
+    }
+    &__input{
+        flex: 1;
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        textarea{
+            background-color: var(--c-bg);
+            padding: 12px;
+            width: 100%;
+        }
+        select{
+            background-color: var(--c-bg);
+            padding: 12px;
+            padding-right: 50px;
+            border: none;
+            outline: none;
+            -webkit-appearance: none;
+            appearance: none;
+            cursor: pointer;
+        }
+        input[type="radio"]{
+            accent-color: var(--c-text);
+            inline-size: 1.5em;
+            block-size: 1.5em;
+            width: 1.5em;
+            aspect-ratio: 1;
+            vertical-align: middle;
+            outline: none;
+            border-color: #fff;
+            cursor: pointer;
+        }
+        .wpcf7-radio{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            @include fw(500);
+            label{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                cursor: pointer;
+            }
+        }
+        .wpcf7-form-control-wrap{
+            &:has(select){
+                display: block;
+                width: fit-content;
+                position: relative;
+                &::before{
+                    content: "";
+                    display: block;
+                    width: 10px;
+                    aspect-ratio: 1/1;
+                    border: 1px solid var(--c-text);
+                    border-top: 0;
+                    border-left: 0;
+                    rotate: 45deg;
+                    position: absolute;
+                    top: 15px;
+                    right: 15px;
+                }
+            }
+        }
+    }
+    &__text{
+        text-align: center;
+        font-size: 15px;
+        margin-top: 100px;
+        a{
+            text-decoration: underline;
+        }
+        &+&{
+            margin-top: 20px;
+        }
+        label{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: .5em;
+            cursor: pointer;
+        }
+        input[type="checkbox"]{
+            accent-color: var(--c-text);
+            inline-size: 1.5em;
+            block-size: 1.5em;
+            width: 1.5em;
+            aspect-ratio: 1;
+            vertical-align: middle;
+            outline: none;
+            border-color: #fff;
+            cursor: pointer;
+            // translate: 0 -.1em;
+        }
+    }
+    &__submit{
+        width: 600px;
+        height: 96px;
+        margin: 80px auto 0;
+        position: relative;
+        background-color: var(--c-text);
+        color: var(--c-bg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+        letter-spacing: 0.09em;
+        font-size: 22px;
+        @include fw(600);
+        transition: opacity .4s;
+        &:hover{
+            opacity: 0.8;
+        }
+        input{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+        }
+    }
+}

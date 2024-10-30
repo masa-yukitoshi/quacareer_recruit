@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<% pageInfo = {
+    data:{
+        slug:'home',
+        title:'Quacareer Recruit Site',
+        description:'',
+    }
+}; -%>
+<%- include('assets/inc/meta',pageInfo) -%>
+<body>
+    <%- include('assets/inc/global-header',pageInfo) -%>
+    <%- include('assets/inc/global-menu',pageInfo) -%>
+
+    <%- include('assets/inc/b-loading',pageInfo) -%>
+
+    <%- include('assets/inc/kv-slider',pageInfo) -%>
+    
+    <h1 class="e-pagetitle">
+        <small>募集要項</small>
+        <%- include('assets/img/hd_info.svg') -%>
+    </h1>
+    <h1 class="e-pagetitle center">
+        <small>クオキャリアについて</small>
+        <%- include('assets/img/hd_about.svg') -%>
+    </h1>
+
+    <h2 class="e-heading__info js_inview">
+        <small>採用情報</small>
+        INFORMATION
+    </h2>
+
+    <h2 class="e-heading__info js_inview">
+        <small>選考フロー</small>
+        FLOW
+    </h2>
+
+    <div class="e-heading__about">
+        <img src="/assets/img/dummy.jpg" alt="">
+        <h2 class="e-heading__about--text js_inview">
+            <i>1</i>
+            BUSINESS
+            <small>事業展開</small>
+        </h2>
+    </div>
+
+    <%- include('assets/inc/top-index') -%>
+
+    <%- include('assets/inc/b-contact-form') -%>
+
+    <%- include('assets/inc/b-information') -%>
+
+    <%- include('assets/inc/b-flow') -%>
+
+    <div class="l-about-sticky">
+        <i class="l-about-sticky__title"><%- include('assets/img/hd_about.svg') -%></i>
+        <nav class="l-about-sticky__nav">
+            <%- include('assets/inc/e-about-navi',{current:1}) -%>
+        </nav>
+        <div class="l-about-sticky__content">
+            <div class="l-about-sticky__content-inner">
+                <div class="e-headline">
+                    <h3 class="e-headline__chatch">誰もなしえていない社会課題の解決を、<br>歯科をトリガーに実現。</h3>
+                    <p class="e-headline__body">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります</p>
+                </div>
+                <%- include('assets/inc/b-flow-small') -%>
+                <%- include('assets/inc/b-job-block') -%>
+            </div>
+        </div>
+    </div>
+
+    <%- include('assets/inc/b-faq') -%>
+
+    
+    <div class="l-message-fv">
+        <aside class="l-message-fv__bg">
+            <div class="l-message-fv__images">
+                <img src="/assets/img/dummy.jpg" alt="">
+            </div>
+        </aside>
+        <div class="l-message-fv__contents">
+            <section class="l-message-fv__pagetitle">
+                <h1 class="e-pagetitle">
+                    <small>代表メッセージ</small>
+                    <%- include('assets/img/hd_message.svg') -%>
+                </h1>
+            </section>
+            <div style="margin:auto;width:50%;height:400vh;background-color:rgba(255,255,255,.5);">おおおお</div>
+            <aside class="l-message-fv__end"></aside>
+        </div>
+    </div>
+
+
+    <%- include('assets/inc/global-cv',pageInfo) -%>
+    <%- include('assets/inc/global-footer',pageInfo) -%>
+    <script src="assets/js/vendor.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

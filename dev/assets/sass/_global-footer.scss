@@ -1,0 +1,36 @@
+.global-footer{
+    margin-top: 150px;
+    padding-bottom: 45px;
+    &__title{
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        margin-bottom: 36px;
+        img{
+            width: 164px;
+        }
+        &::before,&::after{
+            content: "";
+            display: block;
+            height: 1px;
+            flex: 1;
+            background-color: var(--c-text);
+        }
+    }
+    &__catch{
+        width: calc(100% - 40px);
+        max-width: 910px;
+        margin: auto;
+        .e-copy-passion__catch{fill: var(--c-primary);}
+
+    }
+    .e-navigation{
+        margin-top: 116px;
+    }
+    &__copyright{
+        margin-top: 224px;
+        font-size: 10px;
+        text-align: center;
+        font-family: var(--f-serif);
+    }
+}

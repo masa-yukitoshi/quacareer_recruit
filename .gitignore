@@ -6,6 +6,9 @@
 # Node artifact files
 node_modules/
 dist/
+dest/
+*.zip
+server.json
 
 # Compiled Java class files
 *.class

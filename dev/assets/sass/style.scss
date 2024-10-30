@@ -1,0 +1,84 @@
+@charset "UTF-8";
+$bp-s-min:"(min-width:600px)";
+$bp-s-max:"(max-width:599px)";
+$bp-l-min:"(min-width:1025px)";
+$bp-l-max:"(max-width:1024px)";
+
+@mixin fw($size:400) {
+    font-variation-settings: "wght" $size;
+    // font-weight: $size;
+}
+
+// %font-ja-r{ font-family: toppan-bunkyu-gothic-pr6n, sans-serif; font-weight: 400; }
+// %font-ja-db{ font-family: toppan-bunkyu-gothic-pr6n, sans-serif; font-weight: 600; }
+// %font-ja-eb{ font-family: toppan-bunkyu-midashi-go-std, sans-serif; font-weight: 900; }
+// %font-en-r{ font-family: montserrat, sans-serif; font-weight: 400; }
+// %font-en-m{ font-family: montserrat, sans-serif; font-weight: 500; }
+// %font-en-b{ font-family: montserrat, sans-serif; font-weight: 700; }
+
+:root{
+    --c-primary: #ed1c24;
+    --color-secondary: #fbb03b;
+    --c-text: #231815;
+    --c-bg: #fff;
+    --c-document: #e9e8e7;
+    --f-sans: source-han-sans-jp-variable, sans-serif;
+    --f-serif: shippori-mincho, serif;
+}
+
+@import "base";
+@import "swiper-bundle.min";
+@import "swiper";
+
+@media #{$bp-s-max}{
+    .pc{display: none;}
+    .sp{display: block;}
+}
+@media #{$bp-s-min}{
+    .pc{display: block;}
+    .sp{display: none;}
+}
+
+html{
+    background-color: var(--c-document);
+    font-family: var(--f-sans);
+    @include fw(400);
+    font-weight: unset;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    
+}
+svg{
+    fill: var(--c-text);
+}
+.passion_iframe{
+    aspect-ratio: 226 / 328;
+    overflow: visible;
+    border: none;
+    outline: none;
+}
+
+//グローバル部品
+@import "global-header";
+@import "global-footer";
+@import "global-cv";
+
+@import "kv-slider";
+@import "top-index";
+
+@import "l-about-sticky";
+@import "l-message-fv";
+
+@import "b-loading";
+@import "b-contact-form";
+@import "b-information";
+@import "b-flow";
+@import "b-faq";
+@import "b-job-block";
+
+@import "e-copy";
+@import "e-navigation";
+@import "e-pagetitle";
+@import "e-heading";
+@import "e-about-navi";
+@import "e-headline";

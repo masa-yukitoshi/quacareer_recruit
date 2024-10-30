@@ -1,0 +1,33 @@
+.global-cv{
+    margin: 210px auto 150px;
+    &__button{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        width: 910px;
+        height: 260px;
+        background-color: var(--c-primary);
+        padding: 0 48px 0 62px;
+        span{
+            display: flex;
+            flex-direction: column;
+            gap: 23px;
+        }
+        &:hover span{
+            animation: clip .4s;
+        }
+        svg{
+            height: 71px;
+        }
+        small{
+            font-size: 25px;
+            line-height: 1;
+            font-family: var(--f-serif);
+            @include fw(600);
+        }
+        i img{
+            width: 60px;
+        }
+    }
+}

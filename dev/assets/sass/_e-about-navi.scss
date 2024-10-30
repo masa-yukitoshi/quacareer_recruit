@@ -1,0 +1,48 @@
+.e-about-navi{
+    width: 244px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    &__item{
+        font-family: var(--f-serif);
+        font-weight: 600;
+        line-height: 1;
+        letter-spacing: 0;
+        a{
+            position: relative;
+            display: flex;
+            padding-right: 70px;
+            gap: 8px;
+            span{
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+            }
+            strong{
+                font-size: 28px;
+            }
+            small{
+                font-size: 12px;
+            }
+            &::after{
+                content: "";
+                display: block;
+                height: 2px;
+                width: 0px;
+                background-color: currentColor;
+                position: absolute;
+                right: 0;
+                top: 30%;
+                transition: width .4s;
+            }
+        }
+        &.current{
+            pointer-events: none;
+            color: var(--c-bg);
+        }
+        &.current a,
+        a:hover{
+            &::after{width: 70px;}
+        }
+    }
+}

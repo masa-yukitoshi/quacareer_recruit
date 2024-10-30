@@ -1,0 +1,50 @@
+.e-copy{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    dt svg{
+        height: 40px;
+    }
+    dd svg{
+        height: 122px;
+    }
+    .kv-slider__copy &{
+        gap: 4px;
+        svg{ fill: var(--c-primary); }
+        dt svg{
+            height: 25px;
+        }
+        dd svg{
+            height: 76px;
+        }
+    }
+}
+.e-copy-passion{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    svg{ fill: var(--c-primary); }
+    &__catch{
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+    }
+    &__ja{
+        width: 20%;
+    }
+    &__en{
+        padding-top: 1%;
+        display: flex;
+        gap: 2%;
+        span{
+            &:nth-child(1){flex: 175.5576;}
+            &:nth-child(2){flex: 214.8506;}
+            &:nth-child(3){flex: 325.4355;}
+        }
+    }
+    &__icon{
+        width: 14.5%;
+    }
+}
