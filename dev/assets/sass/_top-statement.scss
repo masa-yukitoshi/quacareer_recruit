@@ -1,0 +1,29 @@
+.top-statement{
+    background-color: var(--c-primary);
+    padding: 50px 0 60px;
+    @media #{$bp-s-min}{
+        padding: 160px 0 200px;
+    }
+    &__inner{
+        width: calc(100% - 80px);
+        @media (max-width:370px){width: calc(100% - 40px);}
+        max-width: 708px;
+        margin: auto;
+        >p{
+            font-family: var(--f-serif);
+            font-size: 20px;
+            line-height: 1.75;
+            letter-spacing: -.05em;
+            @media #{$bp-l-min}{
+                font-size: 28px;
+            }
+            &+p{
+                margin-top: 1.75em;
+            }
+        }
+        .e-copy-passion{
+            margin-top: 50px;
+            @media #{$bp-s-min}{margin-top: 0;}
+        }
+    }
+}

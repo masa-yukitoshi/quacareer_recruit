@@ -2,25 +2,49 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 30px;
     position: fixed;
     z-index: 10;
     top: 0;
     left: 0;
     width: 100%;
-    height: 60px;
+    height: 50px;
+    padding: 0 20px;
+    @media #{$bp-s-max}{
+        transition: background-color 1s;
+        .is-header-observe &{background-color: var(--c-document);}
+    }
+    @media #{$bp-s-min}{
+        height: 60px;
+        padding: 0 30px;
+    }
     &__logo{
-        width: 193px;
+        width: 154px;
+        @media #{$bp-s-min}{
+            width: 193px;
+        }
     }
     &__navi{
         display: flex;
         align-items: center;
-        gap: 18px;
+        gap: 15px;
         font-family: var(--f-serif);
-        font-size: 22px;
+        font-size: 15px;
         letter-spacing: -.05em;
-        li:hover a{
+        @media #{$bp-s-min}{
+            gap: 18px;
+            font-size: 22px;
+        }
+        li:hover >*{
             animation: clip .3s;
+        }
+        .is-menu-open & li:not([class]){display: none;}
+        .js-menu::before{
+            content: "Menu";
+            letter-spacing: -.05em;
+            .is-menu-open &{
+                content: "Close";
+                letter-spacing: -.01em;
+            }
         }
     }
 }

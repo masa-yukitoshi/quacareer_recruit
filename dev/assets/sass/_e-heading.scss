@@ -10,14 +10,18 @@
         font-weight: 600;
         color: var(--c-primary);
         line-height: 1;
-        font-size: 60px;
+        font-size: 36px;
         letter-spacing: -.05em;
+        @media #{$bp-s-min}{
+            font-size: 60px;
+        }
         transition: clip-path .6s ease-out;
         clip-path: polygon(0 0, 0% 0, 0% 100%, 0% 100%);
         &.inviewed{clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);}
         small{
-            font-size: 20px;
+            font-size: 18px;
             letter-spacing: 0;
+            @media #{$bp-s-min}{font-size: 20px;}
         }
     }
     &__about{
@@ -27,7 +31,10 @@
         position: relative;
         z-index: 0;
         overflow: hidden;
-        height: 457px;
+        height: 281px;
+        @media #{$bp-s-min}{
+            height: 457px;
+        }
         img{
             position: absolute;
             top: 0;left: 0;
@@ -35,9 +42,11 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            backface-visibility: hidden;
+            transition: transform .1s linear;
         }
         &--text{
-            width: calc(100% - 40px);
+            width: calc(100% - 80px);
             max-width: 1100px;
             font-family: var(--f-serif);
             font-weight: 600;
@@ -45,16 +54,21 @@
             line-height: 1;
             display: flex;
             flex-direction: column;
-            font-size: 60px;
+            font-size: 40px;
             letter-spacing: -.05em;
             transition: clip-path .6s ease-out;
             clip-path: polygon(0 0, 0% 0, 0% 100%, 0% 100%);
             &.inviewed{clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);}
+            @media #{$bp-s-min}{
+                font-size: 60px;
+            }
             i{
-                font-size: 20px;
+                font-size: 16px;
+                @media #{$bp-s-min}{font-size: 20px;}
             }
             small{
-                font-size: 20px;
+                font-size: 16px;
+                @media #{$bp-s-min}{font-size: 20px;}
                 letter-spacing: 0;
                 margin-top: 0.5em;
             }

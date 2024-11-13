@@ -1,4 +1,5 @@
 .top-index{
+    --h-sp:154px;
     --h-pc:180px;
     position: relative;
     z-index: 0;
@@ -6,13 +7,26 @@
     border-bottom: 1px solid var(--c-text);
     display: block;
     background-color: var(--c-document);
-    height: var(--h-pc);
+    height: var(--h-sp);
     overflow: hidden;
     transition: height .6s;
+    @media #{$bp-l-min}{
+        height: var(--h-pc);
+    }
     &:hover{
-        height: 768px;
+        height: 640px;
+        @media #{$bp-l-min}{
+            height: 768px;
+        }
     }
     &+&{border-top: none;}
+    &.disabled{
+        pointer-events: none;
+        user-select: none;
+        color: #b5b5b6;
+        svg{fill: #b5b5b6!important;}
+        .top-index__arrow{background-color: #f89097;}
+    }
     &__wapper{}
     &__photo{
         position: absolute;
@@ -22,7 +36,7 @@
         height: 100%;
         z-index: -1;
         object-fit: cover;
-        object-position: left top;
+        // object-position: left top;
         opacity: 0;
         transition: opacity .6s;
         .top-index:hover &{
@@ -31,13 +45,35 @@
     }
     &__title{
         display: flex;
-        align-items: center;
-        height: var(--h-pc);
-        padding-left: 60px;
-        padding-right: 120px;
-        gap: 35px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 15px;
+        height: var(--h-sp);
+        padding-left: 18px;
+        padding-right: 90px;
+        @media #{$bp-s-min}{
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        @media #{$bp-l-min}{
+            height: var(--h-pc);
+            gap: 35px;
+            padding-left: 60px;
+            padding-right: 120px;
+        }
+        @media (max-width:370px){
+            gap: 10px;
+        }
         svg{
-            height: 77px;
+            height: 42px;
+            @media (min-width:800px){
+                height: 77px;
+            }
+            @media (max-width:370px){
+                height: 30px;
+            }
         }
         .top-index:hover &{
             color: var(--c-bg);
@@ -45,9 +81,17 @@
         }
     }
     &__text{
-        flex: 1;
         font-family: var(--f-serif);
-        line-height: 1.4;
+        line-height: 1.6;
+        font-size: 12px;
+        letter-spacing: 0;
+        @media #{$bp-l-min}{
+            flex: 1;
+            font-size: 18px;
+        }
+        @media (max-width:370px){
+            font-size: 10px;
+        }
         strong{
             display: block;
             font-weight: 700;
@@ -57,20 +101,29 @@
         display: flex;
         justify-content: center;
         align-items: flex-end;
-        padding: 46px 0;
-        width: 120px;
+        padding: 49px 0;
+        width: 66px;
         // height: calc(var(--h-pc) - 1px);
         height: 100%;
         background-color: var(--c-primary);
         position: absolute;
         bottom: 0;
         right: 0;
+        @media #{$bp-l-min}{
+            width: 120px;
+            padding: 46px 0;
+        }
         .top-index:hover &{
             background-color: transparent;
-            fill: var(--c-bg);
         }
         svg{
-            width: 60px;
+            width: 33px;
+            @media #{$bp-l-min}{
+                width: 60px;
+            }
+            .top-index:hover &{
+                fill: var(--c-bg);
+            }
         }
     }
 }

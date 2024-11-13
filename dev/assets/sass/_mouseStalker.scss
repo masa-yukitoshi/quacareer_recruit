@@ -1,0 +1,45 @@
+.g-ms {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transform: translate3d(50vw, 50vh, 0);
+    pointer-events: none;
+    transition: all 0.3s ease-out;
+    mix-blend-mode: multiply;
+  }
+  .g-ms_i {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    translate: -50% -50%;
+    transition: all .3s ease;
+    // background: rgba(0,0,0,.05);
+    background-color: var(--color-secondary);
+    opacity: 0;
+  }
+  .g-ms_iframe{
+    width: 90px;
+    translate: -50% -85%;
+    scale: 0;
+    transition: all .3s ease;
+    transform-origin: 50% 65%;
+  }
+  
+  /* アクティブ時 */
+  .g-ms.g-ms-active .g-ms_i {
+    opacity: 1;
+  }
+  
+  /* マウスホバー時 */
+  .g-ms.g-ms-hover {
+    // mix-blend-mode: normal;
+  }
+  .g-ms.g-ms-hover .g-ms_i {
+    // background: #fff;
+    transform: scale(0);
+  }
+  .g-ms.g-ms-hover .g-ms_iframe{
+    scale: 1;
+  }
+

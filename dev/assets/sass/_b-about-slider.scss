@@ -1,0 +1,51 @@
+.b-about-slider{
+    margin-right: -40px;
+    @media (min-width:1140px){
+        margin-right: calc(-40px - ((var(--vw) - 1200px) / 2) - 35px );
+    }
+    .swiper-wrapper{
+        flex-shrink: 0;
+        width: 200px;
+    }
+    .swiper-slide{
+        flex-shrink: 0;
+        width: 220px;
+        @media #{$bp-s-min}{
+            width: 274px;
+        }
+    }
+    &__controller{
+        user-select: none;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
+        margin-bottom: 25px;
+    }
+    &__prev{
+        svg{rotate: 180deg;}
+    }
+    &__prev,&__next{
+        width: 15px;
+        height: auto;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        &.swiper-button-disabled{
+            cursor: auto;
+            opacity: 0.3;
+        }
+    }
+    &__pagination{
+        width: fit-content;
+        font-family: var(--f-serif);
+        font-size: 14px;
+        line-height: 1;
+        display: flex;
+        align-items: baseline;
+        .swiper-pagination-current{
+            color: var(--c-primary);
+            font-size: 1.6em;
+        }
+    }
+}

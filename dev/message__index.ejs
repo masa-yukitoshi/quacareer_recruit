@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<% pageInfo = {
+    data:{
+        slug:'message',
+        title:'Quacareer Recruit Site',
+        description:'',
+    }
+}; -%>
+<%- include('assets/inc/meta',pageInfo) -%>
+<body>
+    <%- include('assets/inc/global-header',pageInfo) -%>
+    <%- include('assets/inc/global-menu',pageInfo) -%>
+
+    <main class="l-message-fv">
+        <aside class="l-message-fv__bg">
+            <div class="l-message-fv__images">
+                <div class="l-message-fv__images--inner">
+                    <picture class="i1">
+                        <source media="(max-width:599px)" srcset="/assets/img/top_message_sp.jpg">
+                        <img src="/assets/img/top_message_pc.jpg" alt="" style="view-transition-name:message;">
+                    </picture>
+                    <picture class="i2">
+                        <source media="(max-width:599px)" srcset="/assets/img/message2_sp.jpg">
+                        <img src="/assets/img/message2_pc.jpg" alt="">
+                    </picture>
+                    <picture class="i3">
+                        <source media="(max-width:599px)" srcset="/assets/img/message3_sp.jpg">
+                        <img src="/assets/img/message3_pc.jpg" alt="">
+                    </picture>
+                    <picture class="i4">
+                        <source media="(max-width:599px)" srcset="/assets/img/message4_sp.jpg">
+                        <img src="/assets/img/message4_pc.jpg" alt="">
+                    </picture>
+                    <picture class="i5">
+                        <source media="(max-width:599px)" srcset="/assets/img/message5_sp.jpg">
+                        <img src="/assets/img/message5_pc.jpg" alt="">
+                    </picture>
+                </div>
+            </div>
+        </aside>
+        <div class="l-message-fv__contents">
+            <div class="l-message-fv__triggers">
+                <div class="js-scene-trigger" data-scene="1"></div>
+                <div class="js-scene-trigger" data-scene="2"></div>
+                <div class="js-scene-trigger" data-scene="3"></div>
+                <div class="js-scene-trigger" data-scene="4"></div>
+                <div class="js-scene-trigger" data-scene="5"></div>
+                <div class="js-scene-trigger" data-scene="6"></div>
+                <div class="js-scene-trigger" data-scene="7"></div>
+            </div>
+            <section class="l-message-fv__pagetitle">
+                <h1 class="e-pagetitle">
+                    <small>社長メッセージ</small>
+                    <%- include('assets/img/hd_message.svg') -%>
+                </h1>
+            </section>
+
+            <section class="p-message__section">
+                <div class="p-message__section--inner">
+                    <h2>誰もが必ず<br>「何者か」にはなれる。</h2>
+                    <p>誰もが何者にでもなれる、なんて嘘だ。でも、人は必ず「何者か」にはなれる。私はそう信じ、人ありきの経営をしてきました。縁あって出会った目の前の一人ひとりと一緒に、どんなことができるのか。どうすればもっと可能性を引き出せるのか。それぞれの偏りに愛情を持って向き合い、仕事のあり方を模索し続けてきました。</p>
+                    <p>クオキャリアには、入社前には想像していなかった形で活躍する方が多くいます。学び、努力することで誰かの困りごとを解決し、自分自身の人生も変わっていく。そんな未来を、もっと多くの人に実現してほしいと考えています。</p>
+                    <p>クオキャリアという舞台では誰もが欠かせないキャストです。これからも個性の数だけ、まだないものが生まれてくるでしょう。道を求めている。自分が何者かであることを自分に証明したい。心の奥底だったとしても、あなたの中にそういう情熱があるなら、ぜひ、私たちに会いに来てください。</p>
+                    <dl>
+                        <dt>代表取締役</dt>
+                        <dd>中山 豊</dd>
+                    </dl>
+                </div>
+            </section>
+
+            <aside class="l-message-fv__end"></aside>
+        </div>
+    </main>
+
+
+    <%- include('assets/inc/global-cv',pageInfo) -%>
+    <%- include('assets/inc/global-footer',pageInfo) -%>
+    <script src="/assets/js/vendor.js"></script>
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>

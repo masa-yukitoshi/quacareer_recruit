@@ -1,12 +1,12 @@
 body.loading{overflow: hidden;}
-html:has(.b-loading){overflow-y: scroll;}
+html{overflow-y: scroll;}
 .b-loading{
     position: fixed;
     overflow: hidden;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100lvh;
+    height: 100svh;
     z-index: 100;
     background-color: var(--c-primary);
     &__scene{
@@ -44,11 +44,12 @@ html:has(.b-loading){overflow-y: scroll;}
         }
         // &.scene2{background-color: #fff;}
         &--passion{
-            width: 20%;
+            width: 25%;
             position: absolute;
             top: 50%;
             left: 50%;
             translate: -50% -50%;
+            @media #{$bp-s-min}{width: 20%;}
         }
     }
     &__image{
@@ -64,5 +65,17 @@ html:has(.b-loading){overflow-y: scroll;}
             height: 100%;
             object-fit: cover;
         }
+    }
+    &__skip{
+        position: absolute;
+        z-index: 10;
+        bottom: 0;
+        right: 0;
+        padding: 10px;
+        cursor: pointer;
+        font-family: var(--f-serif);
+        color: var(--c-bg);
+        font-size: 14px;
+        letter-spacing: -.02em;
     }
 }

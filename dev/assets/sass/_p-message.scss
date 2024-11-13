@@ -1,0 +1,47 @@
+.p-message{
+    &__section{
+        padding: 200svh 0;
+        position: relative;
+        z-index: 0;
+        &--inner{
+            width: calc(100% - 40px);
+            max-width: 1144px;
+            margin: auto;
+            color: var(--c-bg);
+            h2,p,dl{
+                max-width: 573px;
+            }
+            h2{
+                font-family: var(--f-serif);
+                font-weight: 600;
+                font-size: 38px;
+                line-height: 1.3;
+                letter-spacing: 0;
+                margin-right: -20px;
+                margin-bottom: 30px;
+                @media #{$bp-s-min}{
+                    font-size: 60px;
+                    margin-bottom: 40px;
+                }
+            }
+            p{
+                line-height: 2;
+                margin: 1.5em 0;
+                text-align: justify;
+            }
+            dl{
+                margin-top: 2em;
+                line-height: 1.4;
+                text-align: right;
+                font-family: var(--f-serif);
+                dd{
+                    font-size: 26px;
+                    @media #{$bp-s-min}{
+                        font-size: 29px;
+                    }
+    
+                }
+            }
+        }
+    }
+}

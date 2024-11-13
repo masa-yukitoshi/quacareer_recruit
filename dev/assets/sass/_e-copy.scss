@@ -4,19 +4,24 @@
     flex-direction: column;
     gap: 8px;
     dt svg{
-        height: 40px;
+        height: 19px;
+        @media #{$bp-s-min}{height: 40px;}
     }
     dd svg{
-        height: 122px;
+        height: 54px;
+        @media #{$bp-s-min}{height: 122px;}
     }
     .kv-slider__copy &{
-        gap: 4px;
+        gap: 9px;
+        @media #{$bp-s-min}{gap: 4px;}
         svg{ fill: var(--c-primary); }
         dt svg{
-            height: 25px;
+            height: 20px;
+            @media #{$bp-s-min}{height: 25px;}
         }
         dd svg{
-            height: 76px;
+            height: 58px;
+            @media #{$bp-s-min}{height: 76px;}
         }
     }
 }
@@ -24,27 +29,64 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    svg{ fill: var(--c-primary); }
+    svg{
+        .global-footer &{fill: var(--c-primary);}
+        vertical-align: baseline;
+    }
+    .global-menu &{
+        svg{fill: var(--c-text);}
+    }
     &__catch{
         overflow: hidden;
         display: flex;
         flex-direction: column;
-        width: 85%;
+        width: 225px;
+        @media #{$bp-s-max}{
+            svg{
+                width: auto;
+                height: 100%;
+            }
+        }
+        @media #{$bp-s-min}{
+            width: 85%;
+        }
     }
     &__ja{
-        width: 20%;
+        @media #{$bp-s-max}{
+            height: 19px;
+        }
+        @media #{$bp-s-min}{
+            width: 20%;
+        }
     }
     &__en{
-        padding-top: 1%;
         display: flex;
-        gap: 2%;
+        flex-direction: column;
+        padding-top: 10px;
+        gap: 6px;
+        @media #{$bp-s-min}{
+            flex-direction: row;
+            padding-top: 1%;
+            gap: 2%;
+        }
         span{
-            &:nth-child(1){flex: 175.5576;}
-            &:nth-child(2){flex: 214.8506;}
-            &:nth-child(3){flex: 325.4355;}
+            @media #{$bp-s-max}{
+                height: 39px;
+            }
+            @media #{$bp-s-min}{
+                &:nth-child(1){flex: 175.5576;}
+                &:nth-child(2){flex: 214.8506;}
+                &:nth-child(3){flex: 325.4355;}
+            }
         }
     }
     &__icon{
-        width: 14.5%;
+        width: 64px;
+        @media #{$bp-s-min}{
+            width: 14.5%;
+        }
+        .global-menu &{
+            display: none;
+        }
     }
 }

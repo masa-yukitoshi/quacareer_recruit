@@ -4,23 +4,40 @@
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    gap: 16px;
+    gap: 6px;
+    @media #{$bp-s-min}{
+        gap: 16px;
+    }
     &.center{
         align-items: center;
     }
     small{
         font-family: var(--f-serif);
-        font-size: 26px;
+        font-size: 20px;
         font-weight: 600;
+        @media #{$bp-s-min}{
+            font-size: 26px;
+        }
         transition: clip-path .2s ease-out;
         clip-path: polygon(0 0, 0% 0, 0% 100%, 0% 100%);
         .wf-active &{clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);}
     }
     svg{
         fill: var(--c-primary);
-        height: 71px;
+        height: 44.5px;
+        @media #{$bp-s-min}{
+            height: 71px;
+        }
         transition: clip-path .2s ease-out .1s;
         clip-path: polygon(0 0, 0% 0, 0% 100%, 0% 100%);
         .wf-active &{clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);}
+    }
+    &__wrapper{
+        width: calc(100% - 40px);
+        max-width: 1160px;
+        margin: 130px auto 65px;
+        @media #{$bp-s-min}{
+            margin: 200px auto 170px;
+        }
     }
 }

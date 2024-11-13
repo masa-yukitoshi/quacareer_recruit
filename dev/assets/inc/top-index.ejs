@@ -1,11 +1,62 @@
 <section class="top-index__wapper">
-    <a href="" class="top-index">
-        <img class="top-index__photo" src="/assets/img/dummy.jpg" alt="">
+    <a href="/message/" class="top-index">
+        <picture>
+            <source media="(max-width:599px)" srcset="/assets/img/top_message_sp.jpg">
+            <img class="top-index__photo" src="/assets/img/top_message_pc.jpg" alt="" style="view-transition-name:message;">
+        </picture>
         <span class="top-index__title">
             <%- include('../img/hd_message.svg') -%>
             <span class="top-index__text">
+                <strong>−社長メッセージ−</strong>
+                誰もが必ず「何者か」になれる。
+            </span>
+        </span>
+        <i class="top-index__arrow">
+            <%- include('../img/icon_arrow_middle.svg') -%>
+        </i>
+    </a>
+    <a href="/about/" class="top-index">
+        <picture>
+            <source media="(max-width:599px)" srcset="/assets/img/top_about_sp.jpg">
+            <img class="top-index__photo" src="/assets/img/top_about_pc.jpg" alt="" style="view-transition-name:about;">
+        </picture>
+        <span class="top-index__title">
+            <%- include('../img/hd_about.svg') -%>
+            <span class="top-index__text">
+                <strong>−クオキャリアについて−</strong>
+                私たちの事業や実績、エビデンスを紹介します
+            </span>
+        </span>
+        <i class="top-index__arrow">
+            <%- include('../img/icon_arrow_middle.svg') -%>
+        </i>
+    </a>
+    <a href="/one-day/" class="top-index disabled">
+        <picture>
+            <source media="(max-width:599px)" srcset="/assets/img/top_about_sp.jpg">
+            <img class="top-index__photo" src="/assets/img/top_about_pc.jpg" alt="" style="view-transition-name:one-day;">
+        </picture>
+        <span class="top-index__title">
+            <%- include('../img/hd_one-day.svg') -%>
+            <span class="top-index__text">
+                <strong>−ある社員の1日−</strong>
+                仕事に密着しながら社員の想いを紹介します
+            </span>
+        </span>
+        <i class="top-index__arrow">
+            <%- include('../img/icon_arrow_middle.svg') -%>
+        </i>
+    </a>
+    <a href="/chat/" class="top-index disabled">
+        <picture>
+            <source media="(max-width:599px)" srcset="/assets/img/top_about_sp.jpg">
+            <img class="top-index__photo" src="/assets/img/top_about_pc.jpg" alt="" style="view-transition-name:chat;">
+        </picture>
+        <span class="top-index__title">
+            <%- include('../img/hd_chat.svg') -%>
+            <span class="top-index__text">
                 <strong>−チーム座談会−</strong>
-                チームでの仕事、プロジェクトストーリー、社風など、<br>
+                チームでの仕事、プロジェクトストーリー、<br class="sp">社風など、<br class="pc">
                 ざっくばらんに語ってもらいました
             </span>
         </span>
@@ -13,14 +64,34 @@
             <%- include('../img/icon_arrow_middle.svg') -%>
         </i>
     </a>
-    <a href="" class="top-index">
-        <img class="top-index__photo" src="/assets/img/dummy.jpg" alt="">
+    <a href="/gallery/" class="top-index disabled">
+        <picture>
+            <source media="(max-width:599px)" srcset="/assets/img/top_about_sp.jpg">
+            <img class="top-index__photo" src="/assets/img/top_about_pc.jpg" alt="" style="view-transition-name:gallery;">
+        </picture>
         <span class="top-index__title">
-            <%- include('../img/hd_about.svg') -%>
+            <%- include('../img/hd_gallery.svg') -%>
             <span class="top-index__text">
-                <strong>−チーム座談会−</strong>
-                チームでの仕事、プロジェクトストーリー、社風など、<br>
-                ざっくばらんに語ってもらいました
+                <strong>−写真で知るクオキャリア−</strong>
+                社員がスマホでクオキャリアの日常を撮影<br>
+                私たちのリアルが詰まっています
+            </span>
+        </span>
+        <i class="top-index__arrow">
+            <%- include('../img/icon_arrow_middle.svg') -%>
+        </i>
+    </a>
+    <a href="/welfare/" class="top-index disabled">
+        <picture>
+            <source media="(max-width:599px)" srcset="/assets/img/top_about_sp.jpg">
+            <img class="top-index__photo" src="/assets/img/top_about_pc.jpg" alt="" style="view-transition-name:welfare;">
+        </picture>
+        <span class="top-index__title">
+            <%- include('../img/hd_welfare.svg') -%>
+            <span class="top-index__text">
+                <strong>−環境・制度−</strong>
+                成長を支援する制度や、働き方など、クオキャリアには<br>
+                社員の声を活かした環境・制度が整っています
             </span>
         </span>
         <i class="top-index__arrow">

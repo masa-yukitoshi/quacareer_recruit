@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<% pageInfo = {
+    data:{
+        slug:'info',
+        title:'Quacareer Recruit Site',
+        description:'',
+    }
+}; -%>
+<%- include('assets/inc/meta',pageInfo) -%>
+<body>
+    <%- include('assets/inc/global-header',pageInfo) -%>
+    <%- include('assets/inc/global-menu',pageInfo) -%>
+
+    <main>
+        <section class="e-pagetitle__wrapper p-info__pagetitle">
+            <h1 class="e-pagetitle">
+                <small>募集要項</small>
+                <div class="sp"><%- include('assets/img/hd_info_sp.svg') -%></div>
+                <div class="pc"><%- include('assets/img/hd_info.svg') -%></div>
+            </h1>
+        </section>
+        <picture>
+            <source media="(max-width:599px)" srcset="/assets/img/info_fv_sp.jpg">
+            <img class="p-info__fv" src="/assets/img/info_fv_pc.jpg" alt="" style="view-transition-name:info;">
+        </picture>
+        <section class="p-info__section">
+            <h2 class="e-heading__info js_inview">
+                <small>採用情報</small>
+                INFORMATION
+            </h2>
+            <%- include('assets/inc/b-information') -%>
+        </section>
+        <section class="p-info__section">
+            <h2 class="e-heading__info js_inview">
+                <small>選考フロー</small>
+                FLOW
+            </h2>
+            <%- include('assets/inc/b-flow') -%>   
+        </section>
+        <section class="p-info__section">
+            <h2 class="e-heading__info js_inview">
+                <small>採用FAQ</small>
+                FAQ
+            </h2>
+            <%- include('assets/inc/b-faq') -%>
+        </section>
+    </main>
+
+
+    <%- include('assets/inc/global-cv',pageInfo) -%>
+    <%- include('assets/inc/global-footer',pageInfo) -%>
+    <script src="/assets/js/vendor.js"></script>
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>

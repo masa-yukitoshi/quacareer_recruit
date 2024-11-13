@@ -1,0 +1,56 @@
+.e-card{
+    display: block;
+    &__image{
+        min-width: 0;
+        width: 100%;
+        aspect-ratio: 274 / 190;
+        object-fit: cover;
+        margin-bottom: 18px;
+        @media #{$bp-s-min}{
+            margin-bottom: 24px;
+        }
+    }
+    &__title{
+        font-size: 14px;
+        line-height: 1;
+        @include fw(700);
+        color: var(--c-primary);
+        margin-bottom: 16px;
+        @media #{$bp-s-min}{
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        small{
+            display: block;
+            font-size: 9.6px;
+            @include fw(500);
+            color: var(--c-text);
+            margin-bottom: 5px;
+            @media #{$bp-s-min}{
+                font-size: 12px;
+                margin-bottom: 8px;
+            }
+        }
+    }
+    &__text{
+        font-size: 11px;
+        text-align: justify;
+        @media #{$bp-s-min}{
+            font-size: 14px;
+        }
+    }
+}
+.e-card-wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: auto;
+    width: 220px;
+    @media #{$bp-s-min}{
+        flex-direction: row;
+        width: auto;
+        max-width: 596px;
+    }
+    @media #{$bp-l-min}{gap: 48px;}
+    .e-card{flex: 1;}
+}

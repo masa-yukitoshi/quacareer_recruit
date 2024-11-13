@@ -25,10 +25,10 @@ $bp-l-max:"(max-width:1024px)";
     --f-sans: source-han-sans-jp-variable, sans-serif;
     --f-serif: shippori-mincho, serif;
 }
-
 @import "base";
 @import "swiper-bundle.min";
 @import "swiper";
+@import "mouseStalker";
 
 @media #{$bp-s-max}{
     .pc{display: none;}
@@ -38,15 +38,17 @@ $bp-l-max:"(max-width:1024px)";
     .pc{display: block;}
     .sp{display: none;}
 }
-
+.grecaptcha-badge { visibility: hidden; }
 html{
     background-color: var(--c-document);
     font-family: var(--f-sans);
     @include fw(400);
     font-weight: unset;
-    font-size: 18px;
+    font-size: 14px;
     letter-spacing: 0.1em;
-    
+    @media #{$bp-s-min}{
+        font-size: 18px;
+    }
 }
 svg{
     fill: var(--c-text);
@@ -60,11 +62,13 @@ svg{
 
 //グローバル部品
 @import "global-header";
+@import "global-menu";
 @import "global-footer";
 @import "global-cv";
 
 @import "kv-slider";
 @import "top-index";
+@import "top-statement";
 
 @import "l-about-sticky";
 @import "l-message-fv";
@@ -75,6 +79,8 @@ svg{
 @import "b-flow";
 @import "b-faq";
 @import "b-job-block";
+@import "b-aco";
+@import "b-about-slider";
 
 @import "e-copy";
 @import "e-navigation";
@@ -82,3 +88,8 @@ svg{
 @import "e-heading";
 @import "e-about-navi";
 @import "e-headline";
+@import "e-card";
+
+@import "p-message";
+@import "p-about";
+@import "p-info";

@@ -1,25 +1,48 @@
 .e-navigation{
-    display: flex;
-    justify-content: space-between;
+    width: calc(100% - 80px);
+    @media (max-width:370px){width: calc(100% - 40px);}
     max-width: 990px;
+    display: flex;
+    flex-direction: column;
     margin: auto;
+    gap: 26px;
+    @media #{$bp-s-min}{
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 38px;
+    }
     &-list{
         display: flex;
         flex-direction: column;
-        gap: 38px;
+        gap: 26px;
+        @media #{$bp-s-min}{
+            gap: 38px;
+        }
         &__item{
             width: fit-content;
+            &.disabled{
+                opacity: 0.2;
+                pointer-events: none;
+                user-select: none;
+            }
             a{
                 display: flex;
                 align-items: flex-start;
-                gap: 20px;
+                gap: 15px;
+                @media #{$bp-s-min}{
+                    gap: 20px;
+                }
                 i{
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    width: 36px;
                     aspect-ratio: 36/44;
                     background-color: var(--c-primary);
+                    width: 28px;
+                    @media #{$bp-s-min}{
+                        width: 36px;
+                    }
                     img{
                         width: 50%;
                     }
@@ -29,16 +52,25 @@
                     flex-direction: column;
                     justify-content: flex-start;
                     align-items: flex-start;
-                    gap: 10px;
+                    gap: 6px;
+                    @media #{$bp-s-min}{
+                        gap: 10px;
+                    }
                 }
                 svg{
                     width: auto;
-                    height: 21.5px;
+                    height: 17px;
                     line-height: 0;
+                    @media #{$bp-s-min}{
+                        height: 21.5px;
+                    }
                 }
                 small{
-                    font-size: 12px;
+                    font-size: 10px;
                     line-height: 1;
+                    @media #{$bp-s-min}{
+                        font-size: 12px;
+                    }
                 }
             }
             &:hover a{
@@ -47,9 +79,14 @@
         }
     }
     &-sublist{
+        margin-top: 30px;
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 16px;
+        @media #{$bp-s-min}{
+            margin-top: 0;
+            gap: 20px;
+        }
         &__item{
             font-size: 12px;
             width: fit-content;

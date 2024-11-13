@@ -1,8 +1,14 @@
 .e-about-navi{
-    width: 244px;
     display: flex;
-    flex-direction: column;
-    gap: 35px;
+    padding-top: 20px;
+    gap: 20px;
+    @media #{$bp-s-min}{
+        padding-top: 0;
+        flex-direction: column;
+        gap: 35px;
+        width: 170px;
+    }
+    @media #{$bp-l-min}{width: 244px;}
     &__item{
         font-family: var(--f-serif);
         font-weight: 600;
@@ -11,29 +17,40 @@
         a{
             position: relative;
             display: flex;
-            padding-right: 70px;
-            gap: 8px;
+            gap: 3px;
+            padding-bottom: 30px;
+            @media #{$bp-s-min}{gap: 8px;padding-bottom: 0;padding-right: 30px;}
+            @media #{$bp-l-min}{padding-right: 70px;}
             span{
                 display: flex;
                 flex-direction: column;
                 gap: 6px;
             }
             strong{
-                font-size: 28px;
+                font-size: 22px;
+                @media #{$bp-s-min}{font-size: 28px;}
             }
             small{
-                font-size: 12px;
+                font-size: 11px;
+                @media #{$bp-s-min}{font-size: 12px;}
             }
             &::after{
                 content: "";
                 display: block;
-                height: 2px;
-                width: 0px;
                 background-color: currentColor;
                 position: absolute;
-                right: 0;
-                top: 30%;
-                transition: width .4s;
+                height: 0px;
+                width: 1px;
+                right: 50%;
+                bottom: 0;
+                @media #{$bp-s-min}{
+                    height: 2px;
+                    width: 0px;
+                    right: 0;
+                    top: 30%;
+                    bottom: auto;
+                    transition: width .4s;    
+                }
             }
         }
         &.current{
@@ -42,7 +59,11 @@
         }
         &.current a,
         a:hover{
-            &::after{width: 70px;}
+            &::after{
+                height: 20px;
+                @media #{$bp-s-min}{height: 2px;width: 20px;}
+                @media #{$bp-l-min}{width: 70px;}
+            }
         }
     }
 }

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja">
+<% pageInfo = {
+    data:{
+        slug:'about',
+        title:'Quacareer Recruit Site',
+        description:'',
+    }
+}; -%>
+<%- include('assets/inc/meta',pageInfo) -%>
+<body>
+    <%- include('assets/inc/global-header',pageInfo) -%>
+    <%- include('assets/inc/global-menu',pageInfo) -%>
+
+    <main>
+        <div class="p-about__fv">
+            <picture>
+                <source media="(max-width:599px)" srcset="/assets/img/top_about_sp.jpg">
+                <img class="p-about__fv--bg" src="/assets/img/top_about_pc.jpg" alt="" style="view-transition-name:about;">
+            </picture>
+            <section class="p-about__statement">
+                <h1 class="e-pagetitle">
+                    <small>クオキャリアについて</small>
+                    <%- include('assets/img/hd_about.svg') -%>
+                </h1>
+                <div class="p-about__statement--inner">
+                    <h2>人生を全うできる社会を、<br>歯科からつくる。</h2>
+                    <p>人生100年時代が現実になりつつある現代。人の生き方が変われば、社会にも変化が求められます。超高齢化社会の中で医療費増大やQOL（クオリティ・オブ・ライフ）の低下など、さまざまな課題が浮き彫りになっています。クオキャリアは「歯科×人材」を基盤に、「人生を全うできる社会を、歯科からつくる」をプロミスとし、さまざまな角度から課題解決をめざしています。</p>
+                </div>
+            </section>
+        </div>
+
+        <div class="e-heading__about" id="business">
+            <picture>
+                <source media="(max-width:599px)" srcset="/assets/img/about_h1_sp.jpg">
+                <img class="js-parallax" src="/assets/img/about_h1_pc.jpg" alt="">
+            </picture>
+            <h2 class="e-heading__about--text js_inview">
+                <i>1</i>
+                BUSINESS
+                <small>事業展開</small>
+            </h2>
+        </div>
+
+        <div class="l-about-sticky">
+            <i class="l-about-sticky__title"><%- include('assets/img/hd_about.svg') -%></i>
+            <nav class="l-about-sticky__nav">
+                <%- include('assets/inc/e-about-navi',{current:1}) -%>
+            </nav>
+            <div class="l-about-sticky__content">
+                <div class="l-about-sticky__content-inner">
+                    <div class="e-headline">
+                        <h3 class="e-headline__chatch">人から始まり歯科へ、<br class="sp">社会へ。<br>大きなうねりを<br class="sp">生み出していく。</h3>
+                        <p class="e-headline__body">クオキャリアの事業は、一人の求職者を見つめるところから始まりました。その源泉は「求職者」「歯科」「社会」「企業」「学校」へと広がり、より多くの人や社会を巻き込みながら大きなうねりへと変わっています。</p>
+                        <picture>
+                            <source media="(max-width:599px)" srcset="/assets/img/about_zu_sp.png">
+                            <img src="/assets/img/about_zu.png" alt="">
+                        </picture>
+                    </div>
+                </div>
+                <a class="l-about-sticky__viewmore" href="" target="_blank">
+                    <div class="l-about-sticky__viewmore--inner">
+                        <p>求職者 /<br>歯科医院向けサービス</p>
+                        <i>View <br>more</i>
+                    </div>
+                </a>
+                <div class="l-about-sticky__content-inner">
+                    <div class="e-headline">
+                        <h3 class="e-headline__chatch">求人メディアを通して、<br>社会課題の解決に挑む。</h3>
+                        <p class="e-headline__body">歯科医師や歯科衛生士が長くキャリアを重ねていけるよう、労働環境や就業者のキャリア形成といった雇用にまつわる課題に対してまっとうな基準を設け、メディアを制作・運用しています。</p>
+                    </div>
+                    <%- include('assets/inc/b-about-slider') -%>
+                </div>
+                <a class="l-about-sticky__viewmore" href="" target="_blank">
+                    <div class="l-about-sticky__viewmore--inner">
+                        <p>社会への取り組み</p>
+                        <i>View <br>more</i>
+                    </div>
+                </a>
+                <div class="l-about-sticky__content-inner">
+                    <div class="e-headline">
+                        <h3 class="e-headline__chatch">一人でも多くの人材を<br class="sp">歯科業界に輩出し、<br>予防歯科の推進を後押し。</h3>
+                        <p class="e-headline__body">人生100年時代の健康を担う存在に歯科がなるためには、歯科業界への人材の流入が不可欠です。歯科に特化した人材企業の使命として、歯科業界を志す人を支える取り組みを行っています。</p>
+                    </div>
+                    <div class="e-card-wrap">
+                        <a class="e-card" href="https://quaview.jp/" target="_blank">
+                            <img class="e-card__image" src="/assets/img/about_thumb11.jpg" alt="">
+                            <h4 class="e-card__title">
+                                <small>歯科衛生士を目指す方のキャリア教育・学習支援</small>
+                                クオキャリア奨学金
+                            </h4>
+                            <p class="e-card__text">単なる資金援助にとどまらず、奨学生同士の交流の場の提供などを通して、就職に対する意識啓発や学生生活の活性化にも貢献。</p>
+                        </a>
+                        <a class="e-card" href="https://haisyasan.tv/" target="_blank">
+                            <img class="e-card__image" src="/assets/img/about_thumb12.jpg" alt="">
+                            <h4 class="e-card__title">
+                                <small>予防歯科啓発WEBメディア</small>
+                                予防の歯医者さんTV
+                            </h4>
+                            <p class="e-card__text">予防歯科を身近に感じてもらうため、歯ブラシの選び方から全身疾患とお口の関係まで、口腔と健康に関する情報を動画で発信。</p>
+                        </a>
+                    </div>
+                </div>
+                <a class="l-about-sticky__viewmore" href="" target="_blank">
+                    <div class="l-about-sticky__viewmore--inner">
+                        <p>企業向けサービス</p>
+                        <i>View <br>more</i>
+                    </div>
+                </a>
+                <div class="l-about-sticky__content-inner">
+                    <div class="e-headline">
+                        <h3 class="e-headline__chatch">歯科医院のネットワークと<br class="sp">企業を結び、<br class="pc">予防歯科の<br class="sp">ムーブメントを加速。</h3>
+                        <p class="e-headline__body">近年注目が高まる「予防歯科」。クオキャリアが展開する多彩なメディアや、培ってきた歯科医院や教育機関とのネットワークを活かして、口腔ケアを切り口とした企業の広報・ブランディング支援・マッチング支援を行っています。</p>
+                    </div>
+                    <div class="e-card-wrap">
+                        <a class="e-card" href="https://haisyasan.tv/magazine/yobou2023/" target="_blank">
+                            <img class="e-card__image" src="/assets/img/about_thumb13.jpg" alt="">
+                            <h4 class="e-card__title">
+                                <small>口腔の健康と暮らしにまつわるフリーペーパー</small>
+                                予防の歯医者さん
+                            </h4>
+                            <p class="e-card__text">口腔の健康から始めるカラダと心にいい暮らしを届ける一般向けフリーペーパー。企業とのタイアップコンテンツを企画。</p>
+                        </a>
+                        <a class="e-card" href="https://www.quacareer.co.jp/business/enterprise/#service01" target="_blank">
+                            <img class="e-card__image" src="/assets/img/about_thumb14.jpg" alt="">
+                            <h4 class="e-card__title">
+                                <small>歯科衛生士向け予防歯科教育事業</small>
+                                企業タイアップセミナー
+                            </h4>
+                            <p class="e-card__text">食品メーカーなどさまざまな企業とタイアップし、歯科衛生士学校で学ぶ学生へ向けてセミナーを開催。</p>
+                        </a>
+                    </div>
+                </div>
+                <a class="l-about-sticky__viewmore" href="" target="_blank">
+                    <div class="l-about-sticky__viewmore--inner">
+                        <p>歯科衛生士養成学校向け<br class="sp">サービス</p>
+                        <i>View <br>more</i>
+                    </div>
+                </a>
+                <div class="l-about-sticky__content-inner">
+                    <div class="e-headline">
+                        <h3 class="e-headline__chatch">学びのサポートを通して、<br>歯科業界への人材流入を<br class="sp">促進。</h3>
+                        <p class="e-headline__body">歯科衛生士として着実にキャリアを重ねていけるよう、全国の歯科衛生士養成学校や歯科衛生士養成学校で学ぶ学生に向け、キャリアガイダンスや学習支援ツールを提供しています。</p>
+                    </div>
+                    <div class="e-card-wrap">
+                        <a class="e-card" href="https://www.quacareer.co.jp/business/school/#service01" target="_blank">
+                            <img class="e-card__image" src="/assets/img/about_thumb15.jpg" alt="">
+                            <h4 class="e-card__title">
+                                <small>無料キャリアガイダンスを提供</small>
+                                歯科衛生士キャリア形成支援事業
+                            </h4>
+                            <p class="e-card__text">全国の歯科衛生士養成学校で学ぶ学生を対象に、無料のキャリアガイダンスを完全オーダーメイドプログラムで実施。</p>
+                        </a>
+                        <a class="e-card" href="https://www.webqua.jp/dr/kakomonclub" target="_blank">
+                            <img class="e-card__image" src="/assets/img/about_thumb16.jpg" alt="">
+                            <h4 class="e-card__title">
+                                <small>独自の試験対策アプリを開発・運営</small>
+                                国家試験対策
+                            </h4>
+                            <p class="e-card__text">人材創出の関門である国家試験において、学生が効率よく対策学習を進められるよう国家試験対策アプリを開発・運営。</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="e-heading__about" id="job">
+            <picture>
+                <source media="(max-width:599px)" srcset="/assets/img/about_h2_sp.jpg">
+                <img class="js-parallax" src="/assets/img/about_h2_pc.jpg" alt="">
+            </picture>
+            <h2 class="e-heading__about--text js_inview">
+                <i>2</i>
+                JOB
+                <small>仕事内容</small>
+            </h2>
+        </div>
+
+        <div class="l-about-sticky">
+            <i class="l-about-sticky__title"><%- include('assets/img/hd_about.svg') -%></i>
+            <nav class="l-about-sticky__nav">
+                <%- include('assets/inc/e-about-navi',{current:2}) -%>
+            </nav>
+            <div class="l-about-sticky__content">
+                <div class="l-about-sticky__content-inner">
+                    <div class="e-headline">
+                        <h3 class="e-headline__chatch">経営者に伴走し、<br>経営課題、社会課題の<br class="sp">解決をめざす。</h3>
+                        <p class="e-headline__body">入社後はまず営業として、歯科医院の採用支援を行います。主にやり取りするのは経営者や人事担当者の方々。将来のビジョンや採用課題に対し、自社メディア・イベント企画などを活用した採用支援プランを提案します。本配属後はそれぞれの専門領域から医院の課題解決に取り組み、ビジョン達成を支援します。</p>
+                    </div>
+                    <h3 class="p-about__heading">入社後の流れ<small>※お客様理解のため、入社1年目は新規開拓営業を経験していただきます。</small></h3>
+                    <%- include('assets/inc/b-flow-small') -%>
+                    <h3 class="p-about__heading">部門・職種例</h3>
+                    <%- include('assets/inc/b-job-block') -%>
+                </div>
+            </div>
+        </div>    
+
+
+        <div class="e-heading__about" id="industry">
+            <picture>
+                <source media="(max-width:599px)" srcset="/assets/img/about_h3_sp.jpg">
+                <img class="js-parallax" src="/assets/img/about_h3_pc.jpg" alt="">
+            </picture>
+            <h2 class="e-heading__about--text js_inview">
+                <i>3</i>
+                INDUSTRY
+                <small>業界</small>
+            </h2>
+        </div>
+
+        <div class="l-about-sticky">
+            <i class="l-about-sticky__title"><%- include('assets/img/hd_about.svg') -%></i>
+            <nav class="l-about-sticky__nav">
+                <%- include('assets/inc/e-about-navi',{current:3}) -%>
+            </nav>
+            <div class="l-about-sticky__content">
+                <div class="l-about-sticky__content-inner">
+                    <div class="e-headline">
+                        <h3 class="e-headline__chatch">国としての課題に<br class="sp">立ち向かう<br>クオキャリアの挑戦。</h3>
+                        <p class="e-headline__body">「人生を全うできる社会を、歯科からつくる」</p>
+                    </div>
+                    <%- include('assets/inc/b-aco') -%>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+
+    <%- include('assets/inc/global-cv',pageInfo) -%>
+    <%- include('assets/inc/global-footer',pageInfo) -%>
+    <script src="/assets/js/vendor.js"></script>
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>

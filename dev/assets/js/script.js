@@ -1,5 +1,23 @@
 (function(){
     const $body = $("body");
+    document.documentElement.style.setProperty('--vw', document.documentElement.clientWidth + 'px');
+    $(window).on('resize orientationchange', function () {
+      document.documentElement.style.setProperty('--vw', document.documentElement.clientWidth + 'px');
+    })
+    
+    if($(".js-menu")[0]){
+        $(".js-menu").on("click",function(){
+            $body.toggleClass("is-menu-open");
+            return false;
+        });
+        // $('.global-menu').on('click', function(event) {
+        //     if (!$(event.target).closest('.js-closest').length) {
+        //         if($body.hasClass("is-menu-open")){
+        //             $body.removeClass("is-menu-open");
+        //         }
+        //     }
+        // });
+    }
 
     if($(".b-faq")[0]){
         $(".b-faq").each(function(){
@@ -28,13 +46,13 @@
             scale: 1,
             scrollTrigger: {
                 trigger: '.l-message-fv__pagetitle',
-                start: 'top bottom',
-                end: 'top top',
+                start: 'bottom bottom',
+                // end: 'top top',
                 // markers: true, 
                 scrub: true,
             }
         });
-        gsap.to('.l-message-fv__images', {
+        gsap.to('.l-message-fv__images--inner', {
             scale: 0.6,
             scrollTrigger: {
                 trigger: '.l-message-fv__end',
@@ -59,13 +77,19 @@
             },
             pagination: {
                 el: '.swiper-pagination',
-                clickable: true,
-                renderBullet: function (index, className) {
-                    let num = index + 1;
-                    return (
-                        '<div class="' + className + '"><div class="pagination_num">0' + num + '</div><div class="pagination_bar"></div></div>'
-                    )
-                },
+                // clickable: true,
+                type: 'progressbar',
+                // renderBullet: function (index, className) {
+                //     let num = index + 1;
+                //     return (
+                //         '<div class="' + className + '"><div class="pagination_num">o' + num + '</div><div class="pagination_bar"></div></div>'
+                //     )
+                // },
+                // renderProgressbar: function(progressbarFillClass){
+                //     return (
+                //         '<div class="swiper-pagination-bullet"><div class="pagination_num">o1</div><div class="pagination_bar"><span class="'+progressbarFillClass+'"></span></div><div class="pagination_num">o3</div></div>'
+                //     )
+                // },
             },
         });
         if($(".b-loading")[0]){
@@ -74,23 +98,106 @@
     }
 
 
+    if($(".b-about-slider")[0]){
+        const about_slider = new Swiper('.b-about-slider', {
+            slidesPerView: "auto",
+            spaceBetween: 30,
+            slidesOffsetAfter: 30,
+            pagination: {
+              el: '.b-about-slider__pagination',
+              type: 'fraction' ,
+              formatFractionCurrent: function (number) {
+                return ('0' + number).slice(-2);
+              },
+              formatFractionTotal: function (number) {
+                return ('0' + number).slice(-2);
+              },    
+            },
+            navigation: {
+              nextEl: '.b-about-slider__next',
+              prevEl: '.b-about-slider__prev',
+            },
+        });
+    }
+
+
     if($(".b-loading")[0]){
         const $b_loading = $(".b-loading");
+        const $skip = $(".b-loading__skip");
         const time = 3000;
         $body.addClass("loading");
         $b_loading.attr("data-scene",1);
+        function loadingend(){
+            $b_loading.fadeOut(function(){
+                $body.removeClass("loading");
+                kv_slider.autoplay.start();
+            });
+        }
         setTimeout(function(){
             $b_loading.attr("data-scene",2);
             setTimeout(function(){
                 $b_loading.attr("data-scene",3);
                 setTimeout(function(){
-                    $b_loading.fadeOut(function(){
-                        $body.removeClass("loading");
-                        kv_slider.autoplay.start();
-                    });
+                    loadingend();
                 },time);
             },time);
         },time);
+        $skip.on("click",function(){
+            loadingend();
+        });
+    }
+
+    if($(".b-aco")[0]){
+        $(".b-aco").each(function(){
+            if( !$(this).hasClass("is-open") ){
+                $(this).find(".b-aco__body").hide();
+            }
+        });
+        $(".b-aco__head").on("click",function(){
+            $(this).parent(".b-aco").toggleClass("is-open");
+            $(this).next(".b-aco__body").slideToggle();
+        });
+    }
+
+    if($(".js-parallax")[0]){
+        let target = document.getElementsByClassName("js-parallax");
+        let parallaxConfig = {
+          delay: 0, // スクロール止めてから動く秒数
+          orientation: "up", // 動く方向
+          scale: 1.1, // 動く大きさ
+        };
+        const parallax_instance = new simpleParallax(target, parallaxConfig);
+    }
+
+
+    if($(".l-about-sticky")[0]){
+        const $head = $('.global-header');
+        let isRunning = false;
+        const checkGetBounding = function(){
+          if (!isRunning) {
+            isRunning = true;
+            window.requestAnimationFrame(function(){
+              const recta = $head[0].getBoundingClientRect();
+              const rectb = [];
+              const flg = [];
+              $('.l-about-sticky').each(function(i){
+                rectb[i] = this.getBoundingClientRect();
+                if(rectb[i].top <= recta.bottom && recta.top <= rectb[i].bottom && rectb[i].left <= recta.right && recta.left <= rectb[i].right){
+                  flg[i] = true;
+                }else{
+                  flg[i] = false;
+                }
+                if(flg.includes(true)){
+                  $body.addClass('is-header-observe');
+                }else{
+                  $body.removeClass('is-header-observe');
+                }
+              });
+              isRunning = false;
+            });
+          }
+        }
+        $(window).on("load scroll", checkGetBounding );
     }
 
 

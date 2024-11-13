@@ -63,7 +63,7 @@ gulp.task('upload', function () {
 });
 gulp.task('ftp', ['upload'],function(){
     console.log('↓TEST-UP URL↓\u001b[32m');
-    console.log('https://hakkenzukan.den-web.com/');
+    console.log('https://quacareer.den-web.com/');
     console.log('\u001b[0m↑TEST-UP URL↑');
 });
 
@@ -184,7 +184,7 @@ gulp.task('js', function(){
       'dev/assets/js/vendor/swiper-bundle.min.js',
       'dev/assets/js/vendor/gsap.min.js',
       'dev/assets/js/vendor/ScrollTrigger.min.js',
-      // 'dev/assets/js/vendor/jquery-modal-video.min.js',
+      'dev/assets/js/vendor/simpleParallax.umd.js',
       // 'dev/assets/js/vendor/fancybox.umd.js',
       // 'dev/assets/js/vendor/lightbox.min.js',
     ])
@@ -192,8 +192,8 @@ gulp.task('js', function(){
     .pipe( gulp.dest('dest/assets/js') );
   var normal = gulp.src([
       'dev/assets/js/inview.js',
-      'dev/assets/js/scroll_direction.js',
-      // 'dev/assets/js/scroll_onoff.js',
+      // 'dev/assets/js/scroll_direction.js',
+      'dev/assets/js/mouseStalker.js',
       // 'dev/assets/js/global_navigation.js',
       // 'dev/assets/js/viewport.js',
       // 'dev/assets/js/video.js',

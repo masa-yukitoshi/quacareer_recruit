@@ -1,11 +1,12 @@
 .kv-slider{
     position: relative;
     overflow: hidden;
+    z-index: 0;
     &__swiper{
         pointer-events: none;
         .swiper-slide{
             width: calc( var(--vw) * 100 );
-            height: 100lvh;
+            height: 100svh;
             overflow: hidden;
             img{
                 width: 100%;
@@ -13,59 +14,140 @@
                 object-fit: cover;
             }
         }
-        .swiper-pagination{
-            padding: 20px;
+        &--progress{
+            font-feature-settings: "onum";
+            position: absolute;
+            z-index: 10;
+            left: 40px;
+            bottom: 20px;
             display: flex;
+            align-items: center;
             gap: 10px;
-        }
-        .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-            margin: 0;
-        }
-        .swiper-pagination-bullet{
-            opacity: 1;
-            width: auto;
-            height: auto;
-            background-color: transparent;
             line-height: 1;
             font-family: var(--f-serif);
             font-size: 16px;
             font-weight: 500;
             letter-spacing: 0;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .pagination_bar{
-            width: 60px;
-            height: 2px;
-            background-color: rgba(#808080,.8);
-            position: relative;
-            &::after{
-                content: "";
-                display: block;
-                position: absolute;
-                width: 0%;
-                height: 100%;
+            @media #{$bp-s-max}{
+                font-size: 12px;
+                width: fit-content;
+                flex-direction: column;
+                padding-bottom: 30%;
+                gap: 55px;
+                top: 0;
+                bottom: 0;
+                left: -35px;
+                margin: auto;
+                justify-content: center;
+            }
+            .swiper-pagination-progressbar.swiper-pagination-horizontal{
+                position: static;
+                width: 100px;
+                height: 1px;
+                @media #{$bp-s-max}{
+                    rotate: 90deg;
+                }
+            }
+            .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
                 background-color: var(--c-primary);
             }
         }
-        .swiper-pagination-bullet.swiper-pagination-bullet-active .pagination_bar::after{
-            animation: pagination_bar 5s linear forwards;
-        }
+        // .swiper-pagination{
+        //     font-feature-settings: "onum";
+        //     padding: 20px;
+        //     top: auto;
+        //     bottom: 0;
+        //     width: fit-content;
+        //     height: auto;
+        //     display: flex;
+        //     gap: 10px;
+        //     @media #{$bp-s-max}{
+        //         width: fit-content;
+        //         flex-direction: column;
+        //         padding: 9px;
+        //         padding-bottom: 30%;
+        //         gap: 9px;
+        //         top: 0;
+        //         bottom: 0;
+        //         margin: auto;
+        //         justify-content: center;
+        //     }
+        // }
+        // .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+        //     margin: 0;
+        // }
+        // .swiper-pagination-bullet{
+        //     opacity: 1;
+        //     width: auto;
+        //     height: auto;
+        //     background-color: transparent;
+        //     line-height: 1;
+        //     font-family: var(--f-serif);
+        //     font-size: 16px;
+        //     font-weight: 500;
+        //     letter-spacing: 0;
+        //     display: flex;
+        //     align-items: center;
+        //     gap: 8px;
+        //     @media #{$bp-s-max}{
+        //         // flex-direction: column;
+        //         gap: 3px;
+        //         font-size: 12px;
+        //         line-height: 1;
+        //         writing-mode: vertical-rl;
+        //     }
+        // }
+        // .pagination_bar{
+        //     width: 60px;
+        //     height: 2px;
+        //     background-color: rgba(#808080,.8);
+        //     position: relative;
+        //     @media #{$bp-s-max}{
+        //         width: 2px;
+        //         height: 30px;
+        //     }
+        //     &::after{
+        //         content: "";
+        //         display: block;
+        //         position: absolute;
+        //         width: 0%;
+        //         height: 100%;
+        //         @media #{$bp-s-max}{
+        //             width: 100%;
+        //             height: 0;
+        //         }
+        //         background-color: var(--c-primary);
+        //     }
+        // }
+        // .swiper-pagination-bullet.swiper-pagination-bullet-active .pagination_bar::after{
+        //     animation: pagination_bar 5s linear forwards;
+        //     @media #{$bp-s-max}{
+        //         animation: scroll_bar 5s linear forwards;
+        //     }
+        // }
     }
     &__copy{
         position: absolute;
         z-index: 1;
-        top: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        width: calc(100% - 200px);
-        height: 100%;
-        display: flex;
-        align-items: center;
+        @media #{$bp-s-max}{
+            bottom: -2px;
+            left: 0px;
+        }
+        @media #{$bp-s-min}{
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: calc(100% - 200px);
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
     }
     &__scroll{
+        @media #{$bp-s-max}{
+            display: none;
+        }
         position: absolute;
         z-index: 1;
         bottom: 0;
@@ -101,13 +183,15 @@
         .passion_iframe{
             pointer-events: all;
             position: absolute;
-            top: 74%;
-            left: 52%;
+            top: 69%;
+            left: 53.5%;
             width: 8%;
-            // aspect-ratio: 226 / 329;
-            .kv1 &{left: 52%;}
-            .kv2 &{left: 60%;}
-            .kv3 &{left: 55%;}
+            @media #{$bp-s-min}{
+                top: 74%;
+                .kv1 &{left: 52%;}
+                .kv2 &{left: 60%;}
+                .kv3 &{left: 55%;}
+            }
         }
     }
 }

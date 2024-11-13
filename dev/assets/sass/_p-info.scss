@@ -1,0 +1,26 @@
+.p-info{
+    &__pagetitle{
+        margin-bottom: 75px;
+        @media #{$bp-s-max}{
+            .e-pagetitle svg{height: 100px;}
+        }
+        @media #{$bp-s-min}{
+            margin-bottom: 80px;
+        }
+    }
+    &__fv{
+        width: 100%;
+        object-fit: cover;
+        margin-bottom: 45px;
+        @media #{$bp-s-min}{
+            margin-bottom: 130px;
+            max-height: 370px;
+        }
+    }
+    &__section{
+        &+&{
+            margin-top: 90px;
+            @media #{$bp-s-min}{margin-top: 155px;}
+        }
+    }
+}

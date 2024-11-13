@@ -1,49 +1,61 @@
 .b-information{
     position: relative;
     display: flex;
-    width: calc(100% - 40px);
+    flex-direction: column;
+    width: 100%;
     max-width: 1046px;
     margin: auto;
-    gap: 90px;
-    &+&{
-        border-top: 1px solid #999;
-    }
-    &::before{
-        content: "";
-        display: block;
-        position: absolute;
-        top: -1px;
-        left: 0;
-        width: calc((100svw - 100%) / 2);
-        height: calc(100% + 2px);
-        background-color: var(--c-bg);
-        translate: -100% 0;
-    }
-    &:first-child{
-        .b-information__head,
-        .b-information__body{
-            padding-top: 90px;
+    gap: 0;
+    @media #{$bp-s-min}{
+        flex-direction: row;
+        gap: 90px;
+        &+&{
+            border-top: 1px solid #999;
         }
-    }
-    &:last-child{
-        .b-information__head,
-        .b-information__body{
-            padding-bottom: 90px;
+        &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            top: -1px;
+            left: 0;
+            width: calc((100svw - 100%) / 2);
+            height: calc(100% + 2px);
+            background-color: var(--c-bg);
+            translate: -100% 0;
+        }
+        &:first-child{
+            .b-information__head,
+            .b-information__body{
+                padding-top: 90px;
+            }
+        }
+        &:last-child{
+            .b-information__head,
+            .b-information__body{
+                padding-bottom: 90px;
+            }
         }
     }
     &__head{
-        width: 208px;
-        padding: 45px 0;
+        padding: 20px 40px;
         background-color: var(--c-bg);
-        font-size: 22px;
+        font-size: 16px;
         letter-spacing: 0.15em;
         line-height: 1;
         color: var(--c-primary);
         @include fw(550);
+        @media #{$bp-s-min}{
+            width: 208px;
+            padding: 45px 0;
+            font-size: 22px;
+        }
     }
     &__body{
         flex: 1;
-        padding: 45px 0;
+        padding: 20px 40px;
+        @media #{$bp-s-min}{
+            padding: 45px 0;
+        }
         p{line-height: 2;}
         small{
             display: block;
@@ -51,32 +63,50 @@
             line-height: 1.6;
             margin: .5em 0;
         }
+        li{
+            margin: .75em 0;
+            padding-left: 1em;
+            text-indent: -1em;
+        }
+        ul{
+            list-style: none;
+            li::before{
+                content: "・";
+                font-feature-settings: normal;
+            }
+        }
         ol {
             list-style: none;
             counter-reset: number;
-            li {
-                margin: .75em 0;
-                &::before {
-                    counter-increment: number;
-                    content: counter(number);
-                    // position: absolute;
-                    // top: 5px;
-                    // left: 0;
-                    display: inline-flex;
-                    align-items: center;
-                    justify-content: center;
-                    vertical-align: middle;
-                    width: 20px;
-                    aspect-ratio: 1/1;
-                    background-color: var(--c-bg);
-                    border-radius: 100%;
+            li{
+                padding-left: 24px;
+                text-indent: -24px;
+            }
+            li::before{
+                counter-increment: number;
+                content: counter(number);
+                // position: absolute;
+                // top: 5px;
+                // left: 0;
+                text-indent: .1em;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                vertical-align: middle;
+                width: 18px;
+                aspect-ratio: 1/1;
+                background-color: var(--c-bg);
+                border-radius: 100%;
+                font-size: 13px;
+                @include fw(600);
+                text-align: center;
+                line-height: 1;
+                padding-bottom: 3px;
+                margin-right: 5px;
+                translate: 0 -2px;
+                @media #{$bp-s-min}{
+                    width: 22px;
                     font-size: 16px;
-                    @include fw(600);
-                    text-align: center;
-                    line-height: 1;
-                    padding-bottom: 3px;
-                    margin-right: 5px;
-                    translate: 0 -2px;
                 }
             }
           }
