@@ -2,7 +2,9 @@
     position: relative;
     overflow: hidden;
     z-index: 0;
-    .loading &{scale: .4;}
+    // transition: scale .3s linear;
+    // .loading &{scale: .4;transition: scale 3s linear;}
+    .loading[data-scene="2"] &{scale: .4;transition: scale .3s linear;}
     .loading[data-scene="3"] &{scale: 1;transition: scale 3s linear;}
     &__swiper{
         pointer-events: none;
