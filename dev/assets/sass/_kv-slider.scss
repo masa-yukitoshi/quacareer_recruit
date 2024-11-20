@@ -2,6 +2,8 @@
     position: relative;
     overflow: hidden;
     z-index: 0;
+    .loading &{scale: .4;}
+    .loading[data-scene="3"] &{scale: 1;transition: scale 3s linear;}
     &__swiper{
         pointer-events: none;
         .swiper-slide{
@@ -183,16 +185,20 @@
         .passion_iframe{
             pointer-events: all;
             position: absolute;
-            top: 69%;
-            left: 53.5%;
+            top: 68%;
+            left: 53%;
             width: 8%;
             @media #{$bp-s-min}{
-                top: 74%;
-                .kv1 &{left: 52%;}
-                .kv2 &{left: 60%;}
+                top: 72%;
+                .kv1 &{left: 49%;}
+                .kv2 &{left: 56%;}
                 .kv3 &{left: 55%;}
             }
         }
+        perspective: 2000px;
+        .kv1 & .passion_iframe{ rotate: y 30deg; }
+        .kv2 & .passion_iframe{ rotate: y -20deg; }
+        .kv3 & .passion_iframe{ rotate: y -20deg; }
     }
 }
 

@@ -63,5 +63,19 @@
                 display: none;
             }
         }
+        &.entry{
+            span{
+                svg{
+                    max-height: 41px;
+                    @media #{$bp-s-min}{max-height: 88px;}
+                    &:nth-child(1){
+                        @media #{$bp-s-max}{display: block;}
+                    }
+                    &:nth-child(2){
+                        @media #{$bp-s-min}{display: block;}
+                    }
+                }
+            }
+        }
     }
 }

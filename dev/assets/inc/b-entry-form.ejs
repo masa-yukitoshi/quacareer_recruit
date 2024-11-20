@@ -9,7 +9,7 @@
     <style>
      .confirm_area,
      .thanks_area {
-     display: none;
+     /* display: none; */
      }
      .wpcf7-response-output{
      display: none;
@@ -104,6 +104,23 @@
             <dd class="b-contact-form__input">
                 <p><span class="wpcf7-form-control-wrap" data-name="syubetsu"><span class="wpcf7-form-control wpcf7-radio syubetsu" id="syubetsu"><span class="wpcf7-list-item first"><label><input type="radio" name="syubetsu" value="新卒採用" /><span class="wpcf7-list-item-label">新卒採用</span></label></span><span class="wpcf7-list-item last"><label><input type="radio" name="syubetsu" value="中途採用" /><span class="wpcf7-list-item-label">中途採用</span></label></span></span></span>
                 </p>
+            </dd>
+        </dl>
+        <dl class="b-contact-form shinsotsu-form">
+            <dt class="b-contact-form__headding"></dt>
+            <dd class="b-contact-form__input">
+                <dl class="b-contact-form">
+                    <dt class="b-contact-form__headding"><p>卒業年<i>必須</i></p></dt>
+                    <dd class="b-contact-form__input">
+                        <p><span class="wpcf7-form-control-wrap" data-name="sotsugyou"><input size="40" maxlength="20" minlength="3" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required sotsugyou" id="sotsugyou" autocomplete="name" aria-required="true" aria-invalid="false" value="" type="text" name="sotsugyou" /></span></p>
+                    </dd>
+                </dl>
+                <dl class="b-contact-form">
+                    <dt class="b-contact-form__headding"><p>大学名<i>必須</i></p></dt>
+                    <dd class="b-contact-form__input">
+                        <p><span class="wpcf7-form-control-wrap" data-name="daigaku"><input size="40" maxlength="20" minlength="3" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required daigaku" id="daigaku" autocomplete="name" aria-required="true" aria-invalid="false" value="" type="text" name="daigaku" /></span></p>
+                    </dd>
+                </dl>
             </dd>
         </dl>
         <dl class="b-contact-form alignstart">
@@ -214,6 +231,23 @@
                 </p>
             </dd>
         </dl>
+        <dl class="b-contact-form shinsotsu-form">
+            <dt class="b-contact-form__headding"></dt>
+            <dd class="b-contact-form__input">
+                <dl class="b-contact-form">
+                    <dt class="b-contact-form__headding"><p>卒業年<i>必須</i></p></dt>
+                    <dd class="b-contact-form__input">
+                        <p><span class="confirm_sotsugyou"></span></p>
+                    </dd>
+                </dl>
+                <dl class="b-contact-form">
+                    <dt class="b-contact-form__headding"><p>大学名<i>必須</i></p></dt>
+                    <dd class="b-contact-form__input">
+                        <p><span class="confirm_daigaku"></span></p>
+                    </dd>
+                </dl>
+            </dd>
+        </dl>
         <dl class="b-contact-form alignstart">
             <dt class="b-contact-form__headding">
                 <p>メッセージ本文
@@ -233,6 +267,9 @@
     <p><script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script><br />
     <script>
      $(function () {
+        $( 'input[name="syubetsu"]:radio' ).change(function(){
+            $("body").attr("data-syubetsu",$(this).val());
+        }); 
      // 入力内容取得用 変数
      var val;
      // id取得用 変数

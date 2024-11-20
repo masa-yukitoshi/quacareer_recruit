@@ -5,6 +5,13 @@
       document.documentElement.style.setProperty('--vw', document.documentElement.clientWidth + 'px');
     })
     
+    $("a").on("click",function(){
+        document.startViewTransition(() => {
+            // 遷移後のDOM構造を指定
+            // ･･･
+        });
+    });
+
     if($(".js-menu")[0]){
         $(".js-menu").on("click",function(){
             $body.toggleClass("is-menu-open");
@@ -126,7 +133,7 @@
         const $skip = $(".b-loading__skip");
         const time = 3000;
         $body.addClass("loading");
-        $b_loading.attr("data-scene",1);
+        $body.attr("data-scene",1);
         function loadingend(){
             $b_loading.fadeOut(function(){
                 $body.removeClass("loading");
@@ -134,9 +141,11 @@
             });
         }
         setTimeout(function(){
-            $b_loading.attr("data-scene",2);
+            $body.attr("data-scene",2);
+            $b_loading.css("position","absolute");
             setTimeout(function(){
-                $b_loading.attr("data-scene",3);
+                $body.attr("data-scene",3);
+                $body.removeClass("loading");
                 setTimeout(function(){
                     loadingend();
                 },time);

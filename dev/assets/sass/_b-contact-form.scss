@@ -19,6 +19,9 @@
             margin-top: 80px;
         }
     }
+    .b-contact-form &{
+        width: auto;
+    }
     &__headding{
         display: flex;
         justify-content: space-between;
@@ -27,6 +30,9 @@
         letter-spacing: 0.13em;
         @media #{$bp-s-min}{
             width: 214px;
+            .b-contact-form__input &{
+                width: 150px;
+            }
         }
         p{
             width: 100%;
@@ -222,10 +228,10 @@
             line-height: 1.2;
             font-family: var(--f-serif);
             color: var(--c-bg);
-            translate: 0 50%;
+            translate: 0 70%;
             @media #{$bp-s-min}{
                 font-size: 26px;
-                translate: 0 55%;
+                // translate: 0 70%;
             }
         }
     }
@@ -233,4 +239,8 @@
         text-align: center;
         @include fw(500);
     }
+}
+
+.b-contact-form.shinsotsu-form{
+    [data-syubetsu="中途採用"] &{display: none;}
 }

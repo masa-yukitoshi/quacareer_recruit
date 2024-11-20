@@ -3,7 +3,6 @@ $bp-s-min:"(min-width:600px)";
 $bp-s-max:"(max-width:599px)";
 $bp-l-min:"(min-width:1025px)";
 $bp-l-max:"(max-width:1024px)";
-
 @mixin fw($size:400) {
     font-variation-settings: "wght" $size;
     // font-weight: $size;
@@ -54,7 +53,8 @@ svg{
     fill: var(--c-text);
 }
 .passion_iframe{
-    aspect-ratio: 226 / 328;
+    // aspect-ratio: 226 / 328;
+    aspect-ratio: 897 / 1253;
     overflow: visible;
     border: none;
     outline: none;
@@ -93,3 +93,19 @@ svg{
 @import "p-message";
 @import "p-about";
 @import "p-info";
+
+// body{ view-transition-name: body; }
+// @keyframes slide-out {
+//     from { translate: 0 0; filter: blur(0);}
+//     to { translate: -100% 0; filter: blur(40px);}
+// }
+// @keyframes slide-in {
+//     from { translate: 100% 0; filter: blur(40px);}
+//     to { translate: 0 0; filter: blur(0);}
+// }
+// ::view-transition-old(body) {
+//     animation: 0.2s ease both slide-out;
+// }
+// ::view-transition-new(body) {
+//     animation: 0.2s 0.2s ease both slide-in;
+// }

@@ -1,6 +1,6 @@
 .l-about-sticky{
     --pd: 120px;
-    max-width: 1200px;
+    // max-width: 1200px;
     margin: auto;
     position: relative;
     border-left: 8px solid var(--c-primary);
@@ -20,6 +20,7 @@
             height: 100%;
             padding-top: var(--pd);
             padding-bottom: 160px;
+            z-index: 10;
             svg{
                 height: 43px;
                 translate: 7px -43px;
@@ -29,6 +30,11 @@
                 top: var(--pd);
                 left: 0;
             }
+        }
+        @media(min-width: 1200px){
+            background-color: transparent;
+            left: 0;
+            width: 60px;
         }
     }
     &__nav{
@@ -85,6 +91,11 @@
         @media #{$bp-s-min}{
             margin: 130px 0 110px;
             br{display: none;}
+        }
+        @media(min-width: 1200px){
+            width: calc(100% - ((100% - 704px) / 2) + 40px);
+            // width: calc(100% - 1200px);
+            max-width: none;
         }
         &--inner{
             max-width: 738px;

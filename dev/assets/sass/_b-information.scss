@@ -17,10 +17,12 @@
             display: block;
             position: absolute;
             top: -1px;
-            left: 0;
-            width: calc((100svw - 100%) / 2);
+            left: 2px;
+            margin-right: -2px;
+            width: calc((100svw - 100%) / 2 + 2px);
             height: calc(100% + 2px);
             background-color: var(--c-bg);
+            // background-color: red;
             translate: -100% 0;
         }
         &:first-child{
@@ -48,6 +50,7 @@
             width: 208px;
             padding: 45px 0;
             font-size: 22px;
+            padding-left: 2px;
         }
     }
     &__body{

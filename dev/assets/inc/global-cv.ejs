@@ -1,10 +1,20 @@
 <section class="global-cv">
-    <a class="global-cv__button" href="/info/">
-        <span>
-            <%- include('../img/hd_info.svg') -%>
-            <%- include('../img/hd_info_sp.svg') -%>
-            <small>募集要項</small>
-        </span>
-        <i><img src="/assets/img/icon_arrow_middle.svg" alt=""></i>
-    </a>
+    <% if({entry}){ _%>
+        <a class="global-cv__button entry" href="/entry/">
+            <span>
+                <%- include('../img/hd_entry.svg') -%>
+                <small>エントリー</small>
+            </span>
+            <i><img src="/assets/img/icon_arrow_middle.svg" alt=""></i>
+        </a>
+    <% }else{ _%>
+        <a class="global-cv__button" href="/info/">
+            <span>
+                <%- include('../img/hd_info.svg') -%>
+                <%- include('../img/hd_info_sp.svg') -%>
+                <small>募集要項</small>
+            </span>
+            <i><img src="/assets/img/icon_arrow_middle.svg" alt=""></i>
+        </a>
+    <% } _%>
 </section>
