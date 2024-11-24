@@ -11,9 +11,12 @@
 <body>
     <%- include('assets/inc/global-header',pageInfo) -%>
     <%- include('assets/inc/global-menu',pageInfo) -%>
-    <%- include('assets/inc/b-loading',pageInfo) -%>
+    <%#- include('assets/inc/b-loading',pageInfo) -%>
 
-    <%- include('assets/inc/kv-slider',pageInfo) -%>
+    <div class="kv-slider__wrapper">
+        <%- include('assets/inc/kv-slider',pageInfo) -%>
+        <div class="kv-trigger"></div>
+    </div>
     <%- include('assets/inc/top-statement') -%>
     <%- include('assets/inc/top-index') -%>
 

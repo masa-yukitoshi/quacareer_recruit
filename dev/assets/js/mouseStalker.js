@@ -49,6 +49,14 @@
       mouseStalker.classList.remove('g-ms-hover');
     });
   }
+  if($('.p-gallery__grid')[0]){
+    $(document).on('mouseover', '.p-gallery__grid-item', function() {
+      mouseStalker.classList.add('g-ms-hover');
+    }).on('mouseout', '.p-gallery__grid-item', function() {
+      mouseStalker.classList.remove('g-ms-hover');
+    });
+  }
+
 })();
 
 

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<% pageInfo = {
+    data:{
+        slug:'welfare',
+        title:'Quacareer Recruit Site',
+        description:'',
+    }
+}; -%>
+<%- include('assets/inc/meta',pageInfo) -%>
+<body>
+    <%- include('assets/inc/global-header',pageInfo) -%>
+    <%- include('assets/inc/global-menu',pageInfo) -%>
+
+    <main>
+        <section class="e-pagetitle__wrapper p-welfare__pagetitle">
+            <h1 class="e-pagetitle">
+                <small>環境・制度を知る</small>
+                <%- include('assets/img/hd_welfare.svg') -%>
+            </h1>
+        </section>
+        <picture>
+            <source media="(max-width:599px)" srcset="/assets/img/welfare_fv_sp.jpg">
+            <img class="p-info__fv" src="/assets/img/welfare_fv_pc.jpg" alt="" style="view-transition-name:welfare;">
+        </picture>
+
+        <div class="l-welfare-sticky">
+            <nav class="l-welfare-sticky__nav">
+                <ul class="p-welfare__nav">
+                    <li><a href="#work">働く環境</a></li>
+                    <li><a href="#system">制度</a></li>
+                    <li><a href="#event">イベント</a></li>
+                </ul>
+            </nav>
+            <div class="l-welfare-sticky__contents">
+                <section class="p-welfare__section" id="work">
+                    <h2 class="e-heading__welfare js_inview">
+                        <small>働く環境</small>
+                        WORK
+                    </h2>
+                    <div class="p-welfare__block">
+                        <div class="p-welfare__block--txt">
+                            <h3>proactive 2.5</h3>
+                            <p>
+                                平日5日のうち、4日は9:45～19:30（実働8時間45分）、1日は9:00～14:00（実働5時間）の勤務体系を導入しています。14:00までの勤務日については原則、在宅勤務を採用。社員一人ひとりの生産性を高め、ワーク・ライフ・バランスの実現を図ることを目的とした制度です。
+                                <small>※本制度は祝日のない暦週で土曜、日曜を除く平日5日ある週が適用対象。条件を満たさない週については全日9:45～19:30（実働9時間）、週働40時間内での勤務。また、適用対象外の雇用形態等あり。</small>
+                            </p>
+                        </div>
+                        <img class="p-welfare__block--img" src="/assets/img/welfare01.jpg" alt="">
+                    </div>
+                    <div class="p-welfare__block">
+                        <div class="p-welfare__block--txt">
+                            <h3>有給休暇22日</h3>
+                            <p>入社時から毎年22日の有給休暇を付与。そのうち14日については計画的付与制度を使い、全従業員が同じ日に休暇を取ります（該当日は会社の休業日に指定）。この14日を含めて年127日の休日があります。</p>
+                        </div>
+                        <img class="p-welfare__block--img" src="/assets/img/welfare02.jpg" alt="">
+                    </div>
+                    <div class="p-welfare__block">
+                        <div class="p-welfare__block--txt">
+                            <h3>社長との会話はフルオープン</h3>
+                            <p>社長室はありません。また、社長の机の前には椅子を置き、いつでも社員が相談しに来られるようにしています。オープンな環境の中で交わされる社長との会話をメンバーたちも聞くことで、会社としての考え方や判断の軸などが社内に自然と共有されています。</p>
+                        </div>
+                        <img class="p-welfare__block--img" src="/assets/img/welfare03.jpg" alt="">
+                    </div>
+                </section>
+                <section class="p-welfare__section" id="system">
+                    <h2 class="e-heading__welfare js_inview">
+                        <small>制度</small>
+                        SYSTEM
+                    </h2>
+                    <div class="p-welfare__block">
+                        <div class="p-welfare__block--txt">
+                            <h3>研修制度</h3>
+                            <p>エン・ジャパン社の入社後活躍支援サービス「エンカレッジオンライン」を導入。PCスキルからコミュニケーションスキル、コンセプチュアルスキルまで500以上のプログラムの中から、ご自身の伸ばしたいスキルや能力に合わせた講座を受講できます。</p>
+                        </div>
+                        <img class="p-welfare__block--img" src="/assets/img/welfare04.jpg" alt="">
+                    </div>
+                    <div class="p-welfare__block">
+                        <div class="p-welfare__block--txt">
+                            <h3>資格取得支援制度</h3>
+                            <p>業務のパフォーマンスを高めるために必要な知識の習得や資格取得にかかる費用の一部を補助、もしくは資格試験に合格した際にお祝い金を支給する制度です。本制度の対象となる国家資格キャリアコンサルタントについては、従業員の約5人に1人が取得。歯学生のキャリア支援や顧客に対する採用コンサルティングの場面などで役立てています。</p>
+                        </div>
+                        <img class="p-welfare__block--img" src="/assets/img/welfare05.jpg" alt="">
+                    </div>
+                    <div class="p-welfare__block">
+                        <div class="p-welfare__block--txt">
+                            <h3>書籍購入費補助</h3>
+                            <p>個人のキャリア形成やスキルアップに必要な知識・技術の習得を目的に、書籍の購入費用を補助する制度です。</p>
+                        </div>
+                        <img class="p-welfare__block--img" src="/assets/img/welfare06.jpg" alt="">
+                    </div>
+                    <div class="p-welfare__block">
+                        <div class="p-welfare__block--txt">
+                            <h3>メンター制度</h3>
+                            <p>志向も適正も異なるメンバーを、同じ手法でマネジメントしたりはしません。1人の新入社員につき、先輩メンターがつき、その人に合った成長をサポートしています。</p>
+                        </div>
+                        <img class="p-welfare__block--img" src="/assets/img/welfare07.jpg" alt="">
+                    </div>
+                </section>
+                <section class="p-welfare__section" id="event">
+                    <h2 class="e-heading__welfare js_inview">
+                        <small>イベント</small>
+                        EVENT
+                    </h2>
+                    <div class="p-welfare__block">
+                        <div class="p-welfare__block--txt">
+                            <h3>キッチンバトル</h3>
+                            <p>楽しみながらチームの団結力・企画力・想像力を高めるという考えのもと、チームでテーマに沿った料理を企画・調理するバトルイベントです。「食」は口の健康を守る歯科業界において関連性の高い領域。当日は本格的な厨房を貸し切り、ゲスト審査員を招いて熱くバトルします。毎年、各チーム趣向を凝らした料理が並ぶ白熱ぶりです。</p>
+                        </div>
+                        <img class="p-welfare__block--img" src="/assets/img/welfare08.jpg" alt="">
+                    </div>
+                    <div class="p-welfare__block">
+                        <div class="p-welfare__block--txt">
+                            <h3>RUN IN THE LOOP</h3>
+                            <p>いつもご協力をいただいている企業・事業者、教育機関、学生などの皆さまに感謝をお伝えするランニング大会。サプライチェーン全体を含めた“チームビルディング”をめざし、異業種間交流を促進する目的も兼ねています。荒川河川敷を走った後は懇親会を開催。毎年100名近くが参加してくださる名物イベントです。</p>
+                        </div>
+                        <img class="p-welfare__block--img" src="/assets/img/welfare09.jpg" alt="">
+                    </div>
+                    <div class="p-welfare__block">
+                        <div class="p-welfare__block--txt">
+                            <h3>社員総会</h3>
+                            <p>毎年3月の最終営業日、当期の事業報告や今後の会社の運営方針などの共有を目的とした社員総会を開催。午後からはシュラスコやビュッフェなどのお店で懇親会を行い、食事を楽しみながら社員同士の交流を深めています。</p>
+                        </div>
+                        <img class="p-welfare__block--img" src="/assets/img/welfare10.jpg" alt="">
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+
+    </main>
+
+
+    <%- include('assets/inc/global-cv',{entry:true}) -%>
+    <%- include('assets/inc/global-footer',pageInfo) -%>
+    <script src="/assets/js/vendor.js"></script>
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>

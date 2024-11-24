@@ -78,6 +78,26 @@ const obs2 = new inview('.target', {
       viewOut: function(){},
       once: false
     });
+    const kv_trigger = new inview('.kv-trigger', {
+      margin: '0% 0%',
+      viewIn: function(){
+        $body.addClass("kv-view");
+      },
+      viewOut: function(){
+        $body.removeClass("kv-view");
+      },
+      once: false
+    });
+    const p_welfare_section = new inview('.p-welfare__section', {
+      margin: '-50% 0%',
+      viewIn: function(){
+        $body.attr("data-sec",$(this.target).attr("id"));
+      },
+      // viewOut: function(){},
+      once: false
+    });
+
+    
 
     
     // const section = new inview('.section', {

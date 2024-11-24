@@ -1,4 +1,30 @@
 .e-heading{
+    &__welfare{
+        // width: calc(100% - 40px);
+        // max-width: 1046px;
+        margin: 0 auto 45px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        font-family: var(--f-serif);
+        font-weight: 600;
+        color: var(--c-primary);
+        line-height: 1;
+        font-size: 62px;
+        letter-spacing: -.05em;
+        @media #{$bp-s-min}{
+            font-size: 90px;
+            margin: 0 auto 100px;
+        }
+        transition: clip-path .6s ease-out;
+        clip-path: polygon(0 0, 0% 0, 0% 100%, 0% 100%);
+        &.inviewed{clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);}
+        small{
+            font-size: 20px;
+            letter-spacing: 0;
+            @media #{$bp-s-min}{font-size: 30px;}
+        }
+    }
     &__info{
         width: calc(100% - 40px);
         max-width: 1046px;

@@ -1,0 +1,26 @@
+.l-welfare-sticky{
+    margin-bottom: 120px;
+    @media #{$bp-l-min}{
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 290px;
+    }
+    &__nav{
+        position: sticky;
+        top: 50px;
+        left: 0;
+        @media #{$bp-l-min}{
+            width: 356px;
+            top: 70px;
+        }
+    }
+    &__contents{
+        width: calc(100% - 40px);
+        margin: auto;
+        @media #{$bp-l-min}{
+            flex: 1;
+            width: auto;
+            max-width: 1010p;
+        }
+    }
+}

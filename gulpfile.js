@@ -151,11 +151,15 @@ gulp.task('img', function() {
              .pipe(plumber())
              .pipe(changed('dest/assets/img'))
              .pipe(gulp.dest('dest/assets/img'));
+  var webp = gulp.src('dev/assets/img/**/*.webp')
+             .pipe(plumber())
+             .pipe(changed('dest/assets/img'))
+             .pipe(gulp.dest('dest/assets/img'));
   var favicon = gulp.src('dev/assets/img/*.ico')
              .pipe(plumber())
              .pipe(changed('dest/assets/img'))
              .pipe(gulp.dest('dest/assets/img'));
-  return merge(jpg,png,gif,svg,favicon);
+  return merge(jpg,png,gif,svg,webp,favicon);
 });
 
 // gulp.task('svg', function(){
@@ -185,7 +189,7 @@ gulp.task('js', function(){
       'dev/assets/js/vendor/gsap.min.js',
       'dev/assets/js/vendor/ScrollTrigger.min.js',
       'dev/assets/js/vendor/simpleParallax.umd.js',
-      // 'dev/assets/js/vendor/fancybox.umd.js',
+      'dev/assets/js/vendor/masonry.pkgd.min.js',
       // 'dev/assets/js/vendor/lightbox.min.js',
     ])
     .pipe(concat('vendor.js'))

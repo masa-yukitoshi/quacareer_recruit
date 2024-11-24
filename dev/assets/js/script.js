@@ -85,19 +85,31 @@
             pagination: {
                 el: '.swiper-pagination',
                 // clickable: true,
-                type: 'progressbar',
-                // renderBullet: function (index, className) {
-                //     let num = index + 1;
-                //     return (
-                //         '<div class="' + className + '"><div class="pagination_num">o' + num + '</div><div class="pagination_bar"></div></div>'
-                //     )
-                // },
+                // type: 'progressbar',
+                renderBullet: function (index, className) {
+                    let num = index + 1;
+                    return (
+                        '<div class="' + className + '"><div class="pagination_num">o' + num + '</div><div class="pagination_bar"></div>o3</div>'
+                    )
+                },
                 // renderProgressbar: function(progressbarFillClass){
                 //     return (
                 //         '<div class="swiper-pagination-bullet"><div class="pagination_num">o1</div><div class="pagination_bar"><span class="'+progressbarFillClass+'"></span></div><div class="pagination_num">o3</div></div>'
                 //     )
                 // },
             },
+        });
+        gsap.set('.kv-slider__swiper',{
+            scale: 0.01,
+        });
+        gsap.to('.kv-slider__swiper', {
+            scale: 1,
+            scrollTrigger: {
+                trigger: '.kv-slider__wrapper',
+                end: 'bottom bottom+=100%',
+                // markers: true, 
+                scrub: true,
+            }
         });
         if($(".b-loading")[0]){
             kv_slider.autoplay.stop();
@@ -142,14 +154,18 @@
         }
         setTimeout(function(){
             $body.attr("data-scene",2);
-            $b_loading.css("position","absolute");
+            // $b_loading.css("position","absolute");
             setTimeout(function(){
-                $body.attr("data-scene",3);
                 $body.removeClass("loading");
-                setTimeout(function(){
-                    loadingend();
-                },time);
+                loadingend();
             },time);
+            // setTimeout(function(){
+            //     $body.attr("data-scene",3);
+            //     $body.removeClass("loading");
+            //     setTimeout(function(){
+            //         loadingend();
+            //     },time);
+            // },time);
         },time);
         $skip.on("click",function(){
             loadingend();
@@ -207,6 +223,51 @@
           }
         }
         $(window).on("load scroll", checkGetBounding );
+    }
+
+
+    function arrayShuffle(array) {
+        for(let i = (array.length - 1); 0 < i; i--){
+          let r = Math.floor(Math.random() * (i + 1));
+          let tmp = array[i];
+          array[i] = array[r];
+          array[r] = tmp;
+        }
+        return array;
+    }
+
+    if($("#grid")[0]){
+        let code = "";
+        arrayShuffle(galleryAry).forEach(function(data){
+            code = code + '<div class="p-gallery__grid-item"><img src="/assets/img/gallery/'+data['img']+'" alt="'+data['ttl']+'"><dl><dt>'+data['ttl']+'</dt><dd>'+data['txt']+'</dd></dl></div>';
+        });
+        $("#grid").append(code);
+        var loadCounter = 0;
+        var msnry;
+        $('.p-gallery__grid-item img').each(function(){
+            $(this).on("load",function(){
+                loadCounter++;
+                if (loadCounter === $('.p-gallery__grid-item img').length) {
+                    console.log(loadCounter)
+                    msnry = new Masonry( '#grid', {
+                        itemSelector: '.p-gallery__grid-item',
+                        initLayout: false,
+                    });
+                    msnry.on('layoutComplete',function(){
+                        $("#grid").addClass("complete");
+                    });
+                    msnry.layout();
+                }
+            });
+        });
+
+        
+        $("#grid").on( 'click', '.p-gallery__grid-item', function() {
+            $(this).toggleClass('wide');
+            msnry.layout();
+        });
+
+
     }
 
 
