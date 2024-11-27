@@ -13,7 +13,7 @@
     @media #{$bp-l-min}{
         height: var(--h-pc);
     }
-    &:hover{
+    &.is-open{
         height: 640px;
         @media #{$bp-l-min}{
             height: 768px;
@@ -39,7 +39,7 @@
         // object-position: left top;
         opacity: 0;
         transition: opacity .6s;
-        .top-index:hover &{
+        .top-index.is-open &{
             opacity: 1;
         }
     }
@@ -75,7 +75,7 @@
                 height: 30px;
             }
         }
-        .top-index:hover &{
+        .top-index.is-open &{
             color: var(--c-bg);
             svg{fill: var(--c-bg);}
         }
@@ -113,7 +113,7 @@
             width: 120px;
             padding: 46px 0;
         }
-        .top-index:hover &{
+        .top-index.is-open &{
             background-color: transparent;
         }
         svg{
@@ -121,7 +121,7 @@
             @media #{$bp-l-min}{
                 width: 60px;
             }
-            .top-index:hover &{
+            .top-index.is-open &{
                 fill: var(--c-bg);
             }
         }

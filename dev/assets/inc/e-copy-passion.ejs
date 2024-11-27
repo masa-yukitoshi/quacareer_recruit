@@ -7,5 +7,9 @@
             <span><%- include('../img/copy_passion.svg') -%></span>
         </p>
     </div>
-    <iframe class="e-copy-passion__icon passion_iframe" src="/passion.html" frameborder="0"></iframe>
+    <% if(anim){ %>
+        <div class="e-copy-passion__icon passion_iframe"><img src="/assets/img/passion.gif" alt=""></div>
+    <% }else{ %>
+        <div class="e-copy-passion__icon passion_iframe"><%- include('../img/passion.svg') -%></div>
+    <% } %>
 </div>

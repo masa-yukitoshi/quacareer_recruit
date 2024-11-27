@@ -68,12 +68,21 @@ const obs2 = new inview('.target', {
     //「.inviewed」をaddClassするだけ
     const $body = $("body");
     const js_inview_addclass = new inview('.js_inview', {margin: '-20% 0%'});
+    const top_statement = new inview('.top-statement__inner', {margin: '-50% 0%'});
     const b_flow_addclass = new inview('.b-flow', {margin: '-45% 0%'});
     const p_about__statement = new inview('.p-about__statement', {margin: '-5% 0%',once: false});
     const scene_trigger = new inview('.js-scene-trigger', {
       margin: '-50% 0%',
       viewIn: function(){
         $body.attr("data-scene",$(this.target).attr("data-scene"));
+      },
+      viewOut: function(){},
+      once: false
+    });
+    const chat_trigger = new inview('.js-chat-trigger', {
+      margin: '-50% 0%',
+      viewIn: function(){
+        $(this.target).parents(".l-chat").attr("data-scene",$(this.target).attr("data-scene"));
       },
       viewOut: function(){},
       once: false
@@ -98,7 +107,7 @@ const obs2 = new inview('.target', {
     });
 
     
-
+    
     
     // const section = new inview('.section', {
     //   margin: '-50% 0%',

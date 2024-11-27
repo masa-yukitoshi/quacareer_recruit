@@ -13,7 +13,7 @@
         height: 100%;
         backface-visibility: hidden;
         opacity: 0;
-        transition: opacity 3s linear;
+        transition: opacity 1s linear;
         [data-scene="3"] &,
         [data-scene="4"] &,
         [data-scene="5"] &{ opacity: 1;}

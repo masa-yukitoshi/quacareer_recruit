@@ -9,8 +9,11 @@
     width: 100%;
     height: 50px;
     padding: 0 20px;
+    transition: background-color 1s;
+    .header-bg &{
+        background-color: var(--c-primary);
+    }
     @media #{$bp-s-max}{
-        transition: background-color 1s;
         .is-header-observe &{background-color: var(--c-document);}
     }
     @media #{$bp-s-min}{

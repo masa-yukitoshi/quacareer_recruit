@@ -10,11 +10,11 @@
     // .loading[data-scene="3"] &{scale: 1;transition: scale 3s linear;}
     &__wrapper{
         position: relative;
-        height: 350svh;
+        height: 150svh;
         background-color: var(--c-primary);
         .kv-trigger{
             pointer-events: none;
-            height: 100svh;
+            height: 40svh;
             width: 100%;
             // background-color: rgba(#000,.5);
             position: absolute;
@@ -28,7 +28,7 @@
             width: calc( var(--vw) * 100 );
             height: 100svh;
             overflow: hidden;
-            img{
+            picture img{
                 width: 100%;
                 height: 100%;
                 object-fit: cover;

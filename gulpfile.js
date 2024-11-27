@@ -190,14 +190,14 @@ gulp.task('js', function(){
       'dev/assets/js/vendor/ScrollTrigger.min.js',
       'dev/assets/js/vendor/simpleParallax.umd.js',
       'dev/assets/js/vendor/masonry.pkgd.min.js',
-      // 'dev/assets/js/vendor/lightbox.min.js',
+      'dev/assets/js/vendor/rellax.min.js',
     ])
     .pipe(concat('vendor.js'))
     .pipe( gulp.dest('dest/assets/js') );
   var normal = gulp.src([
       'dev/assets/js/inview.js',
+      // 'dev/assets/js/mouseStalker.js',
       // 'dev/assets/js/scroll_direction.js',
-      'dev/assets/js/mouseStalker.js',
       // 'dev/assets/js/global_navigation.js',
       // 'dev/assets/js/viewport.js',
       // 'dev/assets/js/video.js',

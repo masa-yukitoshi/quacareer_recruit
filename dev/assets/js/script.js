@@ -5,12 +5,25 @@
       document.documentElement.style.setProperty('--vw', document.documentElement.clientWidth + 'px');
     })
     
+
+
+
     $("a").on("click",function(){
         document.startViewTransition(() => {
             // 遷移後のDOM構造を指定
             // ･･･
         });
     });
+
+
+    $(window).on("scroll",function(){
+        if($(this).scrollTop() > $(this).height()){
+            $body.addClass("header-bg");
+        }else{
+            $body.removeClass("header-bg");
+        }
+    });
+
 
     if($(".js-menu")[0]){
         $(".js-menu").on("click",function(){
@@ -25,6 +38,23 @@
         //     }
         // });
     }
+
+    if($(".top-index")[0]){
+        $(".top-index").on("click",function(){
+            if(!$(this).hasClass("is-open")){
+                $(this).addClass("is-open");
+                return false;
+            }
+        });
+    }
+
+    // if($(".e-card")[0]){
+    //     $(".e-card").on("click",function(){
+    //         return false;
+    //     });
+    // }
+
+
 
     if($(".b-faq")[0]){
         $(".b-faq").each(function(){
@@ -100,13 +130,15 @@
             },
         });
         gsap.set('.kv-slider__swiper',{
-            scale: 0.01,
+            scale: 0.6,
         });
         gsap.to('.kv-slider__swiper', {
             scale: 1,
             scrollTrigger: {
                 trigger: '.kv-slider__wrapper',
-                end: 'bottom bottom+=100%',
+                // end: 'bottom bottom+=10%',
+                start: 'top top',
+                end: 'bottom-=25% bottom',
                 // markers: true, 
                 scrub: true,
             }
@@ -122,6 +154,11 @@
             slidesPerView: "auto",
             spaceBetween: 30,
             slidesOffsetAfter: 30,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: true,
+            },
             pagination: {
               el: '.b-about-slider__pagination',
               type: 'fraction' ,
@@ -269,6 +306,70 @@
 
 
     }
+
+
+
+    if($(".l-chat")[0]){
+        const setVw = function() {
+            const vw = document.documentElement.clientWidth / 100;
+            document.documentElement.style.setProperty('--vw', `${vw}px`);
+        }
+        window.addEventListener('DOMContentLoaded', setVw);
+        window.addEventListener('resize', setVw);
+        $(".l-chat").each(function(){
+            gsap.set($(this).find('.l-chat__images--inner')[0],{
+                // scale: 0.6,
+                y: "-30%",
+                width: "80%",
+                height: "50%",
+                // maxWidth: "780px",
+                maxWidth: "calc(100% - 100% + 780px)",
+                borderRadius: "22px",
+            });
+            gsap.to($(this).find('.l-chat__images--inner')[0], {
+                // scale: 1,
+                y: "0%",
+                width: "100%",
+                height: "100%",
+                // maxWidth: "2000px",
+                maxWidth: "calc(100%  + 780px - 780px)",
+                borderRadius: "0px",
+                scrollTrigger: {
+                    trigger: $(this).find('.l-chat__pagetitle')[0],
+                    start: 'bottom bottom',
+                    // end: 'top top',
+                    // markers: true, 
+                    scrub: true,
+                }
+            });
+            if($(this).find('.l-chat__end')[0]){
+                gsap.to($(this).find('.l-chat__images .i5')[0], {
+                    // scale: 0.6,
+                    width: "80%",
+                    height: "50%",
+                    // maxWidth: "780px",
+                    maxWidth: "calc(100% - 100% + 780px)",
+                    borderRadius: "22px",
+                    scrollTrigger: {
+                        trigger: $(this).find('.l-chat__end')[0],
+                        start: 'top bottom',
+                        end: 'top top',
+                        // markers: true, 
+                        scrub: true,
+                    }
+                });
+            }
+        });
+    }
+
+
+    if($('.rellax')[0]){
+        var rellax = new Rellax('.rellax',{center:true});
+    }
+
+
+
+
 
 
 })();

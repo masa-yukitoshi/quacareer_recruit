@@ -27,7 +27,7 @@ $bp-l-max:"(max-width:1024px)";
 @import "base";
 @import "swiper-bundle.min";
 @import "swiper";
-@import "mouseStalker";
+// @import "mouseStalker";
 
 @media #{$bp-s-max}{
     .pc{display: none;}
@@ -58,6 +58,7 @@ svg{
     overflow: visible;
     border: none;
     outline: none;
+    pointer-events: none
 }
 
 //グローバル部品
@@ -73,6 +74,7 @@ svg{
 @import "l-about-sticky";
 @import "l-welfare-sticky";
 @import "l-message-fv";
+@import "l-chat";
 
 @import "b-loading";
 @import "b-contact-form";
@@ -82,6 +84,7 @@ svg{
 @import "b-job-block";
 @import "b-aco";
 @import "b-about-slider";
+@import "b-chat-section";
 
 @import "e-copy";
 @import "e-navigation";
@@ -96,6 +99,7 @@ svg{
 @import "p-info";
 @import "p-welfare";
 @import "p-gallery";
+@import "p-chat";
 
 
 // body{ view-transition-name: body; }
@@ -113,3 +117,16 @@ svg{
 // ::view-transition-new(body) {
 //     animation: 0.2s 0.2s ease both slide-in;
 // }
+
+a:hover{
+    &.global-menu__entry img,
+    .e-navigation-list__item & i img,
+    &.global-cv__button i img,
+    .top-index__arrow svg{
+        animation: hov_arrow 1s infinite;
+    }
+}
+@keyframes hov_arrow {
+    0%{transform: translateX(-25%);}
+    100%{transform: translateX(25%);}
+}

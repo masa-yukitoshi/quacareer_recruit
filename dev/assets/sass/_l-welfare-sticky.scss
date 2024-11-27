@@ -7,11 +7,11 @@
     }
     &__nav{
         position: sticky;
-        top: 50px;
+        top: 70px;
         left: 0;
         @media #{$bp-l-min}{
             width: 356px;
-            top: 70px;
+            top: 90px;
         }
     }
     &__contents{

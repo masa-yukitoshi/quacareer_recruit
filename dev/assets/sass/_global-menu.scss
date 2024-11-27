@@ -33,6 +33,7 @@ body.is-menu-open{overflow: hidden;}
         font-family: var(--f-serif);
         font-size: 42px;
         letter-spacing: -.05em;
+        filter: invert(100%);
         @media #{$bp-l-min}{
             font-size: 60px;
         }
@@ -58,8 +59,8 @@ body.is-menu-open{overflow: hidden;}
         position: relative;
         .global-menu__entry{
             position: absolute;
-            bottom: 0;
-            right: 35px;
+            bottom: 5px;
+            right: 5px;
             @media #{$bp-s-min}{
                 position: static;
                 width: calc(100% - 80px);

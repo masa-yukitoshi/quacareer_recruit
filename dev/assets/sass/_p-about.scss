@@ -23,7 +23,7 @@
             height: 100%;
             background-color: rgba(#e8e7e6,0);
             backdrop-filter: blur(0px);
-            transition: background-color 4s, backdrop-filter 2s;
+            transition: background-color 2s, backdrop-filter 1s;
         }
         &:has(.inviewed):after{
             background-color: rgba(#e8e7e6,.85);
