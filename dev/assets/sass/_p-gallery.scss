@@ -35,6 +35,7 @@
             dl{visibility: visible;}
         }
         img{width: 100%;}
+        p,
         dl{
             visibility: hidden;
             position: absolute;
@@ -53,6 +54,9 @@
                 font-weight: 600;
                 margin-bottom: 0.5em;
             }
+        }
+        &.wide{
+            p,dl{visibility: visible;}
         }
     }
 }
