@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<% pageInfo = {
+    data:{
+        slug:'one-day',
+        title:'Quacareer Recruit Site',
+        description:'',
+    }
+}; -%>
+<%- include('assets/inc/meta',pageInfo) -%>
+<body>
+    <%- include('assets/inc/global-header',pageInfo) -%>
+    <%- include('assets/inc/global-menu',pageInfo) -%>
+
+    <main>
+        <h1 class="e-pagetitle p-one-day__title">
+            <small>ある社員の1日</small>
+            <%- include('assets/img/hd_one-day.svg') -%>
+        </h1>
+
+
+        <ul class="p-one-day__list">
+            <li>
+                <a href="/one-day/day1/" class="p-one-day__index">
+                    <picture>
+                        <source media="(max-width:599px)" srcset="/assets/img/od1_sp.webp">
+                        <img src="/assets/img/od1_pc.webp" alt="" style="view-transition-name:day1;">
+                    </picture>
+                    <div class="p-one-day__index--text">
+                        <h2>築いてきた絆で、<br>採用成功を後押しする。</h2>
+                        <p>三原 良祐<small>MIHARA RYOSUKE</small></p>
+                        <ul>
+                            <li>2020年入社</li>
+                            <li>フィールドクリエーター部</li>
+                        </ul>
+                    </div>
+                    <%- include('assets/img/icon_arrow_middle.svg') -%>
+                </a>
+            </li>
+            <li>
+                <a href="/one-day/day2/" class="p-one-day__index">
+                    <picture>
+                        <source media="(max-width:599px)" srcset="/assets/img/od2_sp.webp">
+                        <img src="/assets/img/od2_pc.webp" alt="" style="view-transition-name:day2;">
+                    </picture>
+                    <div class="p-one-day__index--text">
+                        <h2>自分の殻を破った<br>先に見えてきた、新しい景色</h2>
+                        <p>金井 駿空<small>KANAI TOSHIHIRO</small></p>
+                        <ul>
+                            <li>2020年入社</li>
+                            <li>採用ソリューション事業部</li>
+                        </ul>
+                    </div>
+                    <%- include('assets/img/icon_arrow_middle.svg') -%>
+                </a>
+            </li>
+            <li>
+                <a href="/one-day/day3/" class="p-one-day__index">
+                    <picture>
+                        <source media="(max-width:599px)" srcset="/assets/img/od3_sp.webp">
+                        <img src="/assets/img/od3_pc.webp" alt="" style="view-transition-name:day3;">
+                    </picture>
+                    <div class="p-one-day__index--text">
+                        <h2>学び挑戦できる、<br>裁量の大きさがやりがい。</h2>
+                        <p>下田 華子<small>SHIMODA HANAKO</small></p>
+                        <ul>
+                            <li>2023年入社</li>
+                            <li>求人コンテンツマネジメント部</li>
+                            <li>カスタマーサクセス課</li>
+                        </ul>
+                    </div>
+                    <%- include('assets/img/icon_arrow_middle.svg') -%>
+                </a>
+            </li>
+        </ul>
+
+
+
+
+
+        
+    </main>
+
+
+    <%- include('assets/inc/global-cv',{entry:false}) -%>
+    <%- include('assets/inc/global-footer',pageInfo) -%>
+    <script src="/assets/js/vendor.js"></script>
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>

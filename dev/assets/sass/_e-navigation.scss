@@ -76,7 +76,9 @@
                 }
             }
             &:hover a{
-                animation: clip .4s;
+                @media #{$bp-s-min}{
+                    animation: clip .4s;
+                }
             }
         }
     }
@@ -100,7 +102,9 @@
                 margin-left: 0.5em;
             }
             &:hover a{
-                animation: clip .4s;
+                @media #{$bp-s-min}{
+                    animation: clip .4s;
+                }
             }
         }
     }

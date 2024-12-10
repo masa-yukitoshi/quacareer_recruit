@@ -2,7 +2,7 @@
     display: flex;
     position: relative;
     &::after{
-        background-color: #888b87;
+        background-color: #8e9495;
         mix-blend-mode: multiply;
         content: "";
         display: block;
@@ -64,6 +64,7 @@
         flex: 1;
     }
     &__pagetitle{
+        position: relative;
         display: flex;
         align-items: center;
         height: 100svh;

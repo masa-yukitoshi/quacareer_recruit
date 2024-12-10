@@ -75,6 +75,7 @@ svg{
 @import "l-welfare-sticky";
 @import "l-message-fv";
 @import "l-chat";
+@import "l-one-day";
 
 @import "b-loading";
 @import "b-contact-form";
@@ -85,6 +86,7 @@ svg{
 @import "b-aco";
 @import "b-about-slider";
 @import "b-chat-section";
+@import "b-day";
 
 @import "e-copy";
 @import "e-navigation";
@@ -93,6 +95,7 @@ svg{
 @import "e-about-navi";
 @import "e-headline";
 @import "e-card";
+@import "e-scrollprompter";
 
 @import "p-message";
 @import "p-about";
@@ -100,6 +103,7 @@ svg{
 @import "p-welfare";
 @import "p-gallery";
 @import "p-chat";
+@import "p-one-day";
 
 
 // body{ view-transition-name: body; }
@@ -119,10 +123,13 @@ svg{
 // }
 
 a:hover{
+    &.b-day-other__item svg,
+    &.p-one-day__index svg,
     &.global-menu__entry img,
     .e-navigation-list__item & i img,
     &.global-cv__button i img,
-    .top-index__arrow svg{
+    .top-index__arrow svg,
+    .b-day-other__back & svg{
         animation: hov_arrow 1s infinite;
     }
 }

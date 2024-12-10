@@ -23,6 +23,7 @@
         }
         .e-copy-passion{
             margin-top: 50px;
+            @media #{$bp-s-max}{justify-content: left;}
             @media #{$bp-s-min}{margin-top: 0;}
         }
         .mask{
@@ -30,7 +31,7 @@
             clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
             @for $i from 0 through 16 {
                 &.d#{$i}{
-                    transition-delay: $i * 0.3s;
+                    transition-delay: $i * 0.2s;
                 }
             }
         }

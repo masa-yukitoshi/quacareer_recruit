@@ -12,6 +12,7 @@
         position: relative;
         height: 150svh;
         background-color: var(--c-primary);
+        .kv-no-scroll &{height: 100svh; transition: height .4s 1s;}
         .kv-trigger{
             pointer-events: none;
             height: 40svh;

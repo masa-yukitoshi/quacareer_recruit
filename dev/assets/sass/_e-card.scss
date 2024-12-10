@@ -17,7 +17,7 @@
         color: var(--c-primary);
         margin-bottom: 16px;
         @media #{$bp-s-min}{
-            font-size: 18px;
+            font-size: 16.5px;
             margin-bottom: 20px;
         }
         small{
@@ -27,7 +27,7 @@
             color: var(--c-text);
             margin-bottom: 5px;
             @media #{$bp-s-min}{
-                font-size: 12px;
+                font-size: 11px;
                 margin-bottom: 8px;
             }
         }
@@ -45,7 +45,7 @@
     flex-direction: column;
     gap: 40px;
     margin: auto;
-    width: 220px;
+    width: 235px;
     @media #{$bp-s-min}{
         flex-direction: row;
         width: auto;

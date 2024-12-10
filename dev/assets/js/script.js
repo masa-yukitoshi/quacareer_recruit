@@ -22,12 +22,30 @@
         }else{
             $body.removeClass("header-bg");
         }
+        if($(".e-scrollprompter")[0]){
+            if($(this).scrollTop() > 100){
+                $(".e-scrollprompter").fadeOut();
+            }
+        }
     });
 
 
+
     if($(".js-menu")[0]){
+        var top_memory = window.scrollY;
         $(".js-menu").on("click",function(){
-            $body.toggleClass("is-menu-open");
+            if(!$body.hasClass("is-menu-open")){
+                top_memory = window.scrollY;
+                $body.addClass("is-menu-open");
+                setTimeout(function(){
+                    if($body.hasClass("is-menu-open")){$body.css("overflow","hidden");}
+                },200)
+            }else{
+                // console.log(top_memory);
+                $body.removeClass("is-menu-open");
+                $body.css("overflow","visible");
+                window.scrollTo(0,top_memory);
+            }
             return false;
         });
         // $('.global-menu').on('click', function(event) {
@@ -86,6 +104,7 @@
                 start: 'bottom bottom',
                 // end: 'top top',
                 // markers: true, 
+                once: true,
                 scrub: true,
             }
         });
@@ -129,20 +148,6 @@
                 // },
             },
         });
-        gsap.set('.kv-slider__swiper',{
-            scale: 0.6,
-        });
-        gsap.to('.kv-slider__swiper', {
-            scale: 1,
-            scrollTrigger: {
-                trigger: '.kv-slider__wrapper',
-                // end: 'bottom bottom+=10%',
-                start: 'top top',
-                end: 'bottom-=25% bottom',
-                // markers: true, 
-                scrub: true,
-            }
-        });
         if($(".b-loading")[0]){
             kv_slider.autoplay.stop();
         }
@@ -155,6 +160,7 @@
             spaceBetween: 30,
             slidesOffsetAfter: 30,
             loop: true,
+            grabCursor: true,
             autoplay: {
                 delay: 3000,
                 disableOnInteraction: true,
@@ -174,39 +180,87 @@
               prevEl: '.b-about-slider__prev',
             },
         });
+        about_slider.autoplay.stop();
+        const b_about_slider = new inview('.b-about-slider', {
+            margin: '-10% 0%',
+            viewIn: function(){
+                about_slider.autoplay.start();
+            },
+            viewOut: function(){
+                about_slider.autoplay.stop();
+            },
+            once: false
+        });
     }
 
 
     if($(".b-loading")[0]){
-        const $b_loading = $(".b-loading");
-        const $skip = $(".b-loading__skip");
-        const time = 3000;
-        $body.addClass("loading");
-        $body.attr("data-scene",1);
-        function loadingend(){
-            $b_loading.fadeOut(function(){
-                $body.removeClass("loading");
-                kv_slider.autoplay.start();
-            });
-        }
-        setTimeout(function(){
-            $body.attr("data-scene",2);
-            // $b_loading.css("position","absolute");
+
+        const keyName = 'viewed';
+        const keyValue = true;
+        if (!sessionStorage.getItem(keyName)) {
+            sessionStorage.setItem(keyName, keyValue);
+            // console.log("初回の閲覧");
+            const $b_loading = $(".b-loading");
+            const $skip = $(".b-loading__skip");
+            const time = 3000;
+            $body.addClass("loading");
+            $body.attr("data-scene",1);
+            function loadingend(){
+                $b_loading.fadeOut(function(){
+                    $body.removeClass("loading");
+                    kv_slider.autoplay.start();
+                });
+            }
             setTimeout(function(){
-                $body.removeClass("loading");
-                loadingend();
+                $body.attr("data-scene",2);
+                setTimeout(function(){
+                    $body.removeClass("loading");
+                    loadingend();
+                },time);
+                // setTimeout(function(){
+                //     $body.attr("data-scene",3);
+                //     $body.removeClass("loading");
+                //     setTimeout(function(){
+                //         loadingend();
+                //     },time);
+                // },time);
             },time);
-            // setTimeout(function(){
-            //     $body.attr("data-scene",3);
-            //     $body.removeClass("loading");
-            //     setTimeout(function(){
-            //         loadingend();
-            //     },time);
-            // },time);
-        },time);
-        $skip.on("click",function(){
-            loadingend();
-        });
+            $skip.on("click",function(){
+                loadingend();
+            });
+            gsap.set('.kv-slider__swiper',{
+                scale: 0.6,
+            });
+            gsap.to('.kv-slider__swiper', {
+                scale: 1,
+                scrollTrigger: {
+                    trigger: '.kv-slider__wrapper',
+                    // end: 'bottom bottom+=10%',
+                    start: 'top top',
+                    end: 'bottom-=25% bottom',
+                    // markers: true, 
+                    once: true,
+                    scrub: true,
+                    onLeave: function(){
+                        $body.addClass("kv-no-scroll");
+                    },
+                }
+            });
+    
+        } else {
+            // console.log("2回目以降の閲覧");
+            $(".b-loading").hide();
+            $body.addClass("kv-no-scroll");
+            kv_slider.autoplay.start();
+        }
+
+
+
+
+
+
+
     }
 
     if($(".b-aco")[0]){
@@ -368,7 +422,72 @@
     }
 
 
+    if($(".p-chat__member")[0]){
+        if( $(window).width()<=1366 ){
+            gsap.to('.p-chat__member--inner',{
+                // x: if( $(window).width()<=1366 ){ -1366 + $(window).width() }else{0},
+                // x: ($(window).width()<1366)?-1366 + $(window).width():0,
+                x: -1366 + $(window).width(),
+                ease: "none",
+                scrollTrigger: {
+                    trigger: '.p-chat__member',
+                    start: "top-=50px top",
+                    // end: $('.p-chat__member--inner').width() - $(window).width(),
+                    anticipatePin: 1,
+                    pin: true,
+                    // markers: true, 
+                    scrub: true,
+                    invalidateOnRefresh: true,
+                }
+            });
+        }
+    }
 
+
+
+
+
+    //ONE-DAY
+    if($(".b-day-fv")[0]){
+        gsap.to('.b-day-fv__blur',{
+            autoAlpha: 1,
+            ease: "none",
+            scrollTrigger: {
+                trigger: '.b-day-fv',
+                start: "top top",
+                end: "bottom bottom",
+                // markers: true, 
+                scrub: true,
+                invalidateOnRefresh: true,
+            }
+        });
+        $(".b-day-prof__flex").on("click",function(){
+            $body.removeClass("view-prof");
+        });
+        $(".b-day-prof__btn").on("click",function(){
+            $body.addClass("view-prof");
+        });
+        var orsslider = new Swiper('.b-day-ors__slider', {
+            effect: 'fade',
+            slidesPerView: 1,
+            speed: 1000,
+            loop: true,
+            allowTouchMove: false,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                renderBullet: function (index, className) {
+                    let num = index + 1;
+                    return (
+                        '<div class="' + className + '"><div class="pagination_num">o' + num + '</div><div class="pagination_bar"></div>o4</div>'
+                    )
+                },
+            },
+        });
+    }
 
 
 

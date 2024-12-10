@@ -27,6 +27,23 @@
         svg{fill: #b5b5b6!important;}
         .top-index__arrow{background-color: #f89097;}
     }
+    &[href*="/message/"]{
+        &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            transition: background-color .6s;
+        }
+        &.is-open::before{
+            background-color: #8e9495;
+            mix-blend-mode: multiply;
+        }
+    }
     &__wapper{}
     &__photo{
         position: absolute;
@@ -34,7 +51,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: -1;
+        z-index: -2;
         object-fit: cover;
         // object-position: left top;
         opacity: 0;
@@ -95,6 +112,23 @@
         strong{
             display: block;
             font-weight: 700;
+        }
+    }
+    &__viewmore{
+        display: none;
+        .top-index.is-open &{display: block;}
+        font-family: var(--f-serif);
+        color: var(--c-bg);
+        font-size: 18px;
+        line-height: 1;
+        letter-spacing: -0.001em;
+        position: absolute;
+        bottom: 64px;
+        right: 66px;
+        @media #{$bp-l-min}{
+            font-size: 30px;
+            bottom: 73px;
+            right: 110px;
         }
     }
     &__arrow{

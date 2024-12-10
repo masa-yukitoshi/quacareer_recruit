@@ -69,8 +69,10 @@ const obs2 = new inview('.target', {
     const $body = $("body");
     const js_inview_addclass = new inview('.js_inview', {margin: '-20% 0%'});
     const top_statement = new inview('.top-statement__inner', {margin: '-50% 0%'});
+    const b_day_sch = new inview('.b-day-sch', {margin: '-50% 0%'});
     const b_flow_addclass = new inview('.b-flow', {margin: '-45% 0%'});
     const p_about__statement = new inview('.p-about__statement', {margin: '-5% 0%',once: false});
+    const b_day_ors__text = new inview('.b-day-ors__text', {margin: '-50% 0%'});
     const scene_trigger = new inview('.js-scene-trigger', {
       margin: '-50% 0%',
       viewIn: function(){
@@ -101,6 +103,14 @@ const obs2 = new inview('.target', {
       margin: '-50% 0%',
       viewIn: function(){
         $body.attr("data-sec",$(this.target).attr("id"));
+      },
+      // viewOut: function(){},
+      once: false
+    });
+    const chat_fv_img = new inview('.chat-fv-img', {
+      margin: '-50% 0%',
+      viewIn: function(){
+        $body.attr("data-fv",$(this.target).attr("data-fv"));
       },
       // viewOut: function(){},
       once: false

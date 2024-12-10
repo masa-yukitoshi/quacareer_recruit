@@ -38,7 +38,9 @@
             font-size: 22px;
         }
         li:hover >*{
-            animation: clip .3s;
+            @media #{$bp-s-min}{
+                animation: clip .3s;
+            }
         }
         .is-menu-open & li:not([class]){display: none;}
         .js-menu::before{
@@ -49,5 +51,6 @@
                 letter-spacing: -.01em;
             }
         }
+        a,button{display: block;}
     }
 }

@@ -1,0 +1,64 @@
+.l-one-day{
+    position: relative;
+    background-image: url(../img/one-day_bg.webp);
+    background-size: 150% 100%;
+    background-position: 0 0;
+    animation: bganim 10s ease-in-out infinite alternate;
+    padding-top: 46px;
+    z-index: 0;
+    &__svg{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        width: 73px;
+        fill: #fff;
+        opacity: 0.3;
+        @media #{$bp-s-min}{
+            left: 0;
+            right: auto;
+            width: 170px;
+        }
+    }
+    &__flex{
+        max-width: 1196px;
+        width: calc(100% - 40px);
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        @media #{$bp-s-min}{
+            width: calc(100% - 60px);
+        }
+    }
+    &__profile{
+        width: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        @media #{$bp-s-min}{
+            width: 28%;
+            justify-content: flex-start;
+        }
+        @media #{$bp-l-min}{
+            width: 270px;
+        }
+    }
+    &__content{
+        // flex: 1;
+        @media #{$bp-s-max}{
+            padding-bottom: 100px;
+        }
+        @media #{$bp-s-min}{
+            width: 70%;
+            max-width: 765px;
+        }
+        @media #{$bp-l-min}{
+            width: calc(100% - 320px);
+        }
+    }
+}
+
+@keyframes bganim {
+    0%{background-position: 0 50%;}
+    100%{background-position: 100% 50%;}
+}
