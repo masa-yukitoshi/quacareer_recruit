@@ -27,7 +27,7 @@
         svg{fill: #b5b5b6!important;}
         .top-index__arrow{background-color: #f89097;}
     }
-    &[href*="/message/"]{
+    // &[href*="/message/"]{
         &::before{
             content: "";
             display: block;
@@ -43,7 +43,7 @@
             background-color: #8e9495;
             mix-blend-mode: multiply;
         }
-    }
+    // }
     &__wapper{}
     &__photo{
         position: absolute;

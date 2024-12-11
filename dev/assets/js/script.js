@@ -331,7 +331,7 @@
         let code = "";
         arrayShuffle(galleryAry).forEach(function(data){
             // code = code + '<div class="p-gallery__grid-item"><img src="/assets/img/gallery/'+data['img']+'" alt="'+data['ttl']+'"><dl><dt>'+data['ttl']+'</dt><dd>'+data['txt']+'</dd></dl></div>';
-            code = code + '<div class="p-gallery__grid-item"><img src="/assets/img/gallery/'+data['img']+'" alt="'+data['ttl']+'"><p>'+data['txt']+'</p></div>';
+            code = code + '<div class="p-gallery__grid-item"><img src="'+path+'/assets/img/gallery/'+data['img']+'" alt=""><p>'+data['txt']+'</p></div>';
         });
         $("#grid").append(code);
         var loadCounter = 0;
