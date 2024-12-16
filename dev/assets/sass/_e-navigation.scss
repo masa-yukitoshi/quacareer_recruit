@@ -40,6 +40,7 @@
                     aspect-ratio: 36/44;
                     background-color: var(--c-primary);
                     width: 28px;
+                    font-size: 0;
                     @media #{$bp-s-min}{
                         width: 36px;
                     }
@@ -47,6 +48,9 @@
                         width: 50%;
                         position: relative;
                         top: 6%;
+                        @media screen and (-webkit-min-device-pixel-ratio:0) {
+                            top: 2%;
+                        }
                     }
                 }
                 span{

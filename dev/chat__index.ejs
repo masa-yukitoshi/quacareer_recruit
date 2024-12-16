@@ -31,13 +31,13 @@
                 </div>
             </div>
             <div class="p-chat__fv--bg">
-                <picture>
+                <picture class="chat-fv-img" data-fv="fv1">
                     <source media="(max-width:729px)" srcset="/assets/img/chat_fv1_sp.webp">
-                    <img class="chat-fv-img" data-fv="fv1" src="/assets/img/chat_fv1.webp" alt="" style="view-transition-name:chat;">
+                    <img src="/assets/img/chat_fv1.webp" alt="" style="view-transition-name:chat;">
                 </picture>
-                <picture>
+                <picture class="chat-fv-img" data-fv="fv2">
                     <source media="(max-width:729px)" srcset="/assets/img/chat_fv2_sp.webp">
-                    <img class="chat-fv-img" data-fv="fv2" src="/assets/img/chat_fv2.webp" alt="">
+                    <img class="toggle" src="/assets/img/chat_fv2.webp" alt="">
                 </picture>
             </div>
         </section>
@@ -114,6 +114,11 @@
         <section class="l-chat" data-scene="1">
             <aside class="l-chat__bg">
                 <div class="l-chat__images">
+                    <div class="p-chat__headding">
+                        <p class="p-chat__headding--chap"><i>CHAPTER</i>01</p>
+                        <h2 class="p-chat__headding--main">よろこびは分かち合い、<br>不安はサポートする。</h2>
+                        <p class="p-chat__headding--lead">クオキャリアの社風を一言で表すと、<br>どんな言葉が浮かびますか？</p>
+                    </div>
                     <div class="l-chat__images--inner">
                         <img class="i1" src="/assets/img/chat01bg1.webp" alt="">
                         <img class="i2" src="/assets/img/chat01bg2.webp" alt="">
@@ -131,11 +136,13 @@
                     <div class="js-chat-trigger" data-scene="4"></div>
                 </div>
                 <div class="l-chat__pagetitle">
-                    <div class="p-chat__headding">
+                    <!-- <div class="p-chat__headding">
+                        <div class="p-chat__headding--inner">
                         <p class="p-chat__headding--chap"><i>CHAPTER</i>01</p>
                         <h2 class="p-chat__headding--main">よろこびは分かち合い、<br>不安はサポートする。</h2>
                         <p class="p-chat__headding--lead">クオキャリアの社風を一言で表すと、<br>どんな言葉が浮かびますか？</p>
-                    </div>
+                        </div>
+                    </div> -->
                 </div>
                 <div class="p-chat__section">
                     <%- include('assets/inc/chat-section1') -%>
@@ -146,6 +153,11 @@
         <section class="l-chat" data-scene="1">
             <aside class="l-chat__bg">
                 <div class="l-chat__images">
+                    <div class="p-chat__headding">
+                        <p class="p-chat__headding--chap"><i>CHAPTER</i>02</p>
+                        <h2 class="p-chat__headding--main">社歴や年齢に関係なく、<br>アイデア大歓迎。</h2>
+                        <p class="p-chat__headding--lead">社風について他にはありますか？</p>
+                    </div>
                     <div class="l-chat__images--inner">
                         <img class="i1" src="/assets/img/chat02bg1.webp" alt="">
                         <img class="i2" src="/assets/img/chat02bg2.webp" alt="">
@@ -163,11 +175,11 @@
                     <div class="js-chat-trigger" data-scene="4"></div>
                 </div>
                 <div class="l-chat__pagetitle">
-                    <div class="p-chat__headding">
+                    <!-- <div class="p-chat__headding">
                         <p class="p-chat__headding--chap"><i>CHAPTER</i>02</p>
                         <h2 class="p-chat__headding--main">社歴や年齢に関係なく、<br>アイデア大歓迎。</h2>
                         <p class="p-chat__headding--lead">社風について他にはありますか？</p>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="p-chat__section">
                     <%- include('assets/inc/chat-section2') -%>
@@ -178,6 +190,11 @@
         <section class="l-chat" data-scene="1">
             <aside class="l-chat__bg">
                 <div class="l-chat__images">
+                    <div class="p-chat__headding">
+                        <p class="p-chat__headding--chap"><i>CHAPTER</i>03</p>
+                        <h2 class="p-chat__headding--main">職域を超えて学び、連携する。</h2>
+                        <p class="p-chat__headding--lead">入社して意外だったこと・<br>驚いたことはありますか？</p>
+                    </div>
                     <div class="l-chat__images--inner">
                         <img class="i1" src="/assets/img/chat03bg1.webp" alt="">
                         <img class="i2" src="/assets/img/chat03bg2.webp" alt="">
@@ -195,11 +212,11 @@
                     <div class="js-chat-trigger" data-scene="4"></div>
                 </div>
                 <div class="l-chat__pagetitle">
-                    <div class="p-chat__headding">
+                    <!-- <div class="p-chat__headding">
                         <p class="p-chat__headding--chap"><i>CHAPTER</i>03</p>
                         <h2 class="p-chat__headding--main">職域を超えて学び、連携する。</h2>
                         <p class="p-chat__headding--lead">入社して意外だったこと・<br>驚いたことはありますか？</p>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="p-chat__section">
                     <%- include('assets/inc/chat-section3') -%>
@@ -210,6 +227,11 @@
         <section class="l-chat" data-scene="1">
             <aside class="l-chat__bg">
                 <div class="l-chat__images">
+                    <div class="p-chat__headding">
+                        <p class="p-chat__headding--chap"><i>CHAPTER</i>04</p>
+                        <h2 class="p-chat__headding--main">社内外の隔たりなく<br>“チーム・クオキャリア”。</h2>
+                        <p class="p-chat__headding--lead">クオキャリアが大切にしている価値観は<br>どんなものですか？</p>
+                    </div>
                     <div class="l-chat__images--inner">
                         <img class="i1" src="/assets/img/chat04bg1.webp" alt="">
                         <img class="i2" src="/assets/img/chat04bg2.webp" alt="">
@@ -229,11 +251,11 @@
                     <div class="js-chat-trigger" data-scene="5"></div>
                 </div>
                 <div class="l-chat__pagetitle">
-                    <div class="p-chat__headding">
+                    <!-- <div class="p-chat__headding">
                         <p class="p-chat__headding--chap"><i>CHAPTER</i>04</p>
                         <h2 class="p-chat__headding--main">社内外の隔たりなく<br>“チーム・クオキャリア”。</h2>
                         <p class="p-chat__headding--lead">クオキャリアが大切にしている価値観は<br>どんなものですか？</p>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="p-chat__section">
                     <%- include('assets/inc/chat-section4') -%>

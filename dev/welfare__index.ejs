@@ -19,9 +19,9 @@
                 <%- include('assets/img/hd_welfare.svg') -%>
             </h1>
         </section>
-        <picture>
+        <picture class="p-info__fv">
             <source media="(max-width:599px)" srcset="/assets/img/welfare_fv_sp.jpg">
-            <img class="p-info__fv" src="/assets/img/welfare_fv_pc.jpg" alt="" style="view-transition-name:welfare;">
+            <img class="js-parallax-fv" src="/assets/img/welfare_fv_pc.jpg" alt="" style="view-transition-name:welfare;">
         </picture>
 
         <div class="l-welfare-sticky">
@@ -132,7 +132,7 @@
     </main>
 
 
-    <%- include('assets/inc/global-cv',{entry:true}) -%>
+    <%- include('assets/inc/global-cv',{entry:false}) -%>
     <%- include('assets/inc/global-footer',pageInfo) -%>
     <script src="/assets/js/vendor.js"></script>
     <script src="/assets/js/script.js"></script>

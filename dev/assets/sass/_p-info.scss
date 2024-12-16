@@ -1,3 +1,9 @@
+.simpleParallax:has(.p-info__fv){
+    margin-bottom: 45px;
+    @media #{$bp-s-min}{
+        margin-bottom: 130px;
+    }
+}
 .p-info{
     &__pagetitle{
         margin-bottom: 75px;
@@ -9,12 +15,12 @@
         }
     }
     &__fv{
-        width: 100%;
-        object-fit: cover;
-        margin-bottom: 45px;
-        @media #{$bp-s-min}{
-            margin-bottom: 130px;
-            max-height: 370px;
+        img{
+            width: 100%;
+            object-fit: cover;
+            @media #{$bp-s-min}{
+                max-height: 370px;
+            }
         }
     }
     &__section{

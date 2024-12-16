@@ -1,6 +1,7 @@
 .l-one-day{
     position: relative;
-    background-image: url(../img/one-day_bg.webp);
+    background-image: url(../img/one-day_bg_sp.webp);
+    @media #{$bp-l-min}{background-image: url(../img/one-day_bg_sp.webp);}
     background-size: 150% 100%;
     background-position: 0 0;
     animation: bganim 10s ease-in-out infinite alternate;

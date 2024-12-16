@@ -7,11 +7,20 @@
     }
     &__nav{
         position: sticky;
-        top: 70px;
+        top: 50px;
         left: 0;
+        @media #{$bp-s-min}{
+            top: 60px;
+        }
+        @media #{$bp-l-max}{
+            background-color: var(--c-document);
+            padding: 10px 0;
+            margin: 60px auto 90px;
+        }
         @media #{$bp-l-min}{
             width: 356px;
-            top: 90px;
+            top: 180px;
+            margin: 0;
         }
     }
     &__contents{

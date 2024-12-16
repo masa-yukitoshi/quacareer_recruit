@@ -115,8 +115,16 @@ const obs2 = new inview('.target', {
       // viewOut: function(){},
       once: false
     });
+    const chat_section = new inview('.p-chat__section', {
+      viewIn: function(){
+        $(this.target).parents('.l-chat').addClass('sectionview');
+      },
+      viewOut: function(){
+        $(this.target).parents('.l-chat').removeClass('sectionview')
+      },
+      once: false
+    });
 
-    
     
     
     // const section = new inview('.section', {

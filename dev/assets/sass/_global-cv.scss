@@ -60,7 +60,13 @@
         i img{
             width: 60px;
             @media (max-width:440px){
-                display: none;
+                // display: none;
+                width: 40px;
+            }
+        }
+        &:not(.entry){
+            @media (max-width:440px){
+                i{translate: 0 50%;}
             }
         }
         &.entry{

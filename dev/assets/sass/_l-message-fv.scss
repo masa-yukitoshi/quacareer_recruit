@@ -67,7 +67,7 @@
         position: relative;
         display: flex;
         align-items: center;
-        height: 100svh;
+        height: 100lvh;
         @media #{$bp-s-max}{
             width: 100%;
             justify-content: center;
@@ -82,7 +82,7 @@
     }
     &__end{
         display: block;
-        height: 100svh;
+        height: 100lvh;
     }
     &__triggers{
         pointer-events: none;

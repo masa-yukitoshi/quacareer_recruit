@@ -79,13 +79,34 @@
                 @media #{$bp-l-min}{font-size: 16px;}
             }
         }
+        .viewmore{
+            font-family: var(--f-serif);
+            color: var(--c-bg);
+            font-size: 14px;
+            line-height: 1;
+            letter-spacing: -0.001em;
+            position: absolute;
+            z-index: 1;
+            bottom: 24px;
+            right: 50px;
+            @media #{$bp-s-min}{
+                font-size: 20px;
+                bottom: 38px;
+                right: 70px;
+            }
+            @media #{$bp-l-min}{
+                font-size: 30px;
+                bottom: 73px;
+                right: 120px;
+            }    
+        }
         svg{
             width: 26px;
             position: absolute;
             z-index: 1;
             bottom: 12px;
             right: 12px;
-            fill: var(--c-primary);
+            fill: var(--c-bg);
             @media #{$bp-s-min}{
                 width: 40px;
                 bottom: 20px;

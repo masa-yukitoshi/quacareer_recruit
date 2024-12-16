@@ -12,7 +12,7 @@
         top: 0;
         left: 0;
         width: calc( var(--vw) * 100 );
-        height: 100svh;
+        height: 100lvh;
         backface-visibility: hidden;
         &::after{
             background-color: #8e9495;
@@ -28,6 +28,7 @@
             opacity: 0;
             transition: opacity 1s linear;
         }
+        .sectionview &::after,
         [data-scene="2"] &::after,
         [data-scene="3"] &::after,
         [data-scene="4"] &::after{ opacity: 1;}
@@ -46,6 +47,9 @@
             gap: .5em;
             [data-scene="1"] &,
             [data-scene="5"] &{ opacity: 0;}   
+            @media(max-width:350px){
+                font-size: 12px;
+            }
             @media #{$bp-s-min}{
                 top: 80px;
                 left: 25px;
