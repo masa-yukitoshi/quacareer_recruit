@@ -19,10 +19,13 @@
                 <%- include('assets/img/hd_gallery.svg') -%>
             </h1>
         </section>
-        <picture class="p-gallery__action">
-            <source media="(max-width:599px)" srcset="/assets/img/gallery-click_sp.svg">
-            <img src="/assets/img/gallery-click_pc.svg" alt="気になる写真をタップ">
-        </picture>
+        <div class="p-gallery__action">
+            <picture>
+                <source media="(max-width:599px)" srcset="/assets/img/gallery-click_sp.svg">
+                <img src="/assets/img/gallery-click_pc.svg" alt="気になる写真をタップ">
+            </picture>
+            <img src="/assets/img/gallery-click_arrow.svg" alt="">
+        </div>
         <section>
             <div class="p-gallery__grid" id="grid"></div>
         </section>

@@ -24,7 +24,8 @@
             font-family: var(--f-serif);
             font-weight: 600;
             color: var(--c-primary);
-            font-size: 36px;
+            white-space: nowrap;
+            font-size: clamp(10px,9vw,36px);
             line-height: 1.2;
             @media #{$bp-s-min}{
                 font-size: 45px;

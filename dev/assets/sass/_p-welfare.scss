@@ -52,6 +52,8 @@
         }
     }
     &__section{
+        max-width: 1010px;
+        margin: auto;
         &+&{
             margin-top: 170px;
             @media #{$bp-s-min}{margin-top: 200px;}

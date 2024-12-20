@@ -1,17 +1,27 @@
 .p-gallery{
     &__action{
         display: block;
+        position: relative;
         text-align: center;
         margin-bottom: 38px;
+        padding-bottom: 30px;
         @media #{$bp-s-min}{
             margin-top: -40px;
             margin-bottom: 88px;
         }
-        img{
+        picture img{
             width: 185px;
             @media #{$bp-s-min}{
                 width: 254px;
             }
+        }
+        >img{
+            width: 25px;
+            position: absolute;
+            bottom: 0;
+            left: 0;right: 0;
+            margin: auto;
+            animation: scroll_arrow 1s infinite;
         }
     }
     &__grid{
