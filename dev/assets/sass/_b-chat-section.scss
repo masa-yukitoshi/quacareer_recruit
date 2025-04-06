@@ -1,3 +1,5 @@
+@use "setting";
+
 .b-chat-section{
     color: var(--c-bg);
     line-height: 1.8;
@@ -9,7 +11,7 @@
     display: flex;
     flex-direction: column;
     gap: 80px;
-    @media #{$bp-s-min}{
+    @media #{setting.$bp-s-min}{
         width: calc(100% - 60px);
         padding-left: 40px;
         gap: 160px;
@@ -22,7 +24,7 @@
         display: flex;
         flex-direction: column;
         gap: 60px;
-        @media #{$bp-s-min}{
+        @media #{setting.$bp-s-min}{
             gap: 120px;
         }
         // @media #{$bp-l-min}{
@@ -46,11 +48,11 @@
             backface-visibility: hidden;
             border-radius: 13px;
             box-shadow: 0 0 10px rgba(#000,.5);
-            @media #{$bp-s-min}{
-                border-radius: 33px;
-            }
             position: relative;
             z-index: -10;
+            @media #{setting.$bp-s-min}{
+                border-radius: 33px;
+            }
             &.chat01small1{width: 220px;left: -90px;}
             &.chat01small2{width: 189px;left: 90px;}
             &.chat01small3{width: 162px;left: 160px;margin-top: -40px;}
@@ -78,7 +80,7 @@
             @media(max-width:350px){
                 scale: .6;
             }
-            @media #{$bp-s-max}{
+            @media #{setting.$bp-s-max}{
                 // &.chat01small1{translate: 0 -200px;}
                 // &.chat01small2{translate: 0 -10px;}
                 // &.chat01small3{translate: 0 -10px;}
@@ -104,7 +106,7 @@
                 // &.chat04small6{translate: 0 -10px;}
                 // &.chat04small7{translate: 0 -10px;}
             }
-            @media #{$bp-s-min}{
+            @media #{setting.$bp-s-min}{
                 &.chat01small1{width: 568px;}
                 &.chat01small2{width: 378px;}
                 &.chat01small3{width: 324px;}
@@ -130,7 +132,7 @@
                 &.chat04small6{width: 342px;}
                 &.chat04small7{width: 315px;}
             }
-            @media #{$bp-l-min}{
+            @media #{setting.$bp-l-min}{
                 position: absolute;
                 max-width: 45%;
                 &.chat01small1{left: 0;top: -40px;}

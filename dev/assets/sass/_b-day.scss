@@ -1,3 +1,5 @@
+@use "setting";
+
 .b-day{
     &-fv{
         position: relative;
@@ -9,7 +11,7 @@
             display: flex;
             flex-direction: column;
             padding: 28px 20px;
-            @media #{$bp-s-min}{
+            @media #{setting.$bp-s-min}{
                 padding: 48px 60px;
             }
             &.first{
@@ -27,10 +29,10 @@
             white-space: nowrap;
             font-size: clamp(10px,9vw,36px);
             line-height: 1.2;
-            @media #{$bp-s-min}{
+            @media #{setting.$bp-s-min}{
                 font-size: 45px;
             }
-            @media #{$bp-l-min}{
+            @media #{setting.$bp-l-min}{
                 font-size: 60px;
             }
         }
@@ -39,20 +41,20 @@
             font-size: 12px;
             line-height: 1.5;
             color: var(--c-bg);
-            @media #{$bp-s-min}{
+            @media #{setting.$bp-s-min}{
                 font-size: 20px;
             }
             dt{
                 font-family: var(--f-serif);
                 font-weight: 600;
                 font-size: 18px;
-                @media #{$bp-s-min}{
+                @media #{setting.$bp-s-min}{
                     font-size: 30px;
                 }
                 small{
                     font-size: 12px;
                     letter-spacing: 0;
-                    @media #{$bp-s-min}{
+                    @media #{setting.$bp-s-min}{
                         font-size: 20px;
                     }
                 }
@@ -67,7 +69,7 @@
                 font-size: 30px;
                 letter-spacing: 0;
                 margin-bottom: 24px;
-                @media #{$bp-s-min}{
+                @media #{setting.$bp-s-min}{
                     font-size: 34px;
                 }
             }
@@ -75,7 +77,7 @@
                 font-size: 16px;
                 line-height: 1.87;
                 text-align: justify;
-                @media #{$bp-s-min}{
+                @media #{setting.$bp-s-min}{
                     font-size: 18px;
                 }
             }
@@ -101,10 +103,10 @@
             right: -5px;
             z-index: -2;
             width: 307px;
-            @media #{$bp-s-min}{
+            @media #{setting.$bp-s-min}{
                 width: 400px;
             }
-            @media #{$bp-l-min}{
+            @media #{setting.$bp-l-min}{
                 width: 658px;
             }
         }
@@ -122,7 +124,7 @@
         display: flex;
         margin: auto;
         line-height: 1.4;
-        @media #{$bp-s-min}{
+        @media #{setting.$bp-s-min}{
             width: 100%;
         }
         &__title{
@@ -132,25 +134,25 @@
             flex-direction: column;
             gap: 10px;
             margin: 0 auto 48px;
-            @media #{$bp-s-min}{
+            @media #{setting.$bp-s-min}{
                 width: 100%;
                 margin: 0 auto 160px;
             }
             small{
                 font-size: 15px;
                 letter-spacing: 0;
-                @media #{$bp-s-min}{font-size: 25px;}
+                @media #{setting.$bp-s-min}{font-size: 25px;}
             }
             span{
                 color: var(--c-primary);
                 font-size: 30px;
-                @media #{$bp-s-min}{font-size: 60px;white-space: nowrap;}
+                @media #{setting.$bp-s-min}{font-size: 60px;white-space: nowrap;}
             }
         }
         &__line{
             width: 20px;
             position: relative;
-            @media #{$bp-l-min}{
+            @media #{setting.$bp-l-min}{
                 width: 30px;
             }
             i{
@@ -164,7 +166,7 @@
                 transition: scale .3s ease-in;
                 scale: 0;
                 .inviewed &{scale: 1;}
-                @media #{$bp-l-min}{
+                @media #{setting.$bp-l-min}{
                     top: 15px;
                     width: 13px;
                 }
@@ -176,7 +178,7 @@
                 left: 4px;
                 width: 1px;
                 height: calc(100% - 9px);
-                @media #{$bp-l-min}{
+                @media #{setting.$bp-l-min}{
                     top: calc(15px + 13px);
                     left: 6px;
                 }
@@ -202,7 +204,7 @@
             transition: opacity .4s ease;
             opacity: 0;
             .inviewed &{opacity: 1;}
-            @media #{$bp-l-min}{
+            @media #{setting.$bp-l-min}{
                 font-size: 30px;
                 width: 150px;
             }
@@ -214,11 +216,11 @@
                 font-size: 18px;
                 color: var(--c-primary);
                 margin-bottom: 1em;
-                @media #{$bp-s-min}{
+                @media #{setting.$bp-s-min}{
                     font-size: 22px;
                     translate: 0 -.1em;
                 }
-                @media #{$bp-l-min}{
+                @media #{setting.$bp-l-min}{
                     font-size: 28px;
                     margin-bottom: 40px;
                     translate: 0 0;
@@ -231,14 +233,14 @@
                 margin-bottom: 40px;
                 text-align: justify;
                 line-height: 1.6;
-                @media #{$bp-s-min}{
+                @media #{setting.$bp-s-min}{
                     font-size: 16px;
                 }
-                @media #{$bp-l-min}{
+                @media #{setting.$bp-l-min}{
                     font-size: 18px;
                     &:last-child{margin-bottom: 144px;}
                 }
-                &.b{@include fw(600);}
+                &.b{@include setting.fw(600);}
             }
             .img{
                 width: auto;
@@ -248,10 +250,10 @@
                 margin-bottom: 40px;
                 position: relative;
                 z-index: 1;
-                @media #{$bp-s-min}{
+                @media #{setting.$bp-s-min}{
                     margin-right: -30px;
                 }
-                @media #{$bp-l-min}{
+                @media #{setting.$bp-l-min}{
                     margin-left: -220px;
                 }
                 @media(min-width:1196px){
@@ -267,17 +269,17 @@
         width: var(--vw);
         margin-left: -20px;
         overflow: hidden;
-        @media #{$bp-s-min}{
+        @media #{setting.$bp-s-min}{
             top: 180px;
             bottom: auto;
             width: 92%;
             max-width: 269px;
             margin-left: 0;
         }
-        @media #{$bp-s-min}{
+        @media #{setting.$bp-s-min}{
             margin-bottom: 40px;
         }
-        @media #{$bp-l-min}{
+        @media #{setting.$bp-l-min}{
             margin-bottom: 144px;
         }
         &__flex{
@@ -285,11 +287,11 @@
             display: flex;
             background-color: #fff;
             transition: translate .4s;
-            @media #{$bp-s-max}{
+            @media #{setting.$bp-s-max}{
                 translate: 100% 0;
                 .view-prof &{translate: 0% 0;}
             }
-            @media #{$bp-s-min}{
+            @media #{setting.$bp-s-min}{
                 flex-direction: column;
                 background-color: transparent;
                 gap: 15px;
@@ -300,7 +302,7 @@
                 top: 50%;
                 left: 0;
                 translate: 100% -50%;
-                @media #{$bp-s-min}{
+                @media #{setting.$bp-s-min}{
                     display: none;
                 }
             }
@@ -312,18 +314,18 @@
             writing-mode: vertical-lr;
             font-family: var(--f-serif);
             letter-spacing: 0;
-            @media #{$bp-s-min}{
+            @media #{setting.$bp-s-min}{
                 position: static;
                 writing-mode: unset;
             }
-            @media #{$bp-l-min}{
+            @media #{setting.$bp-l-min}{
                 font-size: 25px;
             }
         }
         &__photo{
             width: 50%;
             max-width: 376px;
-            @media #{$bp-s-min}{
+            @media #{setting.$bp-s-min}{
                 width: 100%;
             }
         }
@@ -335,10 +337,10 @@
             padding: 13px 17px;
             font-size: 12px;
             letter-spacing: 0;
-            @media #{$bp-s-min}{
+            @media #{setting.$bp-s-min}{
                 padding: 0;
             }
-            @media #{$bp-l-min}{
+            @media #{setting.$bp-l-min}{
                 font-size: 16px;
             }
             dt{
@@ -346,7 +348,7 @@
                 flex-direction: column;
                 font-size: 15px;
                 margin-bottom: 5px;
-                @media #{$bp-l-min}{
+                @media #{setting.$bp-l-min}{
                     flex-direction: row;
                     align-items: baseline;
                     gap: 10px;
@@ -354,7 +356,7 @@
                 }
                 small{
                     font-size: 10px;
-                    @media #{$bp-l-min}{
+                    @media #{setting.$bp-l-min}{
                         font-size: 12px;
                     }
                 }
@@ -368,7 +370,7 @@
             bottom: 5px;
             right: 5px;
             .view-prof &{display: none;}
-            @media #{$bp-s-min}{display: none;}
+            @media #{setting.$bp-s-min}{display: none;}
             img{
                 width: 57px;
                 height: 57px;
@@ -400,7 +402,7 @@
             // animation: slider 30s linear infinite;
             overflow: hidden;
             position: relative;
-            @media #{$bp-s-min}{
+            @media #{setting.$bp-s-min}{
                 // animation: slider 40s linear infinite;
                 width: calc( var(--vw) * 0.55 * 8 );
             }
@@ -410,7 +412,7 @@
             position: relative;
             li{
                 width: calc( var(--vw) * 0.65 );
-                @media #{$bp-s-min}{
+                @media #{setting.$bp-s-min}{
                     width: calc( var(--vw) * 0.55 );
                 }
                 img{backface-visibility: hidden;}
@@ -440,17 +442,17 @@
         background-color: #fff;
         display: flex;
         flex-direction: column;
-        @media #{$bp-s-min}{
+        @media #{setting.$bp-s-min}{
             position: relative;
             flex-direction: row;
         }
         &__text{
             padding: 20px 20px 35px;
-            @media #{$bp-s-min}{
+            @media #{setting.$bp-s-min}{
                 width: 50%;
                 padding-bottom: 80px;
             }
-            @media #{$bp-l-min}{
+            @media #{setting.$bp-l-min}{
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -468,7 +470,7 @@
                     right: 8%;
                     width: 25%;
                     translate: 0 -50%;
-                    @media #{$bp-l-min}{
+                    @media #{setting.$bp-l-min}{
                         width: 30%;
                         right: 5%;
                         translate: 0 -60%;
@@ -477,7 +479,7 @@
             }
             &.inviewed h2 .heart img{
                 animation: spin_small 3s ease-out;
-                @media #{$bp-s-min}{
+                @media #{setting.$bp-s-min}{
                     animation: spin 3s ease-out;
                 }
             }
@@ -485,11 +487,11 @@
                 font-size: 14px;
                 line-height: 1.7;
                 text-align: justify;
-                @media #{$bp-l-min}{
+                @media #{setting.$bp-l-min}{
                     font-size: 20px;
                 }
             }
-            @media #{$bp-l-min}{
+            @media #{setting.$bp-l-min}{
                 h2,p{
                     width: 460px;
                     margin: 0 auto;
@@ -503,19 +505,19 @@
                 height: 100%;
                 object-fit: cover;
             }
-            @media #{$bp-s-min}{
+            @media #{setting.$bp-s-min}{
                 width: 50%;
             }
         }
         &__page{
             padding: 34px 20px;
-            @media #{$bp-s-min}{
+            @media #{setting.$bp-s-min}{
                 position: absolute;
                 bottom: 0;
                 left: 0;
                 width: 50%;
             }
-            @media #{$bp-l-min}{
+            @media #{setting.$bp-l-min}{
                 bottom: 5%;
             }
             .swiper-pagination{
@@ -523,7 +525,7 @@
                 font-feature-settings: "onum";
                 display: flex;
                 gap: 10px;
-                @media #{$bp-l-min}{
+                @media #{setting.$bp-l-min}{
                     width: 460px;
                     margin: auto;
                 }
@@ -572,10 +574,10 @@
     }
     &-other{
         padding-top: 35px;
-        @media #{$bp-s-min}{
+        @media #{setting.$bp-s-min}{
             padding-top: 80px;
         }
-        @media #{$bp-l-min}{
+        @media #{setting.$bp-l-min}{
             padding-top: 160px;
         }
         &__title{
@@ -587,11 +589,11 @@
             font-weight: 600;
             font-size: 30px;
             margin-bottom: 30px;
-            @media #{$bp-s-min}{
+            @media #{setting.$bp-s-min}{
                 font-size: 60px;
                 margin-bottom: 60px;
             }
-            @media #{$bp-l-min}{
+            @media #{setting.$bp-l-min}{
                 font-size: 90px;
                 margin-bottom: 90px;
             }
@@ -603,11 +605,11 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
-            @media #{$bp-s-min}{
+            @media #{setting.$bp-s-min}{
                 flex-direction: row;
                 gap: 30px;
             }
-            @media #{$bp-l-min}{
+            @media #{setting.$bp-l-min}{
                 gap: 50px;
             }
             li{flex: 1;}
@@ -626,7 +628,7 @@
                 left: 0;
                 background: linear-gradient(0deg, rgba(159,160,160,1) 0%, rgba(159,160,160,1) 15%, rgba(159,160,160,0) 100%);
                 mix-blend-mode: multiply;
-                @media #{$bp-s-min}{
+                @media #{setting.$bp-s-min}{
                     height: 50%;
                 }
             }
@@ -642,10 +644,10 @@
                 justify-content: flex-end;
                 color: var(--c-bg);
                 padding: 12px;
-                @media #{$bp-s-min}{
+                @media #{setting.$bp-s-min}{
                     padding: 30px;
                 }
-                @media #{$bp-l-min}{
+                @media #{setting.$bp-l-min}{
                     padding: 40px;
                 }
                 h2{
@@ -654,27 +656,27 @@
                     font-weight: 600;
                     font-size: 20px;
                     line-height: 1.3;
-                    @media #{$bp-s-min}{font-size: 3vw;}
-                    @media #{$bp-l-min}{font-size: 40px;}
+                    @media #{setting.$bp-s-min}{font-size: 3vw;}
+                    @media #{setting.$bp-l-min}{font-size: 40px;}
                 }
                 p{
                     font-family: var(--f-serif);
                     font-size: 16px;
                     letter-spacing: 0;
                     margin: .5em 0 .25em;
-                    @media #{$bp-s-min}{font-size: 20px;}
-                    @media #{$bp-l-min}{font-size: 24px;}
+                    @media #{setting.$bp-s-min}{font-size: 20px;}
+                    @media #{setting.$bp-l-min}{font-size: 24px;}
                     small{
                         font-size: 10px;
                         display: inline-block;
                         margin-left: 0.5em;
-                        @media #{$bp-l-min}{font-size: 13px;}
+                        @media #{setting.$bp-l-min}{font-size: 13px;}
                     }
                 }
                 ul{
                     font-size: 12px;
-                    @media #{$bp-s-min}{font-size: 14px;}
-                    @media #{$bp-l-min}{font-size: 16px;}
+                    @media #{setting.$bp-s-min}{font-size: 14px;}
+                    @media #{setting.$bp-l-min}{font-size: 16px;}
                 }
             }
             svg{
@@ -684,12 +686,12 @@
                 bottom: 12px;
                 right: 12px;
                 fill: var(--c-primary);
-                @media #{$bp-s-min}{
+                @media #{setting.$bp-s-min}{
                     width: 40px;
                     bottom: 20px;
                     right: 20px;
                 }
-                @media #{$bp-l-min}{
+                @media #{setting.$bp-l-min}{
                     width: 60px;
                     bottom: 45px;
                     right: 45px;
@@ -704,7 +706,7 @@
             font-family: var(--f-serif);
             font-size: 18px;
             letter-spacing: 0;
-            @media #{$bp-s-min}{
+            @media #{setting.$bp-s-min}{
                 font-size: 30px;
                 margin-top: 60px;
             }
@@ -717,7 +719,7 @@
                 display: block;
                 width: 26px;
                 margin-right: 15px;
-                @media #{$bp-s-min}{
+                @media #{setting.$bp-s-min}{
                     width: 60px;
                 }
                 svg{rotate: y 180deg;}

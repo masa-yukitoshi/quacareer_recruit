@@ -1,3 +1,5 @@
+@use "setting";
+
 .global-header{
     display: flex;
     align-items: center;
@@ -13,16 +15,16 @@
     .header-bg &{
         background-color: var(--c-primary);
     }
-    @media #{$bp-s-max}{
+    @media #{setting.$bp-s-max}{
         .is-header-observe &{background-color: var(--c-document);}
     }
-    @media #{$bp-s-min}{
+    @media #{setting.$bp-s-min}{
         height: 60px;
         padding: 0 30px;
     }
     &__logo{
         width: 154px;
-        @media #{$bp-s-min}{
+        @media #{setting.$bp-s-min}{
             width: 193px;
         }
     }
@@ -33,12 +35,12 @@
         font-family: var(--f-serif);
         font-size: 15px;
         letter-spacing: -.05em;
-        @media #{$bp-s-min}{
+        @media #{setting.$bp-s-min}{
             gap: 18px;
             font-size: 22px;
         }
         li:hover >*{
-            @media #{$bp-s-min}{
+            @media #{setting.$bp-s-min}{
                 animation: clip .3s;
             }
         }

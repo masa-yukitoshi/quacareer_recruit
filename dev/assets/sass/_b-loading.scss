@@ -1,3 +1,5 @@
+@use "setting";
+
 body.loading{overflow: hidden;}
 html{overflow-y: scroll;}
 .b-loading{
@@ -50,7 +52,7 @@ html{overflow-y: scroll;}
             top: 50%;
             left: 50%;
             translate: -50% -50%;
-            @media #{$bp-s-min}{width: 20%;}
+            @media #{setting.$bp-s-min}{width: 20%;}
         }
     }
     &__image{

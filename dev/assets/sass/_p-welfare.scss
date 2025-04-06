@@ -1,10 +1,12 @@
+@use "setting";
+
 .p-welfare{
     &__pagetitle{
         margin-bottom: 75px;
         // @media #{$bp-s-max}{
         //     .e-pagetitle svg{height: 100px;}
         // }
-        @media #{$bp-s-min}{
+        @media #{setting.$bp-s-min}{
             margin-bottom: 80px;
         }
     }
@@ -12,7 +14,7 @@
         width: 100%;
         object-fit: cover;
         margin-bottom: 45px;
-        @media #{$bp-s-min}{
+        @media #{setting.$bp-s-min}{
             margin-bottom: 130px;
             max-height: 370px;
         }
@@ -25,7 +27,7 @@
         font-size: 20px;
         font-family: var(--f-serif);
         // font-weight: 600;
-        @media #{$bp-l-min}{
+        @media #{setting.$bp-l-min}{
             flex-direction: column;
             padding-left: 60px;
             // margin: 0;
@@ -45,7 +47,7 @@
                 left: -.25em;
                 top: 50%;
                 translate: -100% -50%;
-                @media #{$bp-l-min}{
+                @media #{setting.$bp-l-min}{
                     width: 55px;
                 }
             }
@@ -56,11 +58,11 @@
         margin: auto;
         &+&{
             margin-top: 170px;
-            @media #{$bp-s-min}{margin-top: 200px;}
+            @media #{setting.$bp-s-min}{margin-top: 200px;}
         }
     }
     &__block{
-        @media #{$bp-l-min}{
+        @media #{setting.$bp-l-min}{
             padding-right: 20px;
             max-width: 1010px;
         }
@@ -72,7 +74,7 @@
         }
         &+&{
             margin-top: 45px;
-            @media #{$bp-s-min}{
+            @media #{setting.$bp-s-min}{
                 margin-top: 150px;
             }
         }
@@ -80,7 +82,7 @@
             font-size: 14px;
             line-height: 1.85;
             text-align: justify;
-            @media #{$bp-s-min}{
+            @media #{setting.$bp-s-min}{
                 font-size: 18px;
             }
             h3{
@@ -89,7 +91,7 @@
                 font-family: var(--f-serif);
                 color: var(--c-primary);
                 margin-bottom: 15px;
-                @media #{$bp-s-min}{
+                @media #{setting.$bp-s-min}{
                     font-size: 37px;
                     margin-bottom: 20px;
                 }
@@ -102,7 +104,7 @@
                 font-size: 12px;
                 line-height: 1.6;
                 margin-top: 2em;
-                @media #{$bp-s-min}{
+                @media #{setting.$bp-s-min}{
                     font-size: 13px;
                 }
             }

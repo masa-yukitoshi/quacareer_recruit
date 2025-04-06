@@ -1,0 +1,15 @@
+$bp-s-min:"(min-width:600px)";
+$bp-s-max:"(max-width:599px)";
+$bp-l-min:"(min-width:1025px)";
+$bp-l-max:"(max-width:1024px)";
+@mixin fw($size:400) {
+    font-variation-settings: "wght" $size;
+    // font-weight: $size;
+}
+
+// %font-ja-r{ font-family: toppan-bunkyu-gothic-pr6n, sans-serif; font-weight: 400; }
+// %font-ja-db{ font-family: toppan-bunkyu-gothic-pr6n, sans-serif; font-weight: 600; }
+// %font-ja-eb{ font-family: toppan-bunkyu-midashi-go-std, sans-serif; font-weight: 900; }
+// %font-en-r{ font-family: montserrat, sans-serif; font-weight: 400; }
+// %font-en-m{ font-family: montserrat, sans-serif; font-weight: 500; }
+// %font-en-b{ font-family: montserrat, sans-serif; font-weight: 700; }

@@ -1,3 +1,5 @@
+@use "setting";
+
 .p-about{
     &__fv{
         position: relative;
@@ -57,17 +59,17 @@
         }
         &--inner{
             width: calc(100% - 80px);
-            @media (max-width:370px){width: calc(100% - 40px);}
             max-width: 693px;
             height: fit-content;
             margin: auto;
+            @media (max-width:370px){width: calc(100% - 40px);}
             >h2{
                 font-family: var(--f-serif);
                 font-size: 28px;
                 line-height: 1.4;
                 letter-spacing: -.025em;
                 margin-bottom: 50px;
-                @media #{$bp-l-min}{
+                @media #{setting.$bp-l-min}{
                     font-size: 45px;
                 }
             }
@@ -76,7 +78,7 @@
                 font-size: 16px;
                 line-height: 1.75;
                 text-align: justify;
-                @media #{$bp-l-min}{
+                @media #{setting.$bp-l-min}{
                     font-size: 18px;
                 }
                 &+p{
@@ -85,7 +87,7 @@
             }
             .e-copy-passion{
                 margin-top: 50px;
-                @media #{$bp-s-min}{margin-top: 0;}
+                @media #{setting.$bp-s-min}{margin-top: 0;}
             }
         }
     }
@@ -97,11 +99,11 @@
         flex-direction: column;
         font-size: 23px;
         gap: 10px;
-        @media #{$bp-s-min}{
+        @media #{setting.$bp-s-min}{
             margin: 120px 0 40px;
             font-size: 28px;
         }
-        @media #{$bp-l-min}{align-items: center;flex-direction: row;}
+        @media #{setting.$bp-l-min}{align-items: center;flex-direction: row;}
         small{
             font-family: var(--f-sans);
             color: var(--c-text);

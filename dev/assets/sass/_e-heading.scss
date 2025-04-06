@@ -1,3 +1,5 @@
+@use "setting";
+
 .e-heading{
     &__welfare{
         // width: calc(100% - 40px);
@@ -12,17 +14,17 @@
         line-height: 1;
         font-size: 62px;
         letter-spacing: -.05em;
-        @media #{$bp-s-min}{
+        transition: clip-path .6s ease-out;
+        clip-path: polygon(0 0, 0% 0, 0% 100%, 0% 100%);
+        @media #{setting.$bp-s-min}{
             font-size: 90px;
             margin: 0 auto 100px;
         }
-        transition: clip-path .6s ease-out;
-        clip-path: polygon(0 0, 0% 0, 0% 100%, 0% 100%);
         &.inviewed{clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);}
         small{
             font-size: 20px;
             letter-spacing: 0;
-            @media #{$bp-s-min}{font-size: 30px;}
+            @media #{setting.$bp-s-min}{font-size: 30px;}
         }
     }
     &__info{
@@ -38,16 +40,16 @@
         line-height: 1;
         font-size: 36px;
         letter-spacing: -.05em;
-        @media #{$bp-s-min}{
-            font-size: 60px;
-        }
         transition: clip-path .6s ease-out;
         clip-path: polygon(0 0, 0% 0, 0% 100%, 0% 100%);
+        @media #{setting.$bp-s-min}{
+            font-size: 60px;
+        }
         &.inviewed{clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);}
         small{
             font-size: 18px;
             letter-spacing: 0;
-            @media #{$bp-s-min}{font-size: 20px;}
+            @media #{setting.$bp-s-min}{font-size: 20px;}
         }
     }
     &__about{
@@ -58,7 +60,7 @@
         z-index: 0;
         overflow: hidden;
         height: 281px;
-        @media #{$bp-s-min}{
+        @media #{setting.$bp-s-min}{
             height: 457px;
         }
         img{
@@ -85,18 +87,18 @@
             transition: clip-path .6s ease-out;
             clip-path: polygon(0 0, 0% 0, 0% 100%, 0% 100%);
             &.inviewed{clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);}
-            @media #{$bp-s-min}{
+            @media #{setting.$bp-s-min}{
                 font-size: 60px;
             }
             i{
                 font-size: 16px;
-                @media #{$bp-s-min}{font-size: 20px;}
+                @media #{setting.$bp-s-min}{font-size: 20px;}
             }
             small{
                 font-size: 16px;
-                @media #{$bp-s-min}{font-size: 20px;}
                 letter-spacing: -.01em;
                 margin-top: 0.5em;
+                @media #{setting.$bp-s-min}{font-size: 20px;}
             }
         }
     }

@@ -1,3 +1,5 @@
+@use "setting";
+
 // body.is-menu-open{overflow: hidden;}
 .global-menu{
     -ms-overflow-style: none;
@@ -14,12 +16,12 @@
     padding: 90px 0 55px;
     svg{fill: #000;}
     color: #000;
-    @media #{$bp-l-min}{
-        padding: 190px 0 0;
-    }
     transition: clip-path .4s;
     clip-path: circle(0% at 100% 0);
     overflow: auto;
+    @media #{setting.$bp-l-min}{
+        padding: 190px 0 0;
+    }
     .is-menu-open &{
         pointer-events: all;
         clip-path: circle(150% at 100% 0);
@@ -34,20 +36,20 @@
         font-size: 42px;
         letter-spacing: -.05em;
         filter: invert(100%);
-        @media #{$bp-l-min}{
+        @media #{setting.$bp-l-min}{
             font-size: 60px;
         }
         @media (max-width:370px){gap: 5px;font-size: 30px;}
         img{
             width: 29px;
-            @media #{$bp-l-min}{
+            @media #{setting.$bp-l-min}{
                 width: 46px;
             }
             @media (max-width:370px){width: 24px;}
         }
     }
     &__catch{
-        @media #{$bp-s-min}{
+        @media #{setting.$bp-s-min}{
             width: 563px;
         }
         .e-copy-passion{
@@ -61,7 +63,7 @@
             position: absolute;
             bottom: 5px;
             right: 5px;
-            @media #{$bp-s-min}{
+            @media #{setting.$bp-s-min}{
                 position: static;
                 width: calc(100% - 80px);
                 margin: 60px auto -40px;
@@ -74,10 +76,10 @@
     }
     &__wrap2{
         // display: flex;
-        width: calc(100% - 80px);
-        @media (max-width:370px){width: calc(100% - 40px);}
         max-width: 990px;
         margin: 60px auto 0;
+        width: calc(100% - 80px);
+        @media (max-width:370px){width: calc(100% - 40px);}
         @media(max-width:749px){
             .global-menu__entry{
                 display: none;

@@ -1,3 +1,5 @@
+@use "setting";
+
 .p-gallery{
     &__action{
         display: block;
@@ -5,13 +7,13 @@
         text-align: center;
         margin-bottom: 38px;
         padding-bottom: 30px;
-        @media #{$bp-s-min}{
+        @media #{setting.$bp-s-min}{
             margin-top: -40px;
             margin-bottom: 88px;
         }
         picture img{
             width: 185px;
-            @media #{$bp-s-min}{
+            @media #{setting.$bp-s-min}{
                 width: 254px;
             }
         }
@@ -41,22 +43,22 @@
         border-radius: 14px;
         overflow: hidden;
         position: relative;
-        @media #{$bp-s-min}{
+        transition: width .2s;
+        @media #{setting.$bp-s-min}{
             width: calc((100% / 3) - ( 10px * 2) );
             margin: 10px;
             border-radius: 20px;
         }
-        @media #{$bp-l-min}{
+        @media #{setting.$bp-l-min}{
             width: calc((100% / 5) - ( 10px * 2) );
         }
-        transition: width .2s;
         &.wide{
             z-index: 1;
             width: calc((100% / 2 * 2) - ( 4px * 2) );
-            @media #{$bp-s-min}{
+            @media #{setting.$bp-s-min}{
                 width: calc((100% / 3 * 2) - ( 10px * 2) );
             }
-            @media #{$bp-l-min}{
+            @media #{setting.$bp-l-min}{
                 width: calc((100% / 5 * 2) - ( 10px * 2) );
             }
             dl{visibility: visible;}

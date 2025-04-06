@@ -1,3 +1,5 @@
+@use "setting";
+
 .kv-slider{
     position: sticky;
     left: 0;
@@ -87,7 +89,7 @@
         gap: 10px;
         opacity: 0;
         .kv-view &{opacity: 1;}
-        @media #{$bp-s-max}{
+        @media #{setting.$bp-s-max}{
             width: fit-content;
             flex-direction: column;
             padding: 9px;
@@ -119,7 +121,7 @@
         display: flex;
         align-items: center;
         gap: 8px;
-        @media #{$bp-s-max}{
+        @media #{setting.$bp-s-max}{
             // flex-direction: column;
             gap: 3px;
             font-size: 12px;
@@ -134,7 +136,7 @@
         background-color: rgba(#808080,.8);
         position: relative;
         mix-blend-mode: multiply;
-        @media #{$bp-s-max}{
+        @media #{setting.$bp-s-max}{
             width: 2px;
             height: 100px;
         }
@@ -144,27 +146,27 @@
             position: absolute;
             width: 0%;
             height: 100%;
-            @media #{$bp-s-max}{
+            background-color: var(--c-primary);
+            @media #{setting.$bp-s-max}{
                 width: 100%;
                 height: 0;
             }
-            background-color: var(--c-primary);
         }
     }
     .swiper-pagination-bullet.swiper-pagination-bullet-active .pagination_bar::after{
         animation: pagination_bar 5s linear forwards;
-        @media #{$bp-s-max}{
+        @media #{setting.$bp-s-max}{
             animation: scroll_bar 5s linear forwards;
         }
     }
     &__copy{
         position: absolute;
         z-index: 1;
-        @media #{$bp-s-max}{
+        @media #{setting.$bp-s-max}{
             bottom: -2px;
             left: 0px;
         }
-        @media #{$bp-s-min}{
+        @media #{setting.$bp-s-min}{
             top: 0;
             left: 0;
             right: 0;
@@ -186,9 +188,6 @@
         }
     }
     &__scroll{
-        @media #{$bp-s-max}{
-            display: none;
-        }
         position: absolute;
         z-index: 1;
         bottom: 0;
@@ -199,6 +198,9 @@
         letter-spacing: 0;
         writing-mode: vertical-rl;
         height: 6em;
+        @media #{setting.$bp-s-max}{
+            display: none;
+        }
         &::after{
             content: "";
             display: block;
@@ -221,20 +223,20 @@
         min-height: 100%;
         aspect-ratio: 1367 / 768;
         translate: -50% -50%;
+        perspective: 2000px;
         .passion_iframe{
             pointer-events: all;
             position: absolute;
             top: 68%;
             left: 53%;
             width: 8%;
-            @media #{$bp-s-min}{
+            @media #{setting.$bp-s-min}{
                 top: 72%;
                 .kv1 &{left: 49%;}
                 .kv2 &{left: 56%;}
                 .kv3 &{left: 55%;}
             }
         }
-        perspective: 2000px;
         .kv1 & .passion_iframe{ rotate: y 30deg; }
         .kv2 & .passion_iframe{ rotate: y -20deg; }
         .kv3 & .passion_iframe{ rotate: y -20deg; }

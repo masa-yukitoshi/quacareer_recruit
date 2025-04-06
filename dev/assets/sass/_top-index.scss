@@ -1,3 +1,5 @@
+@use "setting";
+
 .top-index{
     --h-sp:154px;
     --h-pc:180px;
@@ -10,12 +12,12 @@
     height: var(--h-sp);
     overflow: hidden;
     transition: height .6s;
-    @media #{$bp-l-min}{
+    @media #{setting.$bp-l-min}{
         height: var(--h-pc);
     }
     &.is-open{
         height: 640px;
-        @media #{$bp-l-min}{
+        @media #{setting.$bp-l-min}{
             height: 768px;
         }
     }
@@ -69,12 +71,12 @@
         height: var(--h-sp);
         padding-left: 18px;
         padding-right: 90px;
-        @media #{$bp-s-min}{
+        @media #{setting.$bp-s-min}{
             flex-direction: row;
             align-items: center;
             justify-content: flex-start;
         }
-        @media #{$bp-l-min}{
+        @media #{setting.$bp-l-min}{
             height: var(--h-pc);
             gap: 35px;
             padding-left: 60px;
@@ -102,7 +104,7 @@
         line-height: 1.6;
         font-size: 12px;
         letter-spacing: 0;
-        @media #{$bp-l-min}{
+        @media #{setting.$bp-l-min}{
             flex: 1;
             font-size: 18px;
         }
@@ -125,7 +127,7 @@
         position: absolute;
         bottom: 64px;
         right: 66px;
-        @media #{$bp-l-min}{
+        @media #{setting.$bp-l-min}{
             font-size: 30px;
             bottom: 73px;
             right: 110px;
@@ -143,7 +145,7 @@
         position: absolute;
         bottom: 0;
         right: 0;
-        @media #{$bp-l-min}{
+        @media #{setting.$bp-l-min}{
             width: 120px;
             padding: 46px 0;
         }
@@ -152,7 +154,7 @@
         }
         svg{
             width: 33px;
-            @media #{$bp-l-min}{
+            @media #{setting.$bp-l-min}{
                 width: 60px;
             }
             .top-index.is-open &{

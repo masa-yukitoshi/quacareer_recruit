@@ -1,3 +1,5 @@
+@use "setting";
+
 .p-message{
     &__section{
         padding: 100lvh 0;
@@ -19,7 +21,7 @@
                 letter-spacing: 0;
                 margin-right: -20px;
                 margin-bottom: 30px;
-                @media #{$bp-s-min}{
+                @media #{setting.$bp-s-min}{
                     font-size: 60px;
                     margin-bottom: 40px;
                 }
@@ -36,7 +38,7 @@
                 font-family: var(--f-serif);
                 dd{
                     font-size: 26px;
-                    @media #{$bp-s-min}{
+                    @media #{setting.$bp-s-min}{
                         font-size: 29px;
                     }
     

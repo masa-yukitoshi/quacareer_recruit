@@ -1,3 +1,5 @@
+@use "setting";
+
 .b-job-block{
     // display: flex;
     position: relative;
@@ -7,12 +9,12 @@
     padding-top: 47px;
     margin: 48px auto 0;
     background-color: var(--c-bg);
-    @media #{$bp-s-min}{
+    @media #{setting.$bp-s-min}{
         font-size: 15px;
         padding: 52px 28px 25px;
         margin: 70px auto 0;
     }
-    @media #{$bp-l-min}{
+    @media #{setting.$bp-l-min}{
         display: flex;
         padding-right: 0;
     }
@@ -25,7 +27,7 @@
         line-height: 1;
         background-color: var(--c-primary);
         color: var(--c-bg);
-        @include fw(600);
+        @include setting.fw(600);
         width: 163px;
         height: 42px;
         display: flex;
@@ -36,12 +38,12 @@
         left: 0;right: 0;
         margin: auto;
         translate: 0 -50%;
-        @media #{$bp-s-min}{
+        @media #{setting.$bp-s-min}{
             font-size: 22px;
             width: 230px;
             height: 54px;
         }
-        @media #{$bp-l-min}{
+        @media #{setting.$bp-l-min}{
             left: 28px;
             right: auto;
         }
@@ -51,14 +53,14 @@
         padding-bottom: 25px;
         border-bottom: 1px solid #000;
         margin-bottom: 16px;
-        @media #{$bp-s-min}{font-size: 15px;}
+        @media #{setting.$bp-s-min}{font-size: 15px;}
     }
     &__ex{
         display: flex;
         align-items: center;
         gap: 10px;
         dt{
-            @include fw(700);
+            @include setting.fw(700);
             background-color: var(--c-primary);
             color: var(--c-bg);
             padding: 6px 8px;
@@ -70,13 +72,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        @media #{$bp-l-max}{
+        @media #{setting.$bp-l-max}{
             padding: 1px;
             margin: 25px 0;
             &.sp-img{}
             &.pc-img{display: none;}
         }
-        @media #{$bp-l-min}{
+        @media #{setting.$bp-l-min}{
             width: 242px;
             &.sp-img{display: none;}
             &.pc-img{}
@@ -90,18 +92,18 @@
         padding: 12px 12px 20px;
         display: flex;
         flex-direction: column;
-        @media #{$bp-s-min}{
+        @media #{setting.$bp-s-min}{
             padding: 14px 14px 20px;
         }
-        @media #{$bp-l-min}{margin-top: 18px;}
+        @media #{setting.$bp-l-min}{margin-top: 18px;}
         dt{
-            @include fw(700);
+            @include setting.fw(700);
             background-color: var(--c-primary);
             color: var(--c-bg);
             text-align: center;
             padding: 8px 0;
             margin-bottom: 12px;
-            @media #{$bp-s-min}{
+            @media #{setting.$bp-s-min}{
                 margin-bottom: 14px;
             }
         }
@@ -129,7 +131,7 @@
     text-align: justify;
     background-color: #d9dada;
     clip-path: polygon(20px 0%, calc(100% - 20px) 0%, 100% 20px, 100% calc(100% - 20px), calc(100% - 20px) 100%, 20px 100%, 0% calc(100% - 20px), 0% 20px);
-    @media #{$bp-s-min}{
+    @media #{setting.$bp-s-min}{
         padding: 50px;
         font-size: 15px;
         margin: 80px auto 0;
@@ -138,9 +140,9 @@
         font-size: 18px;
         line-height: 1.4;
         color: var(--c-primary);
-        @include fw(700);
+        @include setting.fw(700);
         margin-bottom: 18px;
-        @media #{$bp-s-min}{
+        @media #{setting.$bp-s-min}{
             font-size: 23px;
             line-height: 1;
             margin-bottom: 30px;

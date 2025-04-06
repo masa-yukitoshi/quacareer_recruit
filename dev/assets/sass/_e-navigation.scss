@@ -1,12 +1,14 @@
+@use "setting";
+
 .e-navigation{
     width: calc(100% - 80px);
-    @media (max-width:370px){width: calc(100% - 40px);}
     max-width: 990px;
     display: flex;
     flex-direction: column;
     margin: auto;
     gap: 26px;
-    @media #{$bp-s-min}{
+    @media (max-width:370px){width: calc(100% - 40px);}
+    @media #{setting.$bp-s-min}{
         justify-content: space-between;
         flex-direction: row;
         flex-wrap: wrap;
@@ -16,7 +18,7 @@
         display: flex;
         flex-direction: column;
         gap: 26px;
-        @media #{$bp-s-min}{
+        @media #{setting.$bp-s-min}{
             gap: 38px;
         }
         &__item{
@@ -30,7 +32,7 @@
                 display: flex;
                 align-items: flex-start;
                 gap: 15px;
-                @media #{$bp-s-min}{
+                @media #{setting.$bp-s-min}{
                     gap: 20px;
                 }
                 i{
@@ -41,7 +43,7 @@
                     background-color: var(--c-primary);
                     width: 28px;
                     font-size: 0;
-                    @media #{$bp-s-min}{
+                    @media #{setting.$bp-s-min}{
                         width: 36px;
                     }
                     img{
@@ -59,7 +61,7 @@
                     justify-content: flex-start;
                     align-items: flex-start;
                     gap: 6px;
-                    @media #{$bp-s-min}{
+                    @media #{setting.$bp-s-min}{
                         gap: 10px;
                     }
                 }
@@ -67,20 +69,20 @@
                     width: auto;
                     height: 17px;
                     line-height: 0;
-                    @media #{$bp-s-min}{
+                    @media #{setting.$bp-s-min}{
                         height: 21.5px;
                     }
                 }
                 small{
                     font-size: 10px;
                     line-height: 1;
-                    @media #{$bp-s-min}{
+                    @media #{setting.$bp-s-min}{
                         font-size: 12px;
                     }
                 }
             }
             &:hover a{
-                @media #{$bp-s-min}{
+                @media #{setting.$bp-s-min}{
                     animation: clip .4s;
                 }
             }
@@ -91,7 +93,7 @@
         display: flex;
         flex-direction: column;
         gap: 16px;
-        @media #{$bp-s-min}{
+        @media #{setting.$bp-s-min}{
             margin-top: 0;
             gap: 20px;
         }
@@ -106,7 +108,7 @@
                 margin-left: 0.5em;
             }
             &:hover a{
-                @media #{$bp-s-min}{
+                @media #{setting.$bp-s-min}{
                     animation: clip .4s;
                 }
             }

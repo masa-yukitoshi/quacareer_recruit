@@ -1,3 +1,5 @@
+@use "setting";
+
 .l-chat{
     display: flex;
     position: relative;
@@ -51,7 +53,7 @@
             @media(max-width:350px){
                 font-size: 12px;
             }
-            @media #{$bp-s-min}{
+            @media #{setting.$bp-s-min}{
                 top: 80px;
                 left: 25px;
             } 
@@ -109,7 +111,7 @@
         justify-content: center;
         height: 150lvh;
         padding-bottom: 60lvh;
-        @media #{$bp-s-max}{
+        @media #{setting.$bp-s-max}{
             height: 250lvh;
             padding-bottom: 0;
         }

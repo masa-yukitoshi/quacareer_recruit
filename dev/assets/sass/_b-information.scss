@@ -1,3 +1,5 @@
+@use "setting";
+
 .b-information{
     position: relative;
     display: flex;
@@ -6,7 +8,7 @@
     max-width: 1046px;
     margin: auto;
     gap: 0;
-    @media #{$bp-s-min}{
+    @media #{setting.$bp-s-min}{
         flex-direction: row;
         gap: 90px;
         &+&{
@@ -45,8 +47,8 @@
         letter-spacing: 0.15em;
         line-height: 1;
         color: var(--c-primary);
-        @include fw(550);
-        @media #{$bp-s-min}{
+        @include setting.fw(550);
+        @media #{setting.$bp-s-min}{
             width: 208px;
             padding: 45px 0;
             font-size: 22px;
@@ -56,7 +58,7 @@
     &__body{
         flex: 1;
         padding: 20px 40px;
-        @media #{$bp-s-min}{
+        @media #{setting.$bp-s-min}{
             padding: 45px 0;
         }
         p{line-height: 2;}
@@ -101,13 +103,13 @@
                 background-color: var(--c-bg);
                 border-radius: 100%;
                 font-size: 13px;
-                @include fw(600);
+                @include setting.fw(600);
                 text-align: center;
                 line-height: 1;
                 padding-bottom: 3px;
                 margin-right: 5px;
                 translate: 0 -2px;
-                @media #{$bp-s-min}{
+                @media #{setting.$bp-s-min}{
                     width: 22px;
                     font-size: 16px;
                 }

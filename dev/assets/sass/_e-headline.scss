@@ -1,9 +1,11 @@
+@use "setting";
+
 .e-headline{
     display: flex;
     flex-direction: column;
     gap: 34px;
     margin-bottom: 40px;
-    @media #{$bp-s-min}{
+    @media #{setting.$bp-s-min}{
         margin-bottom: 75px;
     }
     &__chatch{
@@ -12,7 +14,7 @@
         font-weight: 600;
         line-height: 1.3;
         color: var(--c-primary);
-        @media #{$bp-s-min}{font-size: 36px;}
+        @media #{setting.$bp-s-min}{font-size: 36px;}
     }
     &__body{
         font-size: 16px;

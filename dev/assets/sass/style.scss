@@ -1,20 +1,6 @@
 @charset "UTF-8";
-$bp-s-min:"(min-width:600px)";
-$bp-s-max:"(max-width:599px)";
-$bp-l-min:"(min-width:1025px)";
-$bp-l-max:"(max-width:1024px)";
-@mixin fw($size:400) {
-    font-variation-settings: "wght" $size;
-    // font-weight: $size;
-}
-
-// %font-ja-r{ font-family: toppan-bunkyu-gothic-pr6n, sans-serif; font-weight: 400; }
-// %font-ja-db{ font-family: toppan-bunkyu-gothic-pr6n, sans-serif; font-weight: 600; }
-// %font-ja-eb{ font-family: toppan-bunkyu-midashi-go-std, sans-serif; font-weight: 900; }
-// %font-en-r{ font-family: montserrat, sans-serif; font-weight: 400; }
-// %font-en-m{ font-family: montserrat, sans-serif; font-weight: 500; }
-// %font-en-b{ font-family: montserrat, sans-serif; font-weight: 700; }
-
+@use "sass:meta";
+@use "setting";
 :root{
     --c-primary: #ed1c24;
     --color-secondary: #fbb03b;
@@ -24,16 +10,16 @@ $bp-l-max:"(max-width:1024px)";
     --f-sans: source-han-sans-jp-variable, sans-serif;
     --f-serif: shippori-mincho, serif;
 }
-@import "base";
-@import "swiper-bundle.min";
-@import "swiper";
+@include meta.load-css("base");
+@include meta.load-css("swiper-bundle.min");
+@include meta.load-css("swiper");
 // @import "mouseStalker";
 
-@media #{$bp-s-max}{
+@media #{setting.$bp-s-max}{
     .pc{display: none;}
     .sp{display: block;}
 }
-@media #{$bp-s-min}{
+@media #{setting.$bp-s-min}{
     .pc{display: block;}
     .sp{display: none;}
 }
@@ -41,11 +27,11 @@ $bp-l-max:"(max-width:1024px)";
 html{
     background-color: var(--c-document);
     font-family: var(--f-sans);
-    @include fw(400);
+    @include setting.fw(400);
     font-weight: unset;
     font-size: 14px;
     letter-spacing: 0.1em;
-    @media #{$bp-s-min}{
+    @media #{setting.$bp-s-min}{
         font-size: 18px;
     }
 }
@@ -62,48 +48,48 @@ svg{
 }
 
 //グローバル部品
-@import "global-header";
-@import "global-menu";
-@import "global-footer";
-@import "global-cv";
+@include meta.load-css("global-header");
+@include meta.load-css("global-menu");
+@include meta.load-css("global-footer");
+@include meta.load-css("global-cv");
 
-@import "kv-slider";
-@import "top-index";
-@import "top-statement";
+@include meta.load-css("kv-slider");
+@include meta.load-css("top-index");
+@include meta.load-css("top-statement");
 
-@import "l-about-sticky";
-@import "l-welfare-sticky";
-@import "l-message-fv";
-@import "l-chat";
-@import "l-one-day";
+@include meta.load-css("l-about-sticky");
+@include meta.load-css("l-welfare-sticky");
+@include meta.load-css("l-message-fv");
+@include meta.load-css("l-chat");
+@include meta.load-css("l-one-day");
 
-@import "b-loading";
-@import "b-contact-form";
-@import "b-information";
-@import "b-flow";
-@import "b-faq";
-@import "b-job-block";
-@import "b-aco";
-@import "b-about-slider";
-@import "b-chat-section";
-@import "b-day";
+@include meta.load-css("b-loading");
+@include meta.load-css("b-contact-form");
+@include meta.load-css("b-information");
+@include meta.load-css("b-flow");
+@include meta.load-css("b-faq");
+@include meta.load-css("b-job-block");
+@include meta.load-css("b-aco");
+@include meta.load-css("b-about-slider");
+@include meta.load-css("b-chat-section");
+@include meta.load-css("b-day");
 
-@import "e-copy";
-@import "e-navigation";
-@import "e-pagetitle";
-@import "e-heading";
-@import "e-about-navi";
-@import "e-headline";
-@import "e-card";
-@import "e-scrollprompter";
+@include meta.load-css("e-copy");
+@include meta.load-css("e-navigation");
+@include meta.load-css("e-pagetitle");
+@include meta.load-css("e-heading");
+@include meta.load-css("e-about-navi");
+@include meta.load-css("e-headline");
+@include meta.load-css("e-card");
+@include meta.load-css("e-scrollprompter");
 
-@import "p-message";
-@import "p-about";
-@import "p-info";
-@import "p-welfare";
-@import "p-gallery";
-@import "p-chat";
-@import "p-one-day";
+@include meta.load-css("p-message");
+@include meta.load-css("p-about");
+@include meta.load-css("p-info");
+@include meta.load-css("p-welfare");
+@include meta.load-css("p-gallery");
+@include meta.load-css("p-chat");
+@include meta.load-css("p-one-day");
 
 
 // body{ view-transition-name: body; }

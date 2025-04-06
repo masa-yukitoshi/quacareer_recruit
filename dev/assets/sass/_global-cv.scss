@@ -1,11 +1,13 @@
+@use "setting";
+
 .global-cv{
     margin: 26px auto 38px;
-    @media #{$bp-s-min}{
+    @media #{setting.$bp-s-min}{
         margin: 120px auto 150px;
     }
     main+&{
         margin-top: 70px;
-        @media #{$bp-s-min}{
+        @media #{setting.$bp-s-min}{
             margin-top: 223px;
         }
     }
@@ -18,7 +20,7 @@
         max-width: 910px;
         background-color: var(--c-primary);
         padding: 30px 20px;
-        @media #{$bp-s-min}{
+        @media #{setting.$bp-s-min}{
             padding: 71px 60px;
             padding-right: 48px;
             gap: 48px;
@@ -29,19 +31,19 @@
             flex-direction: column;
             align-items: flex-start;
             gap: 14px;
-            @media #{$bp-s-min}{
+            @media #{setting.$bp-s-min}{
                 gap: 23px;
             }
             svg{
                 width: 100%;
                 &:nth-child(1){
                     max-height: 71px;
-                    @media #{$bp-s-max}{display: none;}
+                    @media #{setting.$bp-s-max}{display: none;}
                 }
                 &:nth-child(2){
                     width: auto;
                     height: 88px;
-                    @media #{$bp-s-min}{display: none;}
+                    @media #{setting.$bp-s-min}{display: none;}
                 }
             }
         }
@@ -52,8 +54,8 @@
             font-size: 12px;
             line-height: 1;
             font-family: var(--f-serif);
-            @include fw(600);
-            @media #{$bp-s-min}{
+            @include setting.fw(600);
+            @media #{setting.$bp-s-min}{
                 font-size: 25px;
             }
         }
@@ -73,12 +75,12 @@
             span{
                 svg{
                     max-height: 41px;
-                    @media #{$bp-s-min}{max-height: 88px;}
+                    @media #{setting.$bp-s-min}{max-height: 88px;}
                     &:nth-child(1){
-                        @media #{$bp-s-max}{display: block;}
+                        @media #{setting.$bp-s-max}{display: block;}
                     }
                     &:nth-child(2){
-                        @media #{$bp-s-min}{display: block;}
+                        @media #{setting.$bp-s-min}{display: block;}
                     }
                 }
             }

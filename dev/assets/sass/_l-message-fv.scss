@@ -1,3 +1,5 @@
+@use "setting";
+
 .l-message-fv{
     display: flex;
     position: relative;
@@ -68,7 +70,7 @@
         display: flex;
         align-items: center;
         height: 100lvh;
-        @media #{$bp-s-max}{
+        @media #{setting.$bp-s-max}{
             width: 100%;
             justify-content: center;
             .e-pagetitle svg{
@@ -76,7 +78,7 @@
                 width: 100vw;
             }
         }
-        @media #{$bp-s-min}{
+        @media #{setting.$bp-s-min}{
             padding: 0 clamp(50px , calc( (100% - 1146px) / 2 ) , 50%);
         }
     }

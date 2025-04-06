@@ -1,3 +1,5 @@
+@use "setting";
+
 .e-scrollprompter{
     position: absolute;
     z-index: 10;
@@ -15,14 +17,14 @@
     filter: invert(100%);
     mix-blend-mode: difference;
     // .b-day-fv &{mix-blend-mode: normal;}
-    @media #{$bp-s-min}{
+    @media #{setting.$bp-s-min}{
         gap: 15px;
         font-size: 22px;
     }
     img{
         width: 30px;
         animation: scroll_arrow 1s infinite;
-        @media #{$bp-s-min}{width: 40px;}
+        @media #{setting.$bp-s-min}{width: 40px;}
     }
 }
 @keyframes scroll_arrow {
